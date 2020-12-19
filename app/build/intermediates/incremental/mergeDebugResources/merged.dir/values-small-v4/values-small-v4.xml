@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="mtrl_alert_dialog_background_inset_bottom">24dp</dimen>
-    <dimen name="mtrl_alert_dialog_background_inset_end">24dp</dimen>
-    <dimen name="mtrl_alert_dialog_background_inset_start">24dp</dimen>
-    <dimen name="mtrl_alert_dialog_background_inset_top">24dp</dimen>
-    <item name="size_msg_text" type="dimen">14sp</item>
-    <item name="size_msg_textbox" type="dimen">15sp</item>
-</resources>

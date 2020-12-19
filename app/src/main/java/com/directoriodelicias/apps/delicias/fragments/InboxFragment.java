@@ -66,7 +66,7 @@ import io.realm.Realm;
 import io.realm.RealmList;
 
 /**
- * Created by Droideve on 7/12/2017.
+ * Created by Directorio on 7/12/2017.
  */
 
 public class InboxFragment extends Fragment implements DCMBroadcastReceiver.NetworkStateReceiverListener,

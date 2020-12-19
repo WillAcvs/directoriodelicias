@@ -9,7 +9,7 @@ import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Droideve on 2/4/2016.
+ * Created by Directorio on 2/4/2016.
  */
 public class Images extends RealmObject implements Serializable {
 

@@ -9,7 +9,7 @@ public class Constances {
 
     public static int DISTANCE_CONST = 1024;
     //Change the url depending on the name of your web hosting
-    // public static String BASE_URL = "https://droideve.com/smartgeostore";
+    // public static String BASE_URL = "https://Directorio.com/smartgeostore";
     public static String BASE_URL = AppConfig.BASE_URL;
     public static String BASE_URL_API = AppConfig.BASE_URL;
     public static String TERMS_OF_USE_URL = AppConfig.BASE_URL;

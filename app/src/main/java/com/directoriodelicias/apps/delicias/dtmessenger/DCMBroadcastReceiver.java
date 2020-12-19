@@ -35,7 +35,7 @@ import java.util.Map;
 import static com.directoriodelicias.apps.delicias.appconfig.AppConfig.APP_DEBUG;
 
 /**
- * Created by Droideve on 7/24/2016.
+ * Created by Directorio on 7/24/2016.
  */
 
 public class DCMBroadcastReceiver extends BroadcastReceiver {

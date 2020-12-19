@@ -311,7 +311,7 @@ public class NavigationDrawerFragment extends Fragment implements SimpleListAdap
                     if (mDrawerLayout != null)
                         mDrawerLayout.closeDrawers();
 
-                    //https://test.droideve.com/nbs2/index.php/business_manager/index?session={username}&lang={lang}&
+                    //https://test.Directorio.com/nbs2/index.php/business_manager/index?session={username}&lang={lang}&
                     String url = AppConfig.BASE_URL + "/business_manager/index?uri=businesses&lang=" + Locale.getDefault().getLanguage();
                     if (SessionsController.isLogged() && SessionsController.getSession() != null && SessionsController.getSession().getUser() != null) {
                         url = url + "&session=" +

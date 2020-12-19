@@ -4,7 +4,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Droideve on 11/21/2017.
+ * Created by Directorio on 11/21/2017.
  */
 
 public class EventNotification extends RealmObject {

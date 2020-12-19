@@ -12,7 +12,7 @@ import org.json.JSONObject;
 import io.realm.RealmList;
 
 /**
- * Created by Droideve on 2/4/2016.
+ * Created by Directorio on 2/4/2016.
  */
 public class ImagesParser extends Parser {
 

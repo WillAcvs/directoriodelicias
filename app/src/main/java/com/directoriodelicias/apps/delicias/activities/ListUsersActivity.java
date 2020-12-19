@@ -15,7 +15,7 @@ import com.directoriodelicias.apps.delicias.fragments.ListUsersFragment;
 
 
 /**
- * Created by Droideve on 7/13/2017.
+ * Created by Directorio on 7/13/2017.
  */
 
 public class ListUsersActivity extends AppCompatActivity {

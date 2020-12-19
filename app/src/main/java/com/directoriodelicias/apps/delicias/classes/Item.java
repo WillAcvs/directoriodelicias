@@ -3,7 +3,7 @@ package com.directoriodelicias.apps.delicias.classes;
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder;
 
 /**
- * Created by Droideve on 12/13/2015.
+ * Created by Directorio on 12/13/2015.
  */
 public class Item {
 

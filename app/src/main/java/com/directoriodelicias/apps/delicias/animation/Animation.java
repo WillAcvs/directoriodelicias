@@ -6,7 +6,7 @@ import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 
 /**
- * Created by Droideve on 9/24/2017.
+ * Created by Directorio on 9/24/2017.
  */
 
 public class Animation {

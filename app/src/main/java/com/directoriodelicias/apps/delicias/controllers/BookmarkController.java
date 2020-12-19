@@ -11,7 +11,7 @@ import io.realm.RealmResults;
 import io.realm.Sort;
 
 /**
- * Created by Droideve on 7/12/2017.
+ * Created by Directorio on 7/12/2017.
  */
 
 public class BookmarkController {

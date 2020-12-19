@@ -14,7 +14,7 @@ import com.directoriodelicias.apps.delicias.R;
 import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
 
 /**
- * Created by Droideve on 11/18/2017.
+ * Created by Directorio on 11/18/2017.
  */
 
 public class SearchDialog extends Dialog {

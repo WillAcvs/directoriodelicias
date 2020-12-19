@@ -1,7 +1,7 @@
 package com.directoriodelicias.apps.delicias.Services;
 
 /**
- * Created by Droideve on 8/19/2016.
+ * Created by Directorio on 8/19/2016.
  */
 
 public class BusMessage {

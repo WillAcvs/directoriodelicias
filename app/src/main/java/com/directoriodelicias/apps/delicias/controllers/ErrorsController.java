@@ -7,7 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 import com.directoriodelicias.apps.delicias.utils.MessageDialog;
 
 /**
- * Created by Droideve on 2/5/2018.
+ * Created by Directorio on 2/5/2018.
  */
 
 public class ErrorsController {

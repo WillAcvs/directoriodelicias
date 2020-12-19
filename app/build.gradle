@@ -109,7 +109,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.9'
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.github.hzw1199:AwesomeWebView-Android:1.1'
-    //new libs from Droideve
+    //new libs from Directorio
     implementation group: 'com.github.siyamed', name: 'android-shape-imageview', version: '0.9.3'
     implementation 'org.bluecabin.textoo:textoo:1.0.1'
     implementation 'org.greenrobot:eventbus:3.1.1'

@@ -5,7 +5,7 @@ import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Droideve on 2/12/2016.
+ * Created by Directorio on 2/12/2016.
  */
 public class User extends RealmObject {
 

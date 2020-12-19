@@ -2,7 +2,7 @@ package com.directoriodelicias.apps.delicias.helper;
 
 
 /**
- * Created by Droideve on 1/5/2017.
+ * Created by Directorio on 1/5/2017.
  */
 
 public class NotificationHelper {

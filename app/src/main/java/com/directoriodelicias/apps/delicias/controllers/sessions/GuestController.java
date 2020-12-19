@@ -5,7 +5,7 @@ import com.directoriodelicias.apps.delicias.classes.Guest;
 import io.realm.Realm;
 
 /**
- * Created by Droideve on 11/20/2017.
+ * Created by Directorio on 11/20/2017.
  */
 
 public class GuestController {

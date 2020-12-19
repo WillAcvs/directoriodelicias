@@ -12,7 +12,7 @@ import org.json.JSONObject;
 import io.realm.RealmList;
 
 /**
- * Created by Droideve on 1/12/2016.
+ * Created by Directorio on 1/12/2016.
  */
 public class GuestParser extends Parser {
 

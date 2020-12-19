@@ -26,7 +26,7 @@ import java.text.DecimalFormat;
 
 
 /**
- * Created by Droideve on 09/06/2015.
+ * Created by Directorio on 09/06/2015.
  */
 public class Utils {
 

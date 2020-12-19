@@ -11,7 +11,7 @@ import io.realm.RealmResults;
 import io.realm.Sort;
 
 /**
- * Created by Droideve on 11/12/2017.
+ * Created by Directorio on 11/12/2017.
  */
 
 public class OffersController {

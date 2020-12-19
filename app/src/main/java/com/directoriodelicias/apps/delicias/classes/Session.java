@@ -4,7 +4,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Droideve on 8/1/2016.
+ * Created by Directorio on 8/1/2016.
  */
 
 public class Session extends RealmObject {

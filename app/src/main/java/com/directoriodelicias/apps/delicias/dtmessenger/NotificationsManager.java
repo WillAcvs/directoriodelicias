@@ -24,7 +24,7 @@ import com.directoriodelicias.apps.delicias.utils.Translator;
 import java.util.List;
 
 /**
- * Created by Droideve on 10/9/2016.
+ * Created by Directorio on 10/9/2016.
  */
 
 public class NotificationsManager {

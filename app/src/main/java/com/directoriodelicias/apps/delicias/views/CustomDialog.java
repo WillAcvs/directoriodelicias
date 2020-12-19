@@ -4,7 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 
 /**
- * Created by Droideve on 2/24/2016.
+ * Created by Directorio on 2/24/2016.
  */
 public class CustomDialog extends Dialog {
 

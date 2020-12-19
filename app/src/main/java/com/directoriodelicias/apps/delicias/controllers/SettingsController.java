@@ -18,7 +18,7 @@ import com.directoriodelicias.apps.delicias.AppController;
 import com.directoriodelicias.apps.delicias.R;
 
 /**
- * Created by Droideve on 12/14/2017.
+ * Created by Directorio on 12/14/2017.
  */
 
 public class SettingsController {

@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import java.io.Serializable;
 
 /**
- * Created by Droideve on 11/5/2016.
+ * Created by Directorio on 11/5/2016.
  */
 
 public class FragmentParams implements Serializable {

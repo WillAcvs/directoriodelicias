@@ -21,7 +21,7 @@ import com.directoriodelicias.apps.delicias.utils.OfferUtils;
 import java.util.List;
 
 /**
- * Created by Droideve on 11/12/2017.
+ * Created by Directorio on 11/12/2017.
  */
 
 public class StoreOfferAdapter {

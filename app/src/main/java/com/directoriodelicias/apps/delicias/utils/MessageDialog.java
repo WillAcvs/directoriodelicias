@@ -12,7 +12,7 @@ import com.directoriodelicias.apps.delicias.R;
 
 
 /**
- * Created by Droideve on 9/13/2016.
+ * Created by Directorio on 9/13/2016.
  */
 
 public class MessageDialog {

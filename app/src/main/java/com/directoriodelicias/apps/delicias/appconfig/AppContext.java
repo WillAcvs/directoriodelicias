@@ -2,7 +2,7 @@ package com.directoriodelicias.apps.delicias.appconfig;
 
 
 /**
- * Created by Droideve on 9/29/2016.
+ * Created by Directorio on 9/29/2016.
  */
 
 public class AppContext {

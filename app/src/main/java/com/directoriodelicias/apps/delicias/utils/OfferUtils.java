@@ -5,7 +5,7 @@ import com.directoriodelicias.apps.delicias.classes.Currency;
 import java.text.DecimalFormat;
 
 /**
- * Created by Droideve on 1/26/2018.
+ * Created by Directorio on 1/26/2018.
  */
 
 public class OfferUtils {

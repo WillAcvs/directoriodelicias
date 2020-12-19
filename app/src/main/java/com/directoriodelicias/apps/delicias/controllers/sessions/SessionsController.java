@@ -12,7 +12,7 @@ import com.directoriodelicias.apps.delicias.classes.User;
 import io.realm.Realm;
 
 /**
- * Created by Droideve on 8/1/2016.
+ * Created by Directorio on 8/1/2016.
  */
 
 public class SessionsController {

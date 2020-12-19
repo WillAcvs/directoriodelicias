@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.directoriodelicias.apps.delicias.unbescape.html.HtmlEscape;
 
 /**
- * Created by Droideve on 1/3/2017.
+ * Created by Directorio on 1/3/2017.
  */
 
 public class TextUtils {

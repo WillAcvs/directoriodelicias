@@ -26,7 +26,7 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 /**
- * Created by Droideve on 1/5/2016.
+ * Created by Directorio on 1/5/2016.
  */
 
 public class ListDiscussionAdapter extends RecyclerView.Adapter<ListDiscussionAdapter.mViewHolder> {

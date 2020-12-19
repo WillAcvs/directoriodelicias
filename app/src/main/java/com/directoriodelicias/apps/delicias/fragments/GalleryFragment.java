@@ -42,7 +42,7 @@ import java.util.Map;
 import io.realm.RealmList;
 
 /**
- * Created by Droideve on 11/12/2017.
+ * Created by Directorio on 11/12/2017.
  */
 
 public class GalleryFragment extends Fragment implements ImagesListAdapter.ClickListener {

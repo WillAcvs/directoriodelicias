@@ -57,7 +57,7 @@ import io.realm.RealmList;
 
 
 /**
- * Created by Droideve on 6/26/2016.
+ * Created by Directorio on 6/26/2016.
  */
 public class InboxActivity extends AppCompatActivity implements ListDiscussionAdapter.ClickListener, ListDiscussionAdapter.TouchListener, ViewManager.CustomView, DCMBroadcastReceiver.NetworkStateReceiverListener, SwipeRefreshLayout.OnRefreshListener {
 

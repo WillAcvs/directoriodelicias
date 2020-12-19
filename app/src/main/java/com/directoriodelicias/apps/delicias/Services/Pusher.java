@@ -1,7 +1,7 @@
 package com.directoriodelicias.apps.delicias.Services;
 
 /**
- * Created by Droideve on 12/21/2016.
+ * Created by Directorio on 12/21/2016.
  */
 
 public class Pusher {

@@ -1,7 +1,7 @@
 package com.directoriodelicias.apps.delicias.parser.tags;
 
 /**
- * Created by Droideve on 1/11/2016.
+ * Created by Directorio on 1/11/2016.
  */
 public class Tags {
 

@@ -18,12 +18,12 @@ import io.realm.RealmResults;
 import io.realm.Sort;
 
 /**
- * Created by Droideve on 8/14/2016.
+ * Created by Directorio on 8/14/2016.
  */
 
 public class CountriesAutoCompleteAdapter extends ArrayAdapter<String> implements Filterable {
 
-    //private static final String PLACES_API_BASE = "http://bestplaces.droideve.com/1.0/webservice/getGooglePlaces";
+    //private static final String PLACES_API_BASE = "http://bestplaces.Directorio.com/1.0/webservice/getGooglePlaces";
 
     public ArrayList<String> resultList;
 

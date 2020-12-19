@@ -25,7 +25,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by Droideve on 12/21/2016.
+ * Created by Directorio on 12/21/2016.
  */
 
 public class MessengerHelper {

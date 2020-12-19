@@ -7,7 +7,7 @@ import org.json.JSONObject;
 import java.util.Locale;
 
 /**
- * Created by Droideve on 8/5/2016.
+ * Created by Directorio on 8/5/2016.
  */
 
 public class Translator {

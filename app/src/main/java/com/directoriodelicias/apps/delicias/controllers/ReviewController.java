@@ -8,7 +8,7 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 
 /**
- * Created by Droideve on 12/25/2017.
+ * Created by Directorio on 12/25/2017.
  */
 
 public class ReviewController {

@@ -1,7 +1,7 @@
 package com.directoriodelicias.apps.delicias.dtmessenger;
 
 /**
- * Created by Droideve on 7/21/2016.
+ * Created by Directorio on 7/21/2016.
  */
 
 public class DCMessengerConfig {

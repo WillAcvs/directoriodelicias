@@ -6,7 +6,7 @@ import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Droideve on 1/5/2016.
+ * Created by Directorio on 1/5/2016.
  */
 public class Discussion extends RealmObject {
 

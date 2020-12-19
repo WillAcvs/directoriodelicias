@@ -16,7 +16,7 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by Droideve on 8/17/2016.
+ * Created by Directorio on 8/17/2016.
  */
 
 public class DateUtils {

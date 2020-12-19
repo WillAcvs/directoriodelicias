@@ -5,7 +5,7 @@ import com.directoriodelicias.apps.delicias.classes.CountriesModel;
 import io.realm.Realm;
 
 /**
- * Created by Droideve on 7/12/2017.
+ * Created by Directorio on 7/12/2017.
  */
 
 public class CountriesController {

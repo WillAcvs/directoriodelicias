@@ -21,7 +21,7 @@ import java.util.Map;
 import static com.directoriodelicias.apps.delicias.appconfig.AppConfig.APP_DEBUG;
 
 /**
- * Created by Droideve on 11/17/2017.
+ * Created by Directorio on 11/17/2017.
  */
 
 public class CampagneController {

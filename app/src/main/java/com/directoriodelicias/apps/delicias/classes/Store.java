@@ -7,7 +7,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by Droideve on 2/12/2016.
+ * Created by Directorio on 2/12/2016.
  */
 public class Store extends RealmObject {
 

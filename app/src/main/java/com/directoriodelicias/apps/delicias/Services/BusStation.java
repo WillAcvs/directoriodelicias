@@ -3,7 +3,7 @@ package com.directoriodelicias.apps.delicias.Services;
 import org.greenrobot.eventbus.EventBus;
 
 /**
- * Created by Droideve on 8/19/2016.
+ * Created by Directorio on 8/19/2016.
  */
 
 public class BusStation {

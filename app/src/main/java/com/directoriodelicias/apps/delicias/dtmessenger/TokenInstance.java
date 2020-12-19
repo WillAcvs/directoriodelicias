@@ -12,7 +12,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by Droideve on 7/21/2016.
+ * Created by Directorio on 7/21/2016.
  */
 
 public class TokenInstance {

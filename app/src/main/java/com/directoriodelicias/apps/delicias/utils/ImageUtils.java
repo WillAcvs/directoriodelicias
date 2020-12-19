@@ -23,7 +23,7 @@ import java.net.URL;
 import java.util.Objects;
 
 /**
- * Created by Droideve on 9/26/2016.
+ * Created by Directorio on 9/26/2016.
  */
 
 public class ImageUtils {

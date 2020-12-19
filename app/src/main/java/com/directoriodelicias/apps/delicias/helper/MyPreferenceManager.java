@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by Droideve on 6/26/2016.
+ * Created by Directorio on 6/26/2016.
  */
 public class MyPreferenceManager {
 

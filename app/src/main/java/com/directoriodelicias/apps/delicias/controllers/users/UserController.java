@@ -33,7 +33,7 @@ import io.realm.Realm;
 import io.realm.RealmList;
 
 /**
- * Created by Droideve on 7/13/2017.
+ * Created by Directorio on 7/13/2017.
  */
 
 public class UserController {

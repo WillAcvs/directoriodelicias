@@ -39,7 +39,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Droideve on 6/26/2016.
+ * Created by Directorio on 6/26/2016.
  */
 public class NotificationUtils {
 

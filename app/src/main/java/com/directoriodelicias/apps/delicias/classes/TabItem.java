@@ -3,7 +3,7 @@ package com.directoriodelicias.apps.delicias.classes;
 import java.io.Serializable;
 
 /**
- * Created by Droideve on 7/14/2016.
+ * Created by Directorio on 7/14/2016.
  */
 
 public class TabItem implements Serializable {

@@ -34,7 +34,7 @@ import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
 /**
- * Created by Droideve on 6/2/2016.
+ * Created by Directorio  on 6/2/2016.
  */
 public class AppController extends MultiDexApplication {
 
@@ -230,7 +230,7 @@ public class AppController extends MultiDexApplication {
         Constances.TERMS_OF_USE_URL = getResources().getString(R.string.TERMS_OF_USE_URL);
 
 
-        AppConfig.ENABLE_PEOPLE_AROUND_ME = Boolean.parseBoolean(getResources().getString(R.string.ENABLE_PEOPLE_AROUND_ME));
+        AppConfig.ENABLE_PEOPLE_AROUND_ME = Boolean.parseBoolean("false");
 
 
     }

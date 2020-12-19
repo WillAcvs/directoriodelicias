@@ -11,7 +11,7 @@ import com.directoriodelicias.apps.delicias.appconfig.AppConfig;
 import java.io.InputStream;
 
 /**
- * Created by Droideve on 30/10/2015.
+ * Created by Directorio on 30/10/2015.
  */
 public class LoaderImages extends AsyncTask<String, Void, Bitmap> {
 

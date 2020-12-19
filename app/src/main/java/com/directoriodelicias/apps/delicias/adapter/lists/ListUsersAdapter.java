@@ -27,7 +27,7 @@ import com.mikepenz.iconics.IconicsDrawable;
 import java.util.List;
 
 /**
- * Created by Droideve on 5/23/2016.
+ * Created by Directorio on 5/23/2016.
  */
 public class ListUsersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

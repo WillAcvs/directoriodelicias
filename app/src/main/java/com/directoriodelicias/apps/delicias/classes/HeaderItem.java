@@ -1,7 +1,7 @@
 package com.directoriodelicias.apps.delicias.classes;
 
 /**
- * Created by Droideve on 1/9/2016.
+ * Created by Directorio on 1/9/2016.
  */
 public class HeaderItem extends Item {
 

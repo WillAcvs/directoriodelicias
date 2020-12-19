@@ -1,7 +1,7 @@
 package com.directoriodelicias.apps.delicias.utils;
 
 /**
- * Created by Droideve on 12/09/2015.
+ * Created by Directorio on 12/09/2015.
  */
 
 

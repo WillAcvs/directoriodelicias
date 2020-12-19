@@ -72,7 +72,7 @@ import io.realm.Realm;
 
 
 /**
- * Created by Droideve on 6/26/2016.
+ * Created by Directorio on 6/26/2016.
  */
 public class MessengerActivity extends AppCompatActivity implements ListMessageAdapter.ClickListener,
         ListMessageAdapter.LoadEarlierMessages,
