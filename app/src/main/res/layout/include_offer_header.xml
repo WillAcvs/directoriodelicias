@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:background="@drawable/gradient_bg_bottom_to_top_70"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <LinearLayout
+            android:id="@+id/store_detail"
+            android:layout_margin="@dimen/padding_size_large"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/title_size_xlarge"
+                android:id="@+id/header_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/badge_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_badge"
+
+                    android:paddingStart="@dimen/spacing_xmedium"
+                    android:paddingEnd="@dimen/spacing_xmedium"
+                    android:paddingBottom="@dimen/spacing_xsmall"
+                    android:paddingTop="@dimen/spacing_xsmall"
+
+                    android:text="xxxxx xxxxx xxx"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/badge_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_badge"
+                    android:paddingStart="@dimen/spacing_xmedium"
+                    android:paddingEnd="@dimen/spacing_xmedium"
+                    android:paddingBottom="@dimen/spacing_xsmall"
+                    android:paddingTop="@dimen/spacing_xsmall"
+                    android:text="xxxxx xxxxx xxx"
+                    android:textColor="@color/white" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
+
+

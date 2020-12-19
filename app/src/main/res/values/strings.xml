@@ -1,0 +1,297 @@
+<resources>
+    <!-- update this 3 keys and compile your code from here  -->
+    <!-- Set your  application ID-->
+
+    <!--General -->
+
+
+    <string name="Home">Home</string>
+    <string name="ManageThings">Manage Your Business</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="search">Search</string>
+    <string name="options_exit">Exit</string>
+    <string name="oups_no_item_found">Oups !! No item found</string>
+    <string name="about">About Us </string>
+    <string name="Favoris">Favorites</string>
+    <string name="About_us">About US</string>
+    <string name="Settings">Settings</string>
+    <string name="MapStores">Geo Stores</string>
+    <string name="Login">LogIn</string>
+    <string name="Logout">LogOut</string>
+    <string name="parameter">Parameter</string>
+    <string name="close">Close</string>
+    <string name="EventLike">My Events</string>
+    <string name="categories">Categories</string>
+
+
+    <string name="my_stores">"My stores</string>
+    <string name="my_events">"My events</string>
+
+    <!--category--><![CDATA[
+    >
+    ]]>
+    <string name="Categories">Categories</string>
+
+    <!--event-->
+
+
+    <!--notification & messages-->
+    <string name="check_network">check your network</string>
+    <string name="network_error">No Network! click to retry</string>
+    <string name="check_nework">check your network connection</string>
+    <string name="enable_network">Enable network connection in your device</string>
+
+    <string name="editProfile">Edit Profile</string>
+
+    <!--store-->
+    <string name="store_to_far_map">Too far to display the route</string>
+    <string name="store_call_error">Error in your phone call</string>
+
+    <!--messages settings-->
+
+    <string name="settings_notifications">NOTIFICATIONS</string>
+    <string name="settings_app_infos">APPLICATION</string>
+
+
+    <!-- OFFERS -->
+    <string name="settings_notification_offers">Receive a special offers notification</string>
+    <string name="settings_notification_offers_title">Offers notifications</string>
+
+
+    <!-- EVENTS -->
+    <string name="settings_notification_events">Receive notification when there is a event near you</string>
+    <string name="settings_notification_events_title">Nearby events notifications</string>
+
+    <!-- STORES -->
+    <string name="settings_notification_stores">Receive notification when there is a store near you</string>
+    <string name="settings_notification_stores_title">Nearby stores notifications</string>
+
+
+    <!-- MESSENGER -->
+    <string name="settings_notification_messenger">Receive notification when there is new messages</string>
+    <string name="settings_notification_messenger_title">Messenger notifications</string>
+
+    <!-- DISTANCE -->
+    <string name="settings_notification_distance_dis">%1$s KM</string>
+
+    <!-- APP_INFOS -->
+    <string name="settings_app_infos_title">Version of application</string>
+
+    <!--login & sign up-->
+
+    <string name="lessThan1km">Less than 1 km</string>
+    <string name="MoreThan2km">+2 Km</string>
+    <string name="MoreThan5km">+5 Km</string>
+    <string name="MoreThan10km">+10 Km</string>
+
+    <string name="description">Detail</string>
+
+    <string name="permission_disabled_notice">This app is designed to work with location permission if you cancel this permission you may subsequently find operating problems</string>
+    <string name="save">Save</string>
+    <string name="find_new_neighbours">Find new neighbours</string>
+
+
+    <string name="youHaveDiscussions">You have %1$d discissions %2$d messages</string>
+    <string name="youHaveMessage">You have new message</string>
+    <string name="offers">Offers</string>
+    <string name="reviews">%1$s Review(s) </string>
+    <string name="noOffers">No Offers</string>
+    <string name="noReviews">No Reviews</string>
+    <string name="addReview">Add Review</string>
+    <string name="settings">Settings</string>
+    <string name="pseudo">Pseudo</string>
+    <string name="error">Whooops!</string>
+
+    <string name="selectRating">Please select from 1 star to 5 star</string>
+    <string name="pleaseWriteReview" translatable="false">Please write review</string>
+    <string name="writeReview">Write review</string>
+    <string name="thankYou">Thank you!</string>
+
+    <string name="searchOn">Search</string>
+
+    <string name="email">Email</string>
+
+
+    <string name="people_around_me">People around me</string>
+    <string name="promo">Promotion</string>
+
+
+    <string name="fileUploading">Uploading …</string>
+
+    <string name="rateUs">Please rate on application</string>
+    <string name="rateIt">Rate it</string>
+
+    <string name="you_ve_already_reviewd">You have already add your review!</string>
+
+    <string name="shared_text">%1$s - Only on %2$s \n %3$s</string>
+    <string name="reload">Reload</string>
+    <string name="mail">Mail</string>
+    <string name="today">Today</string>
+    <string name="Send_message">Send a message</string>
+    <string name="version">version :</string>
+    <string name="phone">Phone</string>
+    <string name="featured">Featured</string>
+    <string name="app_privacy">Privacy Policy</string>
+    <string name="app_term_of_uses">Terms of use</string>
+
+
+    <string name="offer_start_at">Start at %1$s</string>
+    <string name="offer_end_at">End at %1$s</string>
+    <string name="offer_ended_at">Ended at %1$s</string>
+
+
+    <string name="nbr_stores_message">%1$s stores</string>
+
+
+    <string name="tab_stores">Stores</string>
+    <string name="tab_offers">Offers</string>
+    <string name="tab_events">Events</string>
+    <string name="your_destination">Your Destination</string>
+    <string name="refresh">Refresh</string>
+    <string name="no_users">No users</string>
+    <string name="settings_notification_upcomingevent">Receive a notification when there\'s a new upcoming event</string>
+    <string name="settings_notification_upcomingevent_title">Upcoming Event</string>
+
+
+    <string name="upComingEventMessage">Upcoming Event</string>
+    <string name="upComingEventsMessage">Upcoming Events soon</string>
+    <string name="upcomingTag">Upcoming</string>
+    <string name="myUpComingEvents">UpComing Events</string>
+    <string name="chat_notification_title">You have a new message</string>
+    <string name="authentification_error_msg">Username and Password is incorrect.</string>
+    <string name="gallery">Gallery</string>
+    <string name="noImages">No Photos</string>
+    <string name="enable_network_map_direction">Please enable your network</string>
+    <string name="enable_gps_map_direction">Please enable your GPS first</string>
+
+
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="intro_slide_1_title">Quickly find Restaurant</string>
+    <string name="intro_slide_1_description">Try different restaurants nearby , a map will guide you the route to get the most interesting offer deals </string>
+    <string name="intro_slide_2_title">Upcoming Event</string>
+    <string name="intro_slide_2_description">Attend events organized by some of your favorite stores , participate and get a push notification for the upcoming event </string>
+    <string name="intro_slide_3_title">Nearby Stores</string>
+    <string name="intro_slide_3_description"> Offers, promo, discount are always at your discretion to explore for each near store .</string>
+    <string name="intro_slide_4_title">Rate your best store</string>
+    <string name="intro_slide_4_description">Explore feedback\'s before patronizing any store and leave yours as well</string>
+    <string name="alert_gps_dialog">You Need to allow access to location in order to use the app , please try again and hit OK </string>
+    <string name="confirm_gps_relaunch">Try again</string>
+    <string name="next">Next</string>
+    <string name="block">Block</string>
+    <string name="unblock">Unblock</string>
+    <string name="less_than_1_km">Less than 1 km</string>
+    <string name="noDiscussions">No Discussion</string>
+    <string name="stores_near_by">Stores Near by</string>
+    <string name="searching_for_stores_bearby">Searching for stores nearby</string>
+    <string name="title_activity_v2_main" translatable="false">V2MainActivity</string>
+    <string name="Account">Account</string>
+    <string name="Notification">Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="price">Price</string>
+    <string name="discount">Discount</string>
+    <string name="photo">Photo(s)</string>
+    <string name="editPassword">Edit Password</string>
+    <string name="navigation_drawer_open">Open navigation</string>
+    <string name="navigation_drawer_close">Close navigation</string>
+    <string name="stores_nearby">Nearby Stores</string>
+    <string name="show_more">Show all</string>
+    <string name="offers_nearby">Nearby Offers</string>
+    <string name="events_nearby">Nearby Events</string>
+    <string name="people_nearby">Nearby People</string>
+    <string name="enter_full_name">Enter Full Name</string>
+    <string name="full_name">Full name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_login">Enter Login</string>
+    <string name="login">Login</string>
+    <string name="login_required">This operation requires authentication</string>
+    <string name="authentication">Authentication</string>
+    <string name="open_time">Open</string>
+    <string name="open_now">Open now</string>
+    <string name="closed">Closed</string>
+    <string name="join">Join</string>
+    <string name="call">Call</string>
+    <string name="unjoin">Joined</string>
+    <string name="select_category">Select Category</string>
+    <string name="discount_less_than_25" translatable="false">0-25%</string>
+    <string name="discount_less_than_50" translatable="false">25-50%</string>
+    <string name="discount_less_than_75" translatable="false">50-75%</string>
+    <string name="discount_less_than_100" translatable="false">75-100%</string>
+    <string name="write_name_address_city">Write Name , Address , City</string>
+    <string name="website">Website</string>
+    <string name="begin_date">Begin Date</string>
+    <string name="open_only">Open only</string>
+    <string name="order_by_recent">Recent</string>
+    <string name="order_by_geo">Geo</string>
+    <string name="location">Location</string>
+    <string name="notify_me">Notify me</string>
+    <string name="remind_me">Remind Me</string>
+    <string name="remind_me_msg">By clicking on Remind me, you will receive notification from this event</string>
+    <string name="stores_result">Stores result</string>
+    <string name="events_result">Events result</string>
+    <string name="offers_result">Offers result</string>
+    <string name="recent_offers">Recent Offers</string>
+    <string name="current_location">Current Location</string>
+    <string name="price_one_number" translatable="false">$</string>
+    <string name="price_two_numbers" translatable="false">$$</string>
+    <string name="price_three_numbers" translatable="false">$$$</string>
+    <string name="price_four_numbers" translatable="false">$$$$</string>
+    <string name="radius">Radius</string>
+    <string name="distance">Distance</string>
+    <string name="opening_time_label">Opening time</string>
+    <string name="top_categories">Top Categories</string>
+    <string name="notifications">Notifications</string>
+    <string name="inbox">Inbox</string>
+    <string name="network_not_available">Couldn\\\'t load data from server</string>
+    <string name="retry">Retry</string>
+    <string name="try_a_refresh_the_page">Try a refresh the page</string>
+    <string name="no_feed_yet">No Feed, yet</string>
+    <string name="no_message_yet">No Message yet</string>
+    <string name="no_message_inbox">No messages in your inbox yet! Start chatting with your friends</string>
+    <string name="remove_from_bookmark">Remove from bookmarks</string>
+    <string name="error_try_later" translatable="false">Something went wrong, please try later!</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="business_manager">Business Manager</string>
+    <string name="login_first">Login first</string>
+    <string name="do_you_want_to_change_your_location">Do you want to change your location ?</string>
+    <string name="search_placeholder">Find restaurants, hotels ...</string>
+
+
+    <string name="dp_view_store_on">Open store on the app</string>
+    <string name="dp_view_offer_on">Open offer on the app</string>
+    <string name="dp_view_event_on">Open event on the app</string>
+
+
+    <string name="_DP_HOST_NAME" translatable="false">@string/DP_HOST_NAME</string>
+    <string name="_DP_STORE_MESSAGE" translatable="false">@string/DP_STORE_MESSAGE</string>
+    <string name="_DP_OFFER_MESSAGE" translatable="false">@string/DP_OFFER_MESSAGE</string>
+    <string name="_DP_EVENT_MESSAGE" translatable="false">@string/DP_EVENT_MESSAGE</string>
+
+    <!--Set your google map key-->
+    <string name="map_api_key0" translatable="false">@string/map_api_key</string>
+    <string name="login_create_account">Login / Create account</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="new_password">New password</string>
+    <string name="have_an_account">HAVE AN ACCOUNT ?</string>
+
+
+    <string name="monday">monday</string>
+    <string name="tuesday">tuesday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="thursday">thursday</string>
+    <string name="friday">friday</string>
+    <string name="saturday">saturday</string>
+    <string name="sunday">sunday</string>
+    <string name="redirected_to">\"Redirected  to \"</string>
+    <string name="people_near_by">People Near by</string>
+    <string name="loading">Loading ...</string>
+    <string name="km_100">+100 KM</string>
+    <string name="keep_current_location">Keep current location</string>
+    <string name="change_location">Change location</string>
+
+
+</resources>

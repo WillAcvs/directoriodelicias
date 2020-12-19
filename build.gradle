@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        // Add Google's Maven repository (if it's not there already).
+        google()
+
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath 'io.realm:realm-gradle-plugin:4.1.1'
+
+        // Add the Crashlytics Gradle plugin (use v2.0.0+ if you built
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CategoryCustomView">
+        <attr name="ccDisplayTitle" format="boolean" />
+        <attr name="ccHeader" format="string" />
+        <attr name="ccDisplayStoreNumber" format="boolean" />
+        <attr name="ccRect" format="boolean" />
+        <attr name="ccLoader" format="boolean" />
+        <attr name="ccClickRedirection" format="boolean" />
+        <attr name="siLimit" format="integer|reference" />
+        <attr name="catItemHeight" format="dimension" />
+        <attr name="cattItemWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StoreCustomView">
+        <attr name="strLimit" format="integer" />
+        <attr name="strHeader" format="string" />
+        <attr name="storeItemHeight" format="dimension" />
+        <attr name="storeItemWidth" format="dimension" />
+        <attr name="strLoader" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="OfferCustomView">
+        <attr name="ccDisplayHeader" format="boolean" />
+        <attr name="ocvHeader" format="string" />
+        <attr name="ocvLimit" format="integer" />
+        <attr name="offerItemHeight" format="dimension" />
+        <attr name="offerItemWidth" format="dimension" />
+        <attr name="ocvLoader" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="EventCustomView">
+        <attr name="evtLoader" format="boolean" />
+        <attr name="evtyHeader" format="string" />
+        <attr name="evtLimit" format="integer" />
+        <attr name="eventItemHeight" format="dimension" />
+        <attr name="eventItemWidth" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TintableImageView">
+        <attr name="tint" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="SliderCustomView">
+        <attr name="sliderItemHeight" format="dimension" />
+        <attr name="sliderItemWidth" format="dimension" />
+    </declare-styleable>
+
+</resources>

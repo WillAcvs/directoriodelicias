@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+    <!-- Offers list horizontal scroll view -->
+    <com.directoriodelicias.apps.delicias.customView.OfferCustomView
+        android:id="@+id/horizontalOfferList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:ccDisplayHeader="true"
+        app:ocvHeader="@string/recent_offers"
+        app:ocvLimit="8"
+        app:offerItemHeight="@dimen/v2_offer_card_width"
+        app:offerItemWidth="@dimen/v2_offer_card_height" />
+
+    <!-- Gallery list horizontal scroll view -->
+    <com.directoriodelicias.apps.delicias.customView.GalleryStoreCustomView
+        android:id="@+id/horizontalGalleryList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/padding_size_medium"
+        android:layout_marginLeft="@dimen/padding_size_medium"
+        android:layout_marginTop="@dimen/padding_size_medium"
+        android:layout_marginEnd="@dimen/padding_size_medium"
+        android:layout_marginRight="@dimen/padding_size_medium"
+        android:background="@drawable/rounded_layout_white_3dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_text_block18dp">
+
+        <TextView
+            android:id="@+id/description_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textAlignment="viewStart"
+
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autoLink="web"
+            android:textAlignment="viewStart"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/opening_time_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/padding_size_medium"
+        android:layout_marginLeft="@dimen/padding_size_medium"
+        android:layout_marginTop="@dimen/padding_size_medium"
+        android:layout_marginEnd="@dimen/padding_size_medium"
+        android:layout_marginRight="@dimen/padding_size_medium"
+        android:background="@drawable/rounded_layout_white_3dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_text_block18dp">
+
+
+        <TextView
+            android:id="@+id/opening_time_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/opening_time_label"
+            android:textAlignment="viewStart"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_size_medium"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/opening_time_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MON"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_size_medium"
+        android:layout_marginLeft="@dimen/padding_size_medium"
+        android:layout_marginTop="@dimen/padding_size_medium"
+        android:layout_marginEnd="@dimen/padding_size_medium"
+        android:layout_marginRight="@dimen/padding_size_medium"
+        android:layout_marginBottom="@dimen/padding_size_medium"
+        android:background="@drawable/rounded_layout_white_3dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageButton
+            android:id="@+id/btn_chat"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_3dp"
+            android:padding="15dp"
+            ads:srcCompat="@drawable/ic_chat_bubble_white_24px" />
+
+        <ImageButton
+            android:id="@+id/btn_phone"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_3dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_phone_black_24dp" />
+
+        <ImageButton
+            android:id="@+id/btn_map_direction"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_3dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_directions_black_24dp"
+            android:tint="@color/white"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_share"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_3dp"
+            android:padding="15dp"
+            android:src="@drawable/ic_send_white_24dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/adsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/maps_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:minHeight="300dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/mapping"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                tools:context=".activities.StoreDetailActivity" />
+
+            <LinearLayout
+                android:id="@+id/progressMapLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#eeeeee">
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    style="@style/SpinKitView.Circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="true"
+                    android:visibility="visible"
+                    ads:SpinKit_Color="@color/colorAccent" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="About_us">من نحن</string>
+    <string name="Account">الحساب</string>
+    <string name="Categories">الاقسام</string>
+    <string name="EventLike">أحداثي</string>
+    <string name="Favoris">المفضلة</string>
+    <string name="Home">الصفحة الرئيسية</string>
+    <string name="Login">تسجيل الدخول للدردشة</string>
+    <string name="Logout">الخروج</string>
+    <string name="ManageThings">إدارة المتجر</string>
+    <string name="MapStores">متاجر على الخرائط</string>
+    <string name="MapStoresMenu">متاجر على الخرائط</string>
+    <string name="MoreThan10km">+10 كم</string>
+    <string name="MoreThan2km">+2 كم</string>
+    <string name="MoreThan5km">+5 كم</string>
+    <string name="Notification">تنبيه</string>
+    <string name="Send_message">ارسل رسالة</string>
+    <string name="Settings">إعدادات</string>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"التوجه إلى المنزل"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"التنقل إلى أعلى"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"خيارات أكثر"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"تم"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"عرض الكل"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"اختيار تطبيق"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"إيقاف"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"تفعيل"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"حذف"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"فضاء"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"القائمة+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"بحث…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"محو طلب البحث"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"طلب بحث"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"البحث"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"إرسال طلب البحث"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"بحث صوتي"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"مشاركة مع <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"تصغير"</string>
+    <string name="about">من نحن</string>
+    <string name="addReview">إضافة تقييم</string>
+    <string name="alert_gps_dialog">Enable  GPS of your device</string>
+    <string name="app_name">متاجري</string>
+    <string name="app_privacy">سياسة الخصوصية</string>
+    <string name="app_term_of_uses">تعليمات الاستخدام</string>
+    <string name="authentication">إثبات الأصالة</string>
+    <string name="authentification_error_msg">اسم المستخدم وكلمة المرور غير صحيحين.</string>
+    <string name="begin_date">موعد البدء</string>
+    <string name="block">Block</string>
+    <string name="business_manager">ادارة اعمال</string>
+    <string name="call">مكالمة</string>
+    <string name="categories">الاقسام</string>
+    <string name="chat_notification_title">لديك رسالة جديدة</string>
+    <string name="check_network">تحقق من الشبكة</string>
+    <string name="check_nework">تحقق من اتصال الشبكة</string>
+    <string name="close">أغلق</string>
+    <string name="closed">مغلق</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"تفعيل"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"‏لن يعمل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تفعيل خدمات Google Play."</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"‏تفعيل خدمات Google Play"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"تثبيت"</string>
+    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي لا تتوفر على جهازك."</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"‏الحصول على خدمات Google Play"</string>
+    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"‏مدى توفّر خدمات Google Play"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"‏خطأ في خدمات Google Play"</string>
+    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"‏لدى <ns1:g id="APP_NAME">%1$s</ns1:g> مشكلة في خدمات Google Play. يُرجى إعادة المحاولة."</string>
+    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play التي لا يوفرها جهازك."</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"تحديث"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تحديث خدمات Google Play."</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"‏تحديث خدمات Google Play"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي يتم تحديثها حاليًا."</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"‏يجب توفر إصدار جديد من خدمات Google Play. سيتم تحديثها تلقائيًا قريبًا."</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"فتح على الهاتف"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"تسجل الدخول"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"‏تسجيل الدخول عبر Google"</string>
+    <string name="confirm_gps_relaunch">Confirm</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="current_location">الموقع الحالي</string>
+    <string name="description">وصف</string>
+    <string name="discount">خصم</string>
+    <string name="distance">مسافة</string>
+    <string name="do_you_want_to_change_your_location">هل تريد تغيير موقعك؟</string>
+    <string name="dp_view_event_on">افتح الحدث على التطبيق</string>
+    <string name="dp_view_offer_on">فتح العرض على التطبيق</string>
+    <string name="dp_view_store_on">افتح المتجر على التطبيق</string>
+    <string name="drawer_close">أغلق</string>
+    <string name="drawer_open">افتح</string>
+    <string name="editPassword">تحرير كلمة المرور</string>
+    <string name="editProfile">تعديل الملف الشخصي</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="enable_gps_map_direction">الرجاء تمكين GPS الخاص بك أولا</string>
+    <string name="enable_network">تمكين اتصال الشبكة في جهازك</string>
+    <string name="enable_network_map_direction">الرجاء تمكين الشبكة الخاصة بك</string>
+    <string name="enter_email">أدخل البريد الإلكتروني</string>
+    <string name="enter_full_name">أدخل الاسم الكامل</string>
+    <string name="enter_login">أدخل تسجيل الدخول</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="error">خطأ!</string>
+    <string name="error_try_later">حدث خطأ ما ، يرجى المحاولة لاحقًا!</string>
+    <string name="events_nearby">الأحداث القريبة</string>
+    <string name="events_result">نتائج الأحداث</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"متنوعة"</string>
+    <string name="featured">بارز</string>
+    <string name="fileUploading">جار التحميل ...</string>
+    <string name="find_new_neighbours">البحث عن الجيران الجدد</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="gallery">صالة عرض</string>
+    <string name="inbox">صندوق الوارد</string>
+    <string name="intro_slide_1_description">جرب مطاعم مختلفة قريبة ، ستوجهك الخريطة الطريق للحصول على عروض العروض الأكثر إثارة للاهتمام</string>
+    <string name="intro_slide_1_title">اعثر على المطعم بسرعة</string>
+    <string name="intro_slide_2_description">احضر الأحداث التي تنظمها بعض متاجرك المفضلة ، وشارك واحصل على إشعار فوري للحدث القادم</string>
+    <string name="intro_slide_2_title">حدث قادم</string>
+    <string name="intro_slide_3_description">العروض والترويج والخصم دائمًا وفقًا لتقديرك لاستكشاف كل متجر قريب.</string>
+    <string name="intro_slide_3_title">المتاجر القريبة</string>
+    <string name="intro_slide_4_description">استكشف التعليقات قبل التعامل مع أي متجر واترك متجرك أيضًا</string>
+    <string name="intro_slide_4_title">قيم أفضل متجر لديك</string>
+    <string name="join">انضم</string>
+    <string name="lessThan1km">أقل من 1 كم</string>
+    <string name="less_than_1_km">أقل من 1 كم</string>
+    <string name="load_more">تحميل المزيد</string>
+    <string name="location">موقعك</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="login_create_account">تسجيل الدخول  / إنشاء حساب</string>
+    <string name="login_first">سجل الدخول أولا</string>
+    <string name="login_required">تتطلب هذه العملية المصادقة</string>
+    <string name="logout_alert">تم تسجيل الخروج من حسابك، وذلك لأنه تم حظر حسابك أو حذفه \n مزيد من المعلومات اتصل بالمشرف</string>
+    <string name="mail">بريد</string>
+    <string name="mdtp_date_v1_monthyear">MMMM yyyy</string>
+    <string name="mdtp_date_v2_daymonthyear">EEE، dd MMM</string>
+    <string msgid="3968620852217927702" name="mdtp_day_picker_description">"شبكة الشهر مكونة من الأيام"</string>
+    <string msgid="6908431551612331381" name="mdtp_deleted_key">"تم حذف <ns1:g id="KEY">%1$s</ns1:g>"</string>
+    <string msgid="7007948707597430919" name="mdtp_done_label">"تم"</string>
+    <string msgid="7586639618712934060" name="mdtp_hour_picker_description">"شريط التمرير الدائري للساعات"</string>
+    <string msgid="2674929164900463786" name="mdtp_item_is_selected">"تم تحديد <ns1:g id="ITEM">%1$s</ns1:g>"</string>
+    <string msgid="6024811202872705251" name="mdtp_minute_picker_description">"شريط التمرير الدائري للدقائق"</string>
+    <string msgid="3973338219107019769" name="mdtp_select_day">"تحديد الشهر واليوم"</string>
+    <string msgid="7651068754188418859" name="mdtp_select_hours">"تحديد الساعات"</string>
+    <string msgid="8327182090226828481" name="mdtp_select_minutes">"تحديد الدقائق"</string>
+    <string msgid="2603330600102539372" name="mdtp_select_year">"تحديد العام"</string>
+    <string msgid="6963340404644587098" name="mdtp_year_picker_description">"قائمة الأعوام"</string>
+    <string name="myUpComingEvents">الأحداث القادمة</string>
+    <string name="my_events">أحداثي</string>
+    <string name="my_stores">متجري</string>
+    <string name="navigation_drawer_close">إغلاق</string>
+    <string name="navigation_drawer_open">افتح</string>
+    <string name="nbr_stores_message">%1$s متجر</string>
+    <string name="network_error">لا توجد شبكة! انقر لإعادة المحاولة</string>
+    <string name="network_not_available">تعذر تحميل البيانات من الخادم</string>
+    <string name="next">Suivant</string>
+    <string name="noDiscussions">لا مناقشة</string>
+    <string name="noImages">لا توجد صور</string>
+    <string name="noOffers">لا توجد عروض</string>
+    <string name="noReviews">لم يتم تقديم تعليقات</string>
+    <string name="no_feed_yet">لا يوجد محتوى حتى الآن</string>
+    <string name="no_message_inbox">لا توجد رسائل في بريدك الوارد حتى الآن! ابدأ الدردشة مع أصدقائك</string>
+    <string name="no_message_yet">لا توجد رسالة حتى الآن</string>
+    <string name="no_users">لا يوجد مستخدم</string>
+    <string name="notifications">إشعارات</string>
+    <string name="notify_me">أعلمني</string>
+    <string name="offer_end_at">   ينتهي العرض في %1$s</string>
+    <string name="offer_ended_at">%1$s إنتهى العرض في</string>
+    <string name="offer_start_at">%1$s يبدأ العرض في</string>
+    <string name="offers">عروض</string>
+    <string name="offers_nearby">العروض القريبة</string>
+    <string name="offers_result">نتائج العروض</string>
+    <string name="open_now">مفتوح الان</string>
+    <string name="open_only">مفتوح فقط</string>
+    <string name="open_time">مفتوح</string>
+    <string name="opening_time_label">مواعيد العمل</string>
+    <string name="options_exit">خروج</string>
+    <string name="order_by_geo">الموقع</string>
+    <string name="order_by_recent">حديث</string>
+    <string name="oups_no_item_found">لم يتم العثور على أي عنصر</string>
+    <string name="parameter">إعدادات</string>
+    <string name="people_around_me">الأشخاص من حولي</string>
+    <string name="people_nearby">الأشخاص القريبون</string>
+    <string name="permission_disabled_notice">تم تصميم هذا التطبيق للعمل بإذن الموقع إذا قمت بإلغاء هذا الإذن ، فقد تجد فيما بعد مشاكل التشغيل</string>
+    <string name="phone">هاتف</string>
+    <string name="photo">صورة</string>
+    <string name="places_autocomplete_clear_button">مسح البحث</string>
+    <string name="places_autocomplete_label">اختيار مكان</string>
+    <string name="places_autocomplete_no_results_for_query">لم يتم العثور على نتائج عن %1$s</string>
+    <string name="places_autocomplete_search_hint">بحث</string>
+    <string name="places_cancel">إلغاء</string>
+    <string name="places_powered_by_google">‏تدعمه Google</string>
+    <string name="places_search_error">يتعذر تحميل نتائج البحث.</string>
+    <string name="places_try_again">إعادة المحاولة</string>
+    <string name="pleaseWriteReview">يرجى كتابة التعليق</string>
+    <string name="price">السعر</string>
+    <string name="promo">عرض</string>
+    <string name="pseudo">إسم مستعار</string>
+    <string name="radius">الموقع المستهدف</string>
+    <string name="rateIt">تقييم</string>
+    <string name="rateUs">يرجى تقييم على التطبيق</string>
+    <string name="recent_offers">العروض الأخيرة</string>
+    <string name="refresh">تحديث</string>
+    <string name="reload">إعادة تحميل</string>
+    <string name="remind_me">ذكرني</string>
+    <string name="remind_me_msg">عن طريق النقر في ذكرني، سوف تتلقى إخطارا من هذا الحدث</string>
+    <string name="remove_from_bookmark">إزالة من الإشارات المرجعية</string>
+    <string name="retry">أعد المحاولة</string>
+    <string name="review_title">التعليقات</string>
+    <string name="reviews">التقييمات (%1$s)</string>
+    <string msgid="368094699078615544" name="s1">"حفظ الصورة"</string>
+    <string msgid="4550830452390689489" name="s2">"هل تريد السماح للإعلان بتخزين الصورة في معرض الصور؟"</string>
+    <string msgid="2435407834265420668" name="s3">"قبول"</string>
+    <string msgid="9167523597401839819" name="s4">"رفض"</string>
+    <string msgid="1566682516266724847" name="s5">"إنشاء حدث تقويم"</string>
+    <string msgid="5996672174517137271" name="s6">"هل تريد السماح للإعلان بإنشاء حدث تقويم؟"</string>
+    <string msgid="7163549807207034258" name="s7">"إعلان تجريبي"</string>
+    <string name="save">حفظ</string>
+    <string name="search">بحث</string>
+    <string name="searchOn">بحث</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"البحث"</string>
+    <string name="search_placeholder">البحث عن المطاعم والفنادق ...</string>
+    <string name="searching_for_stores_bearby">البحث عن المتاجر القريبة</string>
+    <string name="selectRating">يرجى الاختيار من نجمة واحدة إلى 5 نجوم</string>
+    <string name="select_category">اختر الفئة</string>
+    <string name="settings">إعدادات</string>
+    <string name="settings_app_infos">التطبيق</string>
+    <string name="settings_app_infos_title">إصدار التطبيق</string>
+    <string name="settings_notification_distance_dis">%1$s كم</string>
+    <string name="settings_notification_events">تلقي إخطار عندما يكون هناك حدث بالقرب منك</string>
+    <string name="settings_notification_events_title">إشعارات الأحداث القريبة</string>
+    <string name="settings_notification_messenger">تلقي إخطار عندما يكون هناك رسائل جديدة</string>
+    <string name="settings_notification_messenger_title">إشعارات المحادثة</string>
+    <string name="settings_notification_offers">تلقي إشعار العروض الخاصة</string>
+    <string name="settings_notification_offers_title">عرض الإشعارات</string>
+    <string name="settings_notification_stores">تلقي إخطار عندما يكون هناك متجر بالقرب منك</string>
+    <string name="settings_notification_stores_title"> الإخطارات للمتاجر القريبة</string>
+    <string name="settings_notification_upcomingevent">تلقي إشعار عند وجود حدث قادم جديد</string>
+    <string name="settings_notification_upcomingevent_title">حدث قادم</string>
+    <string name="settings_notifications">إخطارات</string>
+    <string name="shared_text">Shared from %1$s \n\n%2$s - %3$s \n\nGet it in your app \n %4$s</string>
+    <string name="show_more">عرض الكل</string>
+    <string name="skip">تخطى</string>
+    <string name="start">بداية</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="store_call_error">حدث خطأ في المكالمة الهاتفية</string>
+    <string name="store_not_found">لا يوجد</string>
+    <string name="store_to_far_map">أبعد من اللازم لعرض المسار</string>
+    <string name="stores_near_by">المتاجر بالقرب من</string>
+    <string name="stores_nearby">المتاجر القريبة</string>
+    <string name="stores_result">نتائج المتجر</string>
+    <string name="tab_events">الأحداث</string>
+    <string name="tab_offers">العروض</string>
+    <string name="tab_stores">المتاجر</string>
+    <string name="thankYou">شكرا لكم!</string>
+    <string name="today">اليوم</string>
+    <string name="top_categories">أهم فئات الشهر</string>
+    <string name="try_a_refresh_the_page">حاول تحديث الصفحة</string>
+    <string name="unblock">رفع الحظر</string>
+    <string name="unjoin">انضم</string>
+    <string name="upComingEventMessage">حدث قادم</string>
+    <string name="upComingEventsMessage">أحداث قادمة قريبا</string>
+    <string name="upcomingTag">القادمة</string>
+    <string name="version">الإصدار :</string>
+    <string name="website">موقع الكتروني</string>
+    <string name="writeReview">أكتب تعليقك هنا</string>
+    <string name="write_name_address_city">اكتب الاسم والعنوان والمدينة</string>
+    <string name="youHaveDiscussions">You have  %1$d discissions %2$d messages</string>
+    <string name="youHaveMessage">لديك رسالة جديدة</string>
+    <string name="you_ve_already_reviewd">لقد قمت بالتقييم مسبقا شكرا</string>
+    <string name="your_destination">وجهتك</string>
+</resources>

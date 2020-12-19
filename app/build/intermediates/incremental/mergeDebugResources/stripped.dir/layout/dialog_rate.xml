@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="50dp"
+        android:visibility="gone"
+        android:id="@+id/progressLayout"
+        android:minWidth="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            style="@style/SpinKitView.Circle"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:SpinKit_Color="@color/colorAccent" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="15dp"
+        android:id="@+id/mainLayout"
+        android:minWidth="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <io.techery.properratingbar.ProperRatingBar
+            android:id="@+id/lowerRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            app:prb_clickable="true"
+            app:prb_defaultRating="0"
+            app:prb_tickNormalDrawable="@drawable/ic_star_border_yellow_600_36dp"
+            app:prb_tickSelectedDrawable="@drawable/ic_star_yellow_600_36dp"
+            app:prb_totalTicks="5" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/pseudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/pseudo"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:met_baseColor="@color/gray"
+            app:met_errorColor="@color/red"
+            app:met_primaryColor="@color/colorPrimary" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="@string/writeReview"
+            android:padding="5dp"
+            android:textSize="15sp"
+            app:met_baseColor="@color/gray"
+            app:met_errorColor="@color/red"
+            app:met_primaryColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_margin="1dp"
+        android:id="@+id/addReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/addReview"
+        android:textColor="@color/colorWhite" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "117190528348",
+    "firebase_url": "https://directorio-delicias.firebaseio.com",
+    "project_id": "directorio-delicias",
+    "storage_bucket": "directorio-delicias.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117190528348:android:a793abf3113a28c49c4599",
+        "android_client_info": {
+          "package_name": "com.directoriodelicias.apps.delicias"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117190528348-4615vauj8b8mfvrdqqit5fa4qv38c6q8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqCAcdOLOLSAbmsB7C3mspc5CFW73WaVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117190528348-4615vauj8b8mfvrdqqit5fa4qv38c6q8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/v2_event_card_width"
+    android:layout_height="@dimen/v2_event_card_height"
+    android:layout_margin="@dimen/spacing_medium"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_2"
+                    app:siRadius="@dimen/badge_radius_xlarge" />
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start|top"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:background="@drawable/rounded_badge_xlarge"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_xsmall">
+
+                    <TextView
+                        android:textSize="@dimen/title_size_medium"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:id="@+id/day_calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="23"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:textStyle="italic"
+                        android:layout_marginTop="-4dp"
+                        android:layout_below="@id/day_calendar"
+                        android:textSize="@dimen/title_size_xsmall"
+                        android:textColor="@color/black"
+                        android:id="@+id/month_calendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:text="Aug"/>
+
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/featured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tag_size"
+                    android:layout_gravity="end|top"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:background="@drawable/rounded_badge_xlarge"
+                    android:backgroundTint="@color/colorFeatured"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/spacing_xsmall"
+                    android:paddingLeft="@dimen/spacing_xsmall"
+                    android:paddingTop="@dimen/spacing_xsmall"
+                    android:paddingEnd="@dimen/spacing_xsmall"
+                    android:paddingRight="@dimen/spacing_xsmall"
+                    android:paddingBottom="@dimen/spacing_xsmall"
+                    android:src="@drawable/ic_lnr_pushpin"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/upcoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|bottom"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:background="@drawable/rounded_layout_item"
+                    android:backgroundTint="@color/colorUpcomingEvent"
+                    android:padding="@dimen/spacing_small"
+                    android:text="@string/upcomingTag"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:paddingBottom="@dimen/spacing_xsmall"
+                    android:paddingTop="@dimen/spacing_xsmall"
+                    android:paddingRight="@dimen/spacing_xmedium"
+                    android:paddingEnd="@dimen/spacing_xmedium"
+                    android:paddingLeft="@dimen/spacing_xmedium"
+                    android:paddingStart="@dimen/spacing_xmedium"
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:background="@drawable/rounded_badge_xlarge"
+                    android:backgroundTint="@color/colorAccent"
+                    android:gravity="center"
+                    android:text="30 Km"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_xsmall">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="Lorem ipsum dolor "
+                        android:textSize="@dimen/title_size_medium"
+
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        android:textAlignment="viewStart"
+                        android:textSize="@dimen/title_size_small"
+                        android:textColor="@color/gray_field" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

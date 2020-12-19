@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="Home">الصفحة الرئيسية</string>
+    <string name="ManageThings">إدارة المتجر</string>
+    <string name="drawer_open">افتح</string>
+    <string name="drawer_close">أغلق</string>
+    <string name="search">بحث</string>
+    <string name="options_exit">خروج</string>
+    <string name="oups_no_item_found">لم يتم العثور على أي عنصر</string>
+    <string name="about">من نحن</string>
+    <string name="Favoris">المفضلة</string>
+    <string name="About_us">من نحن</string>
+    <string name="Settings">إعدادات</string>
+    <string name="MapStores">متاجر على الخرائط</string>
+    <string name="Login">تسجيل الدخول للدردشة</string>
+    <string name="Logout">الخروج</string>
+    <string name="parameter">إعدادات</string>
+    <string name="close">أغلق</string>
+    <string name="EventLike">أحداثي</string>
+    <string name="categories">الاقسام</string>
+
+
+    <string name="my_stores">متجري</string>
+    <string name="my_events">أحداثي</string>
+
+
+    <!--category--><![CDATA[
+    >
+    ]]>
+    <string name="Categories">الاقسام</string>
+
+    <!--event-->
+
+
+    <!--notification & messages-->
+    <string name="check_network">تحقق من الشبكة</string>
+    <string name="network_error">لا توجد شبكة! انقر لإعادة المحاولة</string>
+    <string name="check_nework">تحقق من اتصال الشبكة</string>
+    <string name="enable_network">تمكين اتصال الشبكة في جهازك</string>
+
+    <string name="editProfile">تعديل الملف الشخصي</string>
+
+    <!--store-->
+    <string name="store_to_far_map">أبعد من اللازم لعرض المسار</string>
+    <string name="store_call_error">حدث خطأ في المكالمة الهاتفية</string>
+
+    <!--messages settings-->
+
+    <string name="settings_notifications">إخطارات</string>
+    <string name="settings_app_infos">التطبيق</string>
+
+
+    <!-- OFFERS -->
+    <string name="settings_notification_offers">تلقي إشعار العروض الخاصة</string>
+    <string name="settings_notification_offers_title">عرض الإشعارات</string>
+
+
+    <!-- EVENTS -->
+    <string name="settings_notification_events">تلقي إخطار عندما يكون هناك حدث بالقرب منك</string>
+    <string name="settings_notification_events_title">إشعارات الأحداث القريبة</string>
+
+    <!-- STORES -->
+    <string name="settings_notification_stores">تلقي إخطار عندما يكون هناك متجر بالقرب منك</string>
+    <string name="settings_notification_stores_title"> الإخطارات للمتاجر القريبة</string>
+
+
+    <!-- MESSENGER -->
+    <string name="settings_notification_messenger">تلقي إخطار عندما يكون هناك رسائل جديدة</string>
+    <string name="settings_notification_messenger_title">إشعارات المحادثة</string>
+
+    <!-- DISTANCE -->
+    <string name="settings_notification_distance_dis">%1$s كم</string>
+
+    <!-- APP_INFOS -->
+    <string name="settings_app_infos_title">إصدار التطبيق</string>
+
+    <!--login & sign up-->
+
+    <string name="lessThan1km">أقل من 1 كم</string>
+    <string name="MoreThan2km">+2 كم</string>
+    <string name="MoreThan5km">+5 كم</string>
+    <string name="MoreThan10km">+10 كم</string>
+
+    <string name="description">وصف</string>
+
+    <string name="permission_disabled_notice">تم تصميم هذا التطبيق للعمل بإذن الموقع إذا قمت بإلغاء هذا الإذن ، فقد تجد فيما بعد مشاكل التشغيل</string>
+    <string name="save">حفظ</string>
+    <string name="find_new_neighbours">البحث عن الجيران الجدد</string>
+
+
+    <string name="youHaveMessage">لديك رسالة جديدة</string>
+    <string name="offers">عروض</string>
+    <string name="reviews">التقييمات (%1$s)</string>
+    <string name="noOffers">لا توجد عروض</string>
+    <string name="noReviews">لم يتم تقديم تعليقات</string>
+    <string name="addReview">إضافة تقييم</string>
+    <string name="settings">إعدادات</string>
+    <string name="pseudo">إسم مستعار</string>
+    <string name="error">خطأ!</string>
+
+    <string name="selectRating">يرجى الاختيار من نجمة واحدة إلى 5 نجوم</string>
+    <string name="pleaseWriteReview">يرجى كتابة التعليق</string>
+    <string name="writeReview">أكتب تعليقك هنا</string>
+    <string name="thankYou">شكرا لكم!</string>
+
+    <string name="searchOn">بحث</string>
+
+    <string name="email">البريد الإلكتروني</string>
+
+
+    <string name="people_around_me">الأشخاص من حولي</string>
+    <string name="promo">عرض</string>
+
+
+    <string name="fileUploading">جار التحميل ...</string>
+
+    <string name="rateUs">يرجى تقييم على التطبيق</string>
+    <string name="rateIt">تقييم</string>
+
+    <string name="you_ve_already_reviewd">لقد قمت بالتقييم مسبقا شكرا</string>
+
+    <string name="shared_text">Shared from %1$s \n\n%2$s - %3$s \n\nGet it in your app \n %4$s</string>
+    <string name="reload">إعادة تحميل</string>
+
+    <string name="MapStoresMenu">متاجر على الخرائط</string>
+    <string name="review_title">التعليقات</string>
+
+    <string name="load_more">تحميل المزيد</string>
+
+    <string name="logout_alert">تم تسجيل الخروج من حسابك، وذلك لأنه تم حظر حسابك أو حذفه \n مزيد من المعلومات اتصل بالمشرف</string>
+
+
+    <string name="app_name">متاجري</string>
+
+
+    <string name="offer_start_at">%1$s يبدأ العرض في</string>
+    <string name="offer_end_at">   ينتهي العرض في %1$s</string>
+    <string name="offer_ended_at">%1$s إنتهى العرض في</string>
+
+    <string name="tab_stores">المتاجر</string>
+    <string name="tab_offers">العروض</string>
+    <string name="tab_events">الأحداث</string>
+    <string name="your_destination">وجهتك</string>
+    <string name="refresh">تحديث</string>
+    <string name="no_users">لا يوجد مستخدم</string>
+    <string name="settings_notification_upcomingevent">تلقي إشعار عند وجود حدث قادم جديد</string>
+    <string name="settings_notification_upcomingevent_title">حدث قادم</string>
+    <string name="chat_notification_title">لديك رسالة جديدة</string>
+    <string name="authentification_error_msg">اسم المستخدم وكلمة المرور غير صحيحين.</string>
+    <string name="nbr_stores_message">%1$s متجر</string>
+    <string name="app_term_of_uses">تعليمات الاستخدام</string>
+    <string name="app_privacy">سياسة الخصوصية</string>
+    <string name="phone">هاتف</string>
+    <string name="featured">بارز</string>
+    <string name="mail">بريد</string>
+    <string name="today">اليوم</string>
+
+
+    <string name="upComingEventMessage">حدث قادم</string>
+    <string name="upComingEventsMessage">أحداث قادمة قريبا</string>
+    <string name="upcomingTag">القادمة</string>
+    <string name="myUpComingEvents">الأحداث القادمة</string>
+    <string name="gallery">صالة عرض</string>
+    <string name="noImages">لا توجد صور</string>
+    <string name="skip">تخطى</string>
+    <string name="start">بداية</string>
+    <string name="intro_slide_1_title">اعثر على المطعم بسرعة</string>
+    <string name="intro_slide_1_description">جرب مطاعم مختلفة قريبة ، ستوجهك الخريطة الطريق للحصول على عروض العروض الأكثر إثارة للاهتمام</string>
+    <string name="alert_gps_dialog">Enable  GPS of your device</string>
+    <string name="confirm_gps_relaunch">Confirm</string>
+    <string name="next">Suivant</string>
+    <string name="block">Block</string>
+    <string name="unblock">رفع الحظر</string>
+    <string name="less_than_1_km">أقل من 1 كم</string>
+    <string name="noDiscussions">لا مناقشة</string>
+    <string name="stores_near_by">المتاجر بالقرب من</string>
+    <string name="searching_for_stores_bearby">البحث عن المتاجر القريبة</string>
+    <string name="Account">الحساب</string>
+    <string name="Notification">تنبيه</string>
+    <string name="price">السعر</string>
+    <string name="discount">خصم</string>
+    <string name="editPassword">تحرير كلمة المرور</string>
+    <string name="dp_view_store_on">افتح المتجر على التطبيق</string>
+    <string name="dp_view_offer_on">فتح العرض على التطبيق</string>
+    <string name="dp_view_event_on">افتح الحدث على التطبيق</string>
+    <string name="search_placeholder">البحث عن المطاعم والفنادق ...</string>
+    <string name="do_you_want_to_change_your_location">هل تريد تغيير موقعك؟</string>
+    <string name="login_first">سجل الدخول أولا</string>
+    <string name="business_manager">ادارة اعمال</string>
+    <string name="enter_password">أدخل كلمة المرور</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="error_try_later">حدث خطأ ما ، يرجى المحاولة لاحقًا!</string>
+    <string name="remove_from_bookmark">إزالة من الإشارات المرجعية</string>
+    <string name="login_create_account">تسجيل الدخول  / إنشاء حساب</string>
+    <string name="no_message_inbox">لا توجد رسائل في بريدك الوارد حتى الآن! ابدأ الدردشة مع أصدقائك</string>
+    <string name="no_message_yet">لا توجد رسالة حتى الآن</string>
+    <string name="no_feed_yet">لا يوجد محتوى حتى الآن</string>
+    <string name="try_a_refresh_the_page">حاول تحديث الصفحة</string>
+    <string name="retry">أعد المحاولة</string>
+    <string name="network_not_available">تعذر تحميل البيانات من الخادم</string>
+    <string name="photo">صورة</string>
+    <string name="intro_slide_4_description">استكشف التعليقات قبل التعامل مع أي متجر واترك متجرك أيضًا</string>
+    <string name="intro_slide_3_description">العروض والترويج والخصم دائمًا وفقًا لتقديرك لاستكشاف كل متجر قريب.</string>
+    <string name="intro_slide_4_title">قيم أفضل متجر لديك</string>
+    <string name="intro_slide_3_title">المتاجر القريبة</string>
+    <string name="intro_slide_2_description">احضر الأحداث التي تنظمها بعض متاجرك المفضلة ، وشارك واحصل على إشعار فوري للحدث القادم</string>
+    <string name="intro_slide_2_title">حدث قادم</string>
+    <string name="enable_gps_map_direction">الرجاء تمكين GPS الخاص بك أولا</string>
+    <string name="enable_network_map_direction">الرجاء تمكين الشبكة الخاصة بك</string>
+    <string name="version">الإصدار :</string>
+    <string name="Send_message">ارسل رسالة</string>
+    <string name="youHaveDiscussions">You have  %1$d discissions %2$d messages</string>
+    <string name="store_not_found">لا يوجد</string>
+    <string name="navigation_drawer_open">افتح</string>
+    <string name="stores_nearby">المتاجر القريبة</string>
+    <string name="navigation_drawer_close">إغلاق</string>
+    <string name="show_more">عرض الكل</string>
+    <string name="offers_nearby">العروض القريبة</string>
+    <string name="events_nearby">الأحداث القريبة</string>
+    <string name="people_nearby">الأشخاص القريبون</string>
+    <string name="enter_full_name">أدخل الاسم الكامل</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="enter_email">أدخل البريد الإلكتروني</string>
+    <string name="enter_login">أدخل تسجيل الدخول</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="login_required">تتطلب هذه العملية المصادقة</string>
+    <string name="authentication">إثبات الأصالة</string>
+    <string name="open_time">مفتوح</string>
+    <string name="open_now">مفتوح الان</string>
+    <string name="closed">مغلق</string>
+    <string name="join">انضم</string>
+    <string name="call">مكالمة</string>
+    <string name="unjoin">انضم</string>
+    <string name="select_category">اختر الفئة</string>
+    <string name="write_name_address_city">اكتب الاسم والعنوان والمدينة</string>
+    <string name="website">موقع الكتروني</string>
+    <string name="begin_date">موعد البدء</string>
+    <string name="open_only">مفتوح فقط</string>
+    <string name="order_by_recent">حديث</string>
+    <string name="order_by_geo">الموقع</string>
+    <string name="location">موقعك</string>
+    <string name="notify_me">أعلمني</string>
+    <string name="remind_me">ذكرني</string>
+    <string name="remind_me_msg">عن طريق النقر في ذكرني، سوف تتلقى إخطارا من هذا الحدث</string>
+    <string name="stores_result">نتائج المتجر</string>
+    <string name="events_result">نتائج الأحداث</string>
+    <string name="offers_result">نتائج العروض</string>
+    <string name="current_location">الموقع الحالي</string>
+    <string name="recent_offers">العروض الأخيرة</string>
+    <string name="radius">الموقع المستهدف</string>
+    <string name="distance">مسافة</string>
+    <string name="opening_time_label">مواعيد العمل</string>
+    <string name="top_categories">أهم فئات الشهر</string>
+    <string name="notifications">إشعارات</string>
+    <string name="inbox">صندوق الوارد</string>
+
+
+</resources>

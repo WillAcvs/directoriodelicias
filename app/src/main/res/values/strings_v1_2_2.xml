@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- WE ADDED SOME MESSAGES IN UPDATE V1.2 YOU CAN PUT THEY IN YOUR MAIN STRINGS.XML -->
+    <string name="logout_alert">Your account is logged out, that because your account is blocked or deleted\nMore information contact the admin</string>
+
+</resources>

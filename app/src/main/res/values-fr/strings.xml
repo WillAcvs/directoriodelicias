@@ -1,0 +1,194 @@
+<resources>
+    <!-- update this 3 keys and compile your code from here  -->
+    <!-- Set your  application ID-->
+
+    <!--General -->
+
+    <!--Set your google map key-->
+    <string name="map_api_key0">@string/map_api_key</string>
+    <string name="Home">Accueil</string>
+    <string name="ManageThings">Gérer votre business</string>
+    <string name="drawer_open">Ouvrir</string>
+    <string name="drawer_close">Fermer</string>
+    <string name="search">Recherche</string>
+    <string name="options_exit">Sortir</string>
+    <string name="oups_no_item_found">Oups !! Aucun résultat </string>
+    <string name="about">À propos de nous</string>
+    <string name="Favoris">Favoris</string>
+    <string name="About_us">À propos de nous</string>
+    <string name="Settings">Paramètres</string>
+    <string name="MapStores">Boutique à proximité</string>
+    <string name="Login">Connexion Chat</string>
+    <string name="Logout">Déconnexion</string>
+    <string name="parameter">Paramètre</string>
+    <string name="close">Fermer</string>
+    <string name="EventLike">Mes évenements</string>
+    <string name="categories">Catégories</string>
+
+    <string name="my_stores">"Mes boutiques</string>
+    <string name="my_events">"Mes évenements</string>
+
+    <!--category--><![CDATA[
+    >
+    ]]>
+    <string name="Categories">Catégories</string>
+
+    <!--event-->
+
+
+    <!--notification & messages-->
+    <string name="check_network">Vérifiez votre connexion</string>
+    <string name="network_error">Pas de connexion internet! click to retry</string>
+    <string name="check_nework">Vérifiez votre connexion internet</string>
+    <string name="enable_network">Activez la connexion internet de votre téléphone</string>
+
+    <string name="editProfile">Editer le Profil</string>
+    <string name="MapStoresMenu">Géo boutiques</string>
+
+    <!--store-->
+    <string name="store_to_far_map">Trop loin pour afficher l\'itinéraire</string>
+    <string name="store_call_error">Erreur dans votre appel téléphonique</string>
+
+    <!--messages settings-->
+
+    <string name="settings_notifications">NOTIFICATIONS</string>
+    <string name="settings_app_infos">APPLICATION</string>
+
+
+    <!-- OFFERS -->
+    <string name="settings_notification_offers">Recevoir une notification d\'offres spéciales</string>
+    <string name="settings_notification_offers_title">Notifications d\'offres</string>
+
+
+    <!-- EVENTS -->
+    <string name="settings_notification_events">Recevoir une notification lorsqu\'il y a un événement près de chez vous</string>
+    <string name="settings_notification_events_title">Notifications d\'événements à proximité</string>
+
+    <!-- STORES -->
+    <string name="settings_notification_stores">Recevoir une notification lorsqu\'il y a un magasin près de chez vous</string>
+    <string name="settings_notification_stores_title">Notifications des magasins à proximité</string>
+
+
+    <!-- MESSENGER -->
+    <string name="settings_notification_messenger">Recevoir une notification quand il y a de nouveaux messages</string>
+    <string name="settings_notification_messenger_title">Notifications de messagerie</string>
+
+    <!-- DISTANCE -->
+    <string name="settings_notification_distance_dis">%1$s KM</string>
+
+    <!-- APP_INFOS -->
+    <string name="settings_app_infos_title">Version d\'application</string>
+
+    <!--login & sign up-->
+
+    <string name="lessThan1km">Moins que 1 km</string>
+    <string name="MoreThan2km">+2 Km</string>
+    <string name="MoreThan5km">+5 Km</string>
+    <string name="MoreThan10km">+10 Km</string>
+
+    <string name="description">Description</string>
+
+    <string name="permission_disabled_notice">Cette application est conçue pour fonctionner avec une autorisation d\'emplacement. Si vous annulez cette autorisation, vous risquez par la suite de rencontrer des problèmes de fonctionnement.</string>
+    <string name="save">Sauvegarder</string>
+    <string name="find_new_neighbours">Trouver de nouveaux voisins</string>
+
+
+    <string name="youHaveDiscussions">Vous avez %1$d discussion %2$d messages</string>
+    <string name="youHaveMessage">Vous avez un nouveau message</string>
+    <string name="offers">Offres</string>
+    <string name="reviews">Commentaires (%1$s)</string>
+    <string name="review_title">Commentaires</string>
+    <string name="noOffers">Aucune offre pour le moment </string>
+    <string name="noReviews">Aucun commentaire pour le moment</string>
+    <string name="addReview">Ajouter commentaire</string>
+    <string name="settings">Paramètres</string>
+    <string name="pseudo">Surnom</string>
+    <string name="error">Erreur!</string>
+
+    <string name="selectRating">Veuillez choisir entre 1 étoile et 5 étoiles</string>
+    <string name="pleaseWriteReview">S\'il vous plaît écrivez un commentaire</string>
+    <string name="writeReview">Rédiger un commentaire</string>
+    <string name="thankYou">Merci !</string>
+
+    <string name="searchOn">Recherche</string>
+
+    <string name="email">Email</string>
+
+
+    <string name="people_around_me">Personnes à ma proximité</string>
+    <string name="promo">PROMOTION</string>
+
+
+    <string name="fileUploading">Charger ...</string>
+
+    <string name="rateUs">Évaluez nous sur l\'application </string>
+    <string name="rateIt">Evaluez-le </string>
+
+    <string name="you_ve_already_reviewd">Vous avez déjà ajouté votre avis!</string>
+
+    <string name="shared_text">%1$s - Only on %2$s \n %3$s</string>
+    <string name="reload">Recharger</string>
+    <string name="mail">Email</string>
+    <string name="today">Aujourd\'hui</string>
+    <string name="Send_message">Envoyer un message</string>
+    <string name="version">Version :</string>
+    <string name="phone">Téléphone</string>
+    <string name="featured">Recommandé</string>
+    <string name="app_privacy">Politique de confidentialité</string>
+    <string name="app_term_of_uses">Conditions d\'utilisation</string>
+    <string name="upcomingTag">Prochainement</string>
+
+    <string name="offer_start_at">Début à %1$s</string>
+    <string name="offer_end_at">L\'offre se termine: %1$s</string>
+    <string name="offer_ended_at">Terminer à %1$s</string>
+
+
+    <string name="nbr_stores_message">%1$s boutiques</string>
+
+
+    <string name="tab_stores">Boutiques</string>
+    <string name="tab_offers">Offres</string>
+    <string name="tab_events">Événements</string>
+    <string name="your_destination">Votre destination</string>
+    <string name="refresh">Actualiser</string>
+    <string name="no_users">Aucun utilisateur</string>
+    <string name="settings_notification_upcomingevent">Recevoir une notification quand il y a un nouvel événement à venir</string>
+    <string name="settings_notification_upcomingevent_title" >Événement à venir</string>
+    <string name="chat_notification_title">Nouveau message reçu</string>
+    <string name="authentification_error_msg">Le nom d\'utilisateur et le mot de passe sont incorrects.</string>
+    <string name="enable_network_map_direction">S\'il vous plaît activer votre réseau</string>
+    <string name="enable_gps_map_direction">S\'il vous plaît activer votre GPS d\'abord</string>
+    <string name="gallery">Photos</string>
+    <string name="load_more">Voir plus</string>
+
+
+
+
+    <string name="skip">Passer</string>
+    <string name="start">Démarrer</string>
+    <string name="intro_slide_1_title">Trouver rapidement un restaurant</string>
+    <string name="intro_slide_1_description">Essayez différents restaurants à proximité, une carte vous guidera pour trouver les offres les plus intéressantes. </string>
+    <string name="intro_slide_2_title">Événement à venir</string>
+    <string name="intro_slide_2_description">Attend events organized by some of your favorite stores , participate and get a push notification for the upcoming event </string>
+    <string name="intro_slide_3_title">Boutiques à proximité</string>
+    <string name="intro_slide_3_description"> Offres, promo, rabais sont toujours à votre discrétion pour explorer pour chaque magasin.</string>
+    <string name="intro_slide_4_title">Évaluez votre meilleur magasin</string>
+    <string name="intro_slide_4_description"> Explorez les avis avant de fréquenter n\'importe quel magasin et laissez le vôtre également</string>
+    <string name="alert_gps_dialog">Vous devez autoriser l\'accès à l\'emplacement pour pouvoir utiliser l\'application. Veuillez réessayer et cliquer sur OK.</string>
+    <string name="confirm_gps_relaunch">Réessayer</string>
+    <string name="next">Suivant</string>
+    <string name="block">Block</string>
+    <string name="unblock">Unblock</string>
+    <string name="less_than_1_km">Less than 1 km</string>
+    <string name="noDiscussions">No Discussion</string>
+    <string name="stores_near_by">Stores Near by</string>
+    <string name="searching_for_stores_bearby">Searching for stores nearby</string>
+    <string name="Account">Account</string>
+    <string name="Notification">Notification</string>
+    <string name="price">Price</string>
+    <string name="discount">Discount</string>
+    <string name="photo">Photo</string>
+    <string name="editPassword">Edit Password</string>
+
+
+</resources>

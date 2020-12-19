@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="category_width">80dp</dimen>
+    <dimen name="slider_height">200dp</dimen>
+
+    <dimen name="v1_store_card_height">160dp</dimen>
+    <dimen name="v1_offer_card_height">200dp</dimen>
+    <dimen name="v1_event_card_height">160dp</dimen>
+
+
+    <dimen name="v2_store_card_width">200dp</dimen>
+    <dimen name="v2_offer_card_width">160dp</dimen>
+    <dimen name="v2_event_card_width">180dp</dimen>
+    <dimen name="v2_category_card_width">80dp</dimen>
+
+
+    <dimen name="v2_offer_card_height">160dp</dimen>
+    <dimen name="v2_store_card_height">250dp</dimen>
+    <dimen name="v2_event_card_height">200dp</dimen>
+    <dimen name="v2_category_card_height">80dp</dimen>
+
+
+    <dimen name="tab_height">40dp</dimen>
+
+
+    <item name="size_msg_text" type="dimen">14sp</item>
+    <item name="size_msg_textbox" type="dimen">15sp</item>
+    <item name="nbr_gallery_cols" type="integer">10</item>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="dots_margin_bottom">20dp</dimen>
+    <dimen name="img_width_height">120dp</dimen>
+    <dimen name="slide_title">30dp</dimen>
+    <dimen name="slide_desc">16dp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+
+
+    <!--genaral spacing-->
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+
+
+
+    <dimen name="badge_radius_xlarge">8dp</dimen>
+    <dimen name="badge_radius_large">5dp</dimen>
+    <dimen name="badge_radius_medium">3dp</dimen>
+
+    <dimen name="padding_size_large">20dp</dimen>
+    <dimen name="padding_size_medium">10dp</dimen>
+    <dimen name="button_radius_small">3dp</dimen>
+
+
+    <dimen name="title_size_xlarge">20sp</dimen>
+    <dimen name="title_size_large">18sp</dimen>
+    <dimen name="title_size_medium">14sp</dimen>
+    <dimen name="title_size_xmedium">16sp</dimen>
+    <dimen name="title_size_small">12sp</dimen>
+
+    <dimen name="padding_text_block18dp">18dp</dimen>
+    <dimen name="title_size_xsmall">8sp</dimen>
+
+    <dimen name="rounded_radius_small">6dp</dimen>
+    <dimen name="tag_size">25dp</dimen>
+    <dimen name="header_home_size">160dp</dimen>
+    <dimen name="search_box_size">50dp</dimen>
+    <dimen name="offer_filter_checkbox_size">40dp</dimen>
+
+
+</resources>

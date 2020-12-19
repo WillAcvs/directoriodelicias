@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchOffers"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_small"
+    android:visibility="visible">
+
+    <!--Buttons search filter Price / Discount-->
+    <LinearLayout
+        android:id="@+id/btnsOffersPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/price_offer_btn"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/btn_rect_outline"
+            android:text="@string/price"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+        <Button
+            android:id="@+id/discount_offer_btn"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/btn_rect_outline"
+            android:text="@string/discount"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+    </LinearLayout>
+
+    <!--Buttons search filter Price range -->
+    <LinearLayout
+        android:id="@+id/btnsOffersPriceFormat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/price_one_number"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="price_one_number"
+            android:text="@string/price_one_number"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+        <Button
+            android:id="@+id/price_two_numbers"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="price_two_numbers"
+            android:text="@string/price_two_numbers"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+        <Button
+            android:id="@+id/price_three_numbers"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="price_three_numbers"
+            android:text="@string/price_three_numbers"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+
+        <Button
+            android:id="@+id/price_four_numbers"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/spacing_small"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="price_four_numbers"
+            android:text="@string/price_four_numbers"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+    </LinearLayout>
+
+    <!--Buttons search filter Discount range -->
+    <LinearLayout
+        android:id="@+id/btnsOffersDiscountProps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/spacing_medium"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/discount_less_than_25"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/btn_rect_outline"
+            android:focusable="true"
+            android:tag="discount_less_than_25"
+            android:text="@string/discount_less_than_25"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+        <Button
+            android:id="@+id/discount_less_than_50"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="discount_less_than_50"
+            android:text="@string/discount_less_than_50"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+        <Button
+            android:id="@+id/discount_less_than_75"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="discount_less_than_75"
+            android:text="@string/discount_less_than_75"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+
+
+        <Button
+            android:id="@+id/discount_less_than_100"
+            style="@style/Button.Primary.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/offer_filter_checkbox_size"
+            android:layout_margin="@dimen/spacing_small"
+            android:layout_weight="1"
+            android:background="@drawable/btn_rect_outline"
+            android:tag="discount_less_than_100"
+            android:text="@string/discount_less_than_100"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_rect_outline_text" />
+    </LinearLayout>
+
+
+</LinearLayout>

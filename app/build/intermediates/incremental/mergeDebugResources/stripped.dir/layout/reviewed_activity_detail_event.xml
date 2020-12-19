@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <include layout="@layout/include_event_header"/>
+                    <include layout="@layout/include_event_content"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/error"
+            layout="@layout/include_layout_mange_error" />
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/empty"
+            layout="@layout/include_layout_mange_empty_discussion" />
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/include_event_header_placeholder" />
+
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar_transparent" />
+
+    </FrameLayout>
+
+
+
+
+
+
+
+</LinearLayout>

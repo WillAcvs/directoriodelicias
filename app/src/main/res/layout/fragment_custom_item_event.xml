@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_middle"
+    android:layout_marginEnd="@dimen/spacing_middle"
+    android:layout_marginBottom="@dimen/spacing_middle"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/custom_bg"
+    app:cardCornerRadius="@dimen/rounded_radius_small"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/v1_event_card_height">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:minHeight="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_2" />
+
+
+            <ImageView
+                android:id="@+id/featured"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tag_size"
+                android:layout_gravity="start|top"
+                android:layout_margin="@dimen/spacing_small"
+                android:background="@drawable/rounded_badge_xlarge"
+                android:gravity="center"
+                android:paddingStart="@dimen/spacing_xsmall"
+                android:paddingLeft="@dimen/spacing_xsmall"
+                android:paddingTop="@dimen/spacing_xsmall"
+                android:paddingEnd="@dimen/spacing_xsmall"
+                android:paddingRight="@dimen/spacing_xsmall"
+                android:paddingBottom="@dimen/spacing_xsmall"
+                android:src="@drawable/ic_lnr_pushpin"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:backgroundTint="@color/colorFeatured" />
+
+            <TextView
+                android:id="@+id/upcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:layout_margin="@dimen/spacing_medium"
+                android:background="@drawable/rounded_layout_item"
+                android:backgroundTint="@color/colorUpcomingEvent"
+                android:padding="@dimen/spacing_medium"
+                android:text="@string/upcomingTag"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginRight="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:background="@drawable/rounded_layout_item"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                android:paddingStart="@dimen/spacing_middle"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingTop="@dimen/spacing_small"
+                android:paddingEnd="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:paddingBottom="@dimen/spacing_small"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!--  <ImageView
+                  android:layout_width="35dp"
+                  android:layout_height="35dp"
+                  android:layout_gravity="bottom|end"
+                  android:layout_marginEnd="@dimen/spacing_mxlarge"
+                  android:background="@drawable/rounded_badge"
+                  android:backgroundTint="@color/green_400"
+                  android:padding="@dimen/spacing_medium"
+                  android:src="@drawable/ic_event_note_white_18dp" />-->
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/spacing_middle"
+                android:background="@drawable/rounded_layout_item"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_xsmall">
+
+                <TextView
+                    android:id="@+id/day_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center_horizontal"
+                    android:text="23"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/title_size_xmedium"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/month_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:gravity="center_horizontal"
+                    android:text="Aug"
+                    android:textColor="@color/colorFeatured"
+                    android:textSize="@dimen/title_size_small"
+                    android:textStyle="italic" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="@dimen/spacing_middle"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="Lorem ipsum dolor "
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/item_subtitle_color" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/join_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="40dp"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:padding="@dimen/spacing_medium"
+        app:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        app:fabCustomSize="50dp"
+        app:srcCompat="@drawable/ic_event_note_white_18dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/joined_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="40dp"
+        android:outlineAmbientShadowColor="@android:color/transparent"
+        android:outlineSpotShadowColor="@android:color/transparent"
+        android:padding="@dimen/spacing_medium"
+        app:backgroundTint="@color/lightGreen"
+        app:borderWidth="0dp"
+        app:fabCustomSize="50dp"
+        app:srcCompat="@drawable/ic_event_note_white_18dp" />
+
+
+</androidx.cardview.widget.CardView>

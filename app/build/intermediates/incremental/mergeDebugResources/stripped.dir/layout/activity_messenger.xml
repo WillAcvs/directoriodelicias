@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_message_layout">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/no_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listdiscussion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scrollbars="none"
+            android:scrollbarStyle="outsideOverlay">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:minHeight="50dp"
+            android:background="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:padding="12dp"
+                android:textSize="@dimen/size_msg_textbox"
+                android:inputType="text|textMultiLine|textCapSentences"
+                android:background="@color/colorWhite"
+                android:id="@+id/message_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/Send_message"
+                android:maxLines="6"/>
+
+            <ImageButton
+                android:background="@color/colorPrimary"
+                android:id="@+id/send_button"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:contentDescription="Send"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/include_layout_mange_loading" android:id="@+id/loading"/>
+    <include layout="@layout/include_layout_mange_error" android:id="@+id/error"/>
+    <include layout="@layout/include_layout_mange_empty_discussion" android:id="@+id/empty"/>
+
+
+</LinearLayout>

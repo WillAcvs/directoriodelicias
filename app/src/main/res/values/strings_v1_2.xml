@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- WE ADDED SOME MESSAGES IN UPDATE V1.2 YOU CAN PUT THEY IN YOUR MAIN STRINGS.XML -->
+
+    <string name="MapStoresMenu">Geo Stores</string>
+    <string name="review_title">Reviews</string>
+
+    <string name="load_more">Load More</string>
+
+
+</resources>

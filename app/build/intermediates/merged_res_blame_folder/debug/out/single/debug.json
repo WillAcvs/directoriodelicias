@@ -1,0 +1,1378 @@
+[
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_bg_bottom_to_top_70.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\gradient_bg_bottom_to_top_70.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_horizontal_list_store.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_horizontal_list_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_img_no_chat.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\img_no_chat.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_3.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\intro_slide_3.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ratingbar_filled.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ratingbar_filled.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_custom_item_event.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_custom_item_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_loading_icon_manage.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\loading_icon_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_refresh_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_refresh_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_item_discussion_receiver.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\border_item_discussion_receiver.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_close_grey_600_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_close_grey_600_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_layout_mange_empty_discussion.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_layout_mange_empty_discussion.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_event_note_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_event_note_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_warning_red_500_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_warning_red_500_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_chat_bubble_white_24px.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_chat_bubble_white_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_notification_chat_viewpager.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_notification_chat_viewpager.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_custom_item_event_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_custom_item_event_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_v2_appbar_detail_gradient.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\v2_appbar_detail_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_reviewed_activity_detail_event.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\reviewed_activity_detail_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_star_amber_500_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_star_amber_500_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_rate.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\dialog_rate.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_4.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\intro_slide_4.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_rounded_white_outline.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\btn_rounded_white_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_star_border_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_star_border_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_list_discussion_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\layout_list_discussion_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_rate_review_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_rate_review_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_store_review_load_more.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\item_store_review_load_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_lnr_pushpin.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_lnr_pushpin.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_rect_outline.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\btn_rect_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_baseline_dehaze_white_24.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\baseline_dehaze_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_custom_search_stores_layout.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_custom_search_stores_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_star_border_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_star_border_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_badge_xlarge.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_badge_xlarge.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_close_grey_600_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_close_grey_600_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_warning_red_500_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_warning_red_500_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_montserrat_regular.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\montserrat_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonstateslayer1.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\buttonstateslayer1.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_view_image_marker_map.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\view_image_marker_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_placeholder_item_store.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_placeholder_item_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_notifyme_sheet.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\notifyme_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_event_note_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_event_note_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_search_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_search_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_slider_item_image.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_slider_item_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_rounded_layout_white_3dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\rounded_layout_white_3dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_profile_vp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_profile_vp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_appbar_setting.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\appbar_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_logo_nearbystores.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_action_logo_nearbystores.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_store_content.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_store_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_user.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\layout_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_warning_red_500_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_warning_red_500_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_google_maps_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_google_maps_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_offer_header.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_offer_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_event_content.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_event_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_close_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_close_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_message_sender.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\custom_message_sender.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_gallery.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_star_border_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_star_border_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image_2.jpg.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\image_2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_2.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\intro_slide_2.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_more_vert.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_more_vert.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_rate_review_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_rate_review_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_montserrat_medium.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\montserrat_medium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_white_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_person_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_close_grey_600_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_close_grey_600_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\anim_lefttoright_enter.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\anim\\lefttoright_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_store_header_placeholder.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_store_header_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_messenger_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\messenger_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_warning_red_500_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_warning_red_500_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_item_selector_rv.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\item_selector_rv.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_placeholder_item_event.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_placeholder_item_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_result_filter.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_result_filter.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_event_note_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_event_note_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_fastfood_24px.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_baseline_fastfood_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_place_autocomplet.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\dialog_place_autocomplet.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_layout_mange_error.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_layout_mange_error.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_lnr_pushpin.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_lnr_pushpin.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_search_custom.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_search_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_custom_search.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_custom_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_slider_item_placeholder.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_slider_item_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_users.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_list_users.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_star_border_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_star_border_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_placeholder_item_offer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_placeholder_item_offer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_logo_nearbystores.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_logo_nearbystores.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\anim_righttoleft_enter.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\anim\\righttoleft_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_home_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_left_1dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\border_left_1dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_userbuttonstyle.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\userbuttonstyle.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_item_category_rect.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_item_category_rect.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_map.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_map.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_about.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_arrow_forward_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_arrow_forward_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_youtube.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\youtube.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_bg_bottom_to_top_50.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\gradient_bg_bottom_to_top_50.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_shape.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\round_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_badge.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_bookmark_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_bookmark_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_baseline_dehaze_white_24.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\baseline_dehaze_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_event_header.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_event_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_star_border_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_star_border_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_store_review.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\item_store_review.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_map_main.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_map_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_notification_more.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\menu_notification_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_bg_bottom_to_top.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\gradient_bg_bottom_to_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_logo_nearbystores.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_action_logo_nearbystores.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_add_circle_outline_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_add_circle_outline_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\color_custom_tab_icon.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\color\\custom_tab_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_layout_item.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_layout_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_image_fullscreen_preview.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\image_fullscreen_preview.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_detail_event_calendar.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_detail_event_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_horizontal_list_events.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_horizontal_list_events.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_badge_shimmer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_badge_shimmer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_login.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_refresh_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_refresh_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_date_calendar.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_date_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_layout_item_small.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_layout_item_small.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_add_circle_outline_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_add_circle_outline_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_messenger.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_messenger.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_home_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_google_maps_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_google_maps_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_main_activity.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_profile_signup.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_profile_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_location_marker.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_location_marker.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_directions_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_directions_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_close_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_close_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_directions_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_directions_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\anim_righttoleft_exit.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\anim\\righttoleft_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_home_header.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_home_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_search_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_search_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_splash_backgound.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\splash_backgound.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_item_category.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_item_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_gallery.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonstateslayer2_with_border2.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\buttonstateslayer2_with_border2.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_star_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_star_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_close_grey_600_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_close_grey_600_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_lnr_pushpin.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_lnr_pushpin.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_send_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_send_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_lnr_pushpin.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_lnr_pushpin.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_close_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_close_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_store_custom_item_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_store_custom_item_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_reviewed_activity_detail_store.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\reviewed_activity_detail_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_v2_menu_bottom_navigation.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\v2_menu_bottom_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_btm_notif_badge.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\nav_btm_notif_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_horizontal_list_categories.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_horizontal_list_categories.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_offer_header_placeholder.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_offer_header_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_authentication.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_authentication.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonstateslayer2.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\buttonstateslayer2.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_white_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_notifications_white_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\anim_lefttoright_exit.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\anim\\lefttoright_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_access_time_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_access_time_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_montserrat_thin.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\montserrat_thin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_reviews_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\reviews_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_star_15dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_star_15dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_item_event.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_item_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_event_header_placeholder.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_event_header_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_offer_content.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_offer_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_refresh_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_refresh_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_placeholder_item_gallery.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_placeholder_item_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_arrow_forward_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_arrow_forward_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_notifyme_sheet.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout-v26\\notifyme_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_opensans_regular.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\opensans_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_profile_password.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_profile_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_transparent.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\app_bar_transparent.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_access_time_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_access_time_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_userbuttonstyle_with_border2.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\userbuttonstyle_with_border2.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_event_note_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_event_note_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_business_manager_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\business_manager_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_categories.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_categories.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout-xlarge_v2_app_bar_detail_item.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout-xlarge\\v2_app_bar_detail_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_rect_outline_text.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\btn_rect_outline_text.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_event_note_24px.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_baseline_event_note_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_circle_outline.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\shape_circle_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_def_logo.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\def_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_placeholder_item_category_rect.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_placeholder_item_category_rect.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_horizontal_list_gallery.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_horizontal_list_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_montserrat_bold.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\montserrat_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_star_border_yellow_700_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_star_border_yellow_700_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_directions_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_directions_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_box_search.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_box_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_refresh_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_refresh_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_slider_viewpager.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_slider_viewpager.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_custom_item_offer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_custom_item_offer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_store_gallery_horizontal.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_store_gallery_horizontal.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_profile_edit.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_profile_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_def_background.jpg.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\def_background.jpg"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_star_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_star_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_close_grey_600_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_close_grey_600_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_placeholder_item_user.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_placeholder_item_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_bookmark_border_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_bookmark_border_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_no_internet_found.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\no_internet_found.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_icon_bg.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\navigation_icon_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_baseline_dehaze_white_24.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\baseline_dehaze_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_store_offer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\item_store_offer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_layout_mange_empty.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_layout_mange_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_store_list.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_store_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_notification.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_offer_custom_item_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_offer_custom_item_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_star_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_star_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_close_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_close_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_opensans_italic.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\opensans_italic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_custom_search_filter_modules.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_custom_search_filter_modules.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_store_offers.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_store_offers.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_menu_custom_row_drawer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\menu_custom_row_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_message_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\custom_message_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_notification_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\item_notification_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_activity_main.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_include_drawer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_include_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_tab_icon1.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\custom_tab_icon1.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_item_user.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_item_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ratingbar.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ratingbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_user_option.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\user_option.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_navigation_drawer_header.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\navigation_drawer_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_advanced_web_view.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\advanced_web_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_store_reviews.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_store_reviews.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_rate_review_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_rate_review_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_detail_event_btn_quick_access.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_detail_event_btn_quick_access.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_button_3dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\rounded_button_3dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_item_store.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_item_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_error_manage.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_error_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_tab_layout.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\border_tab_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_people_list.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_people_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_maps_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\maps_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_lock_open_black_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_lock_open_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_v2_profile_bottom_navigation.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\v2_profile_bottom_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_bg_top_to_bottom_70.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\gradient_bg_top_to_bottom_70.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slider_activity.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\intro_slider_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_list_discussion.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\layout_list_discussion.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_event_liked.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_event_liked.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_bg_notify.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\bg_notify.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_access_time_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_access_time_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_custom_search_events_layout.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_custom_search_events_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_home.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_empty_list_manage.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_empty_list_manage.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_star_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_star_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_no_item_cactus.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\bg_no_item_cactus.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_store_mall_directory_24px.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_baseline_store_mall_directory_24px.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_directions_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_directions_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_photo_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_photo_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_arrow_forward_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_arrow_forward_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_cat_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\cat_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_add_circle_outline_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_add_circle_outline_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_notification.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\item_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_baseline_dehaze_white_24.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\baseline_dehaze_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_custom_bg.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-v21\\custom_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_rate_review_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_rate_review_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_app_bar.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_app_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_item_offer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_item_offer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_profile.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_location_on_black_24dp.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_location_on_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_store_header.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_store_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_action_logo_nearbystores.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_action_logo_nearbystores.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\app_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_access_time_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_access_time_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_add_circle_outline_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_add_circle_outline_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_baseline_dehaze_white_24.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\baseline_dehaze_white_24.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\xml_settings.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\xml\\settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_warning_red_500_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_warning_red_500_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_close_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_close_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_offers_list.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_offers_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_custom_gallery.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\item_custom_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_share.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_bookmark_plus_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_bookmark_plus_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dialog_costum.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_dialog_costum.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_bookmark_remove_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_bookmark_remove_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_menu_background.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\navigation_menu_background.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_userbuttonstyle.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\userbuttonstyle.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_border_item_discussion_sender.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\border_item_discussion_sender.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_search_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_search_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_xxxxxx.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\xxxxxx.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_include_layout_mange_loading.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\include_layout_mange_loading.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_arrow_forward_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_arrow_forward_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_montserrat_italic.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\montserrat_italic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_phone_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_phone_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_bookmarks.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_bookmarks.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_horizontal_list_offers.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_horizontal_list_offers.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_search.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\dialog_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_reviews.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_reviews.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_color_state_primary.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\color_state_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_app_bar_detail_item.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_app_bar_detail_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_directions_black_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_directions_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_message_receiver.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\custom_message_receiver.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_main.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_msg_layout.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\dialog_msg_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_access_time_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_access_time_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_main_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_profile_placeholder.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\profile_placeholder.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_bookmark_plus_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_bookmark_plus_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_category.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_logo_nearbystores.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_logo_nearbystores.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_circle.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\shape_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_add_a_photo.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_add_a_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gradient_bg_top_to_bottom_50.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\gradient_bg_top_to_bottom_50.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ratingbar_empty.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ratingbar_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_home_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_all_montserrat.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\all_montserrat.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_event_list.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_event_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_custom_item_store.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_custom_item_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_add_circle_outline_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_add_circle_outline_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_intro_slide_1.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\intro_slide_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_marker.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_marker.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_store_list_activity.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\store_list_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_marker.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_marker.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_v2_toolbar_gradient.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\v2_toolbar_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout-large_main_activity.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout-large\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_facebook.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\facebook.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_circular_view.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\circular_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_bookmark_remove_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_bookmark_remove_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_horizontal_list_users.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_horizontal_list_users.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_image_slider.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_image_slider.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_refresh_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_refresh_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_store_favortie.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_store_favortie.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_inbox.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_inbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_arrow_back_18.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_18.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_send_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-hdpi\\ic_send_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_card_item_store.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_card_item_store.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_event_note_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_event_note_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\menu_home_menu.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\menu\\home_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_buttonstateslayer1_with_border2.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\buttonstateslayer1_with_border2.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\font_opensans_bold.ttf.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\font\\opensans_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_marker.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\ic_marker.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_navigation_drawer_content.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\navigation_drawer_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_arrow_forward_white_18dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_arrow_forward_white_18dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_reviewed_activity_detail_offer.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\reviewed_activity_detail_offer.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_navigation_bottom.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_navigation_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_custom_bg.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\custom_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_rate_review_white_24dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xhdpi\\ic_rate_review_white_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout-xlarge_main_activity.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout-xlarge\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_red_star_half.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-xxhdpi\\red_star_half.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_user_list.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\fragment_user_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_slider.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\activity_slider.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_rounded.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable\\btn_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_star_yellow_600_36dp.png.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\drawable-mdpi\\ic_star_yellow_600_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\build\\intermediates\\res\\merged\\debug\\layout_v2_fragment_custom_search_offers_layout.xml.flat",
+        "source": "C:\\Users\\4darq\\Desktop\\directoriodelicias\\app movil\\app_directoriodelicias\\app\\src\\main\\res\\layout\\v2_fragment_custom_search_offers_layout.xml"
+    }
+]

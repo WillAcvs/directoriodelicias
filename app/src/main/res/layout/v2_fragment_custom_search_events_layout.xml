@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchStores"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_small"
+
+    android:visibility="visible">
+
+
+    <LinearLayout
+
+        android:layout_marginLeft="@dimen/spacing_middle"
+        android:layout_marginStart="@dimen/spacing_middle"
+        android:layout_marginRight="@dimen/spacing_middle"
+        android:layout_marginEnd="@dimen/spacing_middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/open_only"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/openStatusCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorAccent" />
+    </LinearLayout>
+
+</LinearLayout>

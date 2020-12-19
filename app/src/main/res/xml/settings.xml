@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/settings_notifications"
+        android:key="pref_key_notification_settings">
+
+        <CheckBoxPreference
+            android:key="notif_offers"
+            android:summary="@string/settings_notification_offers"
+            android:title="@string/settings_notification_offers_title"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="notif_nearby_events"
+            android:summary="@string/settings_notification_events"
+            android:title="@string/settings_notification_events_title"
+            android:defaultValue="true" />
+
+
+        <CheckBoxPreference
+            android:key="notif_nearby_stores"
+            android:summary="@string/settings_notification_stores"
+            android:title="@string/settings_notification_stores_title"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="notif_messenger"
+            android:summary="@string/settings_notification_messenger"
+            android:title="@string/settings_notification_messenger_title"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="notif_upcomingevent"
+            android:summary="@string/settings_notification_upcomingevent"
+            android:title="@string/settings_notification_upcomingevent_title"
+            android:defaultValue="true" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="@string/settings_app_infos"
+        android:key="pref_app_infos">
+
+
+        <Preference
+            android:key="app_term_of_uses"
+            android:title="@string/app_term_of_uses" />
+
+        <Preference
+            android:key="app_privacy"
+            android:title="@string/app_privacy" />
+
+        <Preference
+            android:key="app_version"
+            android:summary="@string/settings_app_infos_title"
+            android:title="@string/settings_app_infos_title" />
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

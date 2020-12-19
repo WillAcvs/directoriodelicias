@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btnsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_tab_layout"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_weight="1"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:layout_marginEnd="1dp"
+        android:text="@string/join"
+        android:textColor="@color/white"
+        android:tint="@color/white"
+        android:visibility="visible"/>
+
+
+
+    <Button
+        android:id="@+id/unjoinBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/lightGreen"
+        android:layout_marginEnd="1dp"
+        android:padding="10dp"
+        android:text="@string/unjoin"
+        android:textColor="@color/white"
+        android:tint="@color/defaultColor"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/phoneBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="@string/call"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/webBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:text="@string/website"
+        android:textColor="@color/white"
+        android:tint="@color/white"
+        android:visibility="visible" />
+
+</LinearLayout>

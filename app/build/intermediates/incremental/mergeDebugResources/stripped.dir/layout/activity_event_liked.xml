@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:id="@+id/event_content"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        </LinearLayout>
+
+
+    <include layout="@layout/loading_icon_manage" android:id="@+id/loading"/>
+    <include layout="@layout/fragment_error_manage" android:id="@+id/error"/>
+    <include layout="@layout/fragment_empty_list_manage" android:id="@+id/empty"/>
+
+
+
+</LinearLayout>

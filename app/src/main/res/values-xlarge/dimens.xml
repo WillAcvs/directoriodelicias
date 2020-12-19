@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <item name="size_msg_text" type="dimen">20sp</item>
+    <item name="size_msg_textbox" type="dimen">22sp</item>
+
+
+</resources>

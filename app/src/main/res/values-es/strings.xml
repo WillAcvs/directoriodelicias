@@ -1,0 +1,185 @@
+<resources>
+    <!-- update this 3 keys and compile your code from here  -->
+    <!-- Set your  application ID-->
+
+    <!--General -->
+    <string name="Home">Inicio</string>
+    <string name="ManageThings">Publicar</string>
+    <string name="drawer_open">Abierto</string>
+    <string name="drawer_close">Cerrado</string>
+    <string name="search">Buscar</string>
+    <string name="options_exit">Salida</string>
+    <string name="oups_no_item_found">Oh !! Ningún artículo encontrado</string>
+    <string name="about">Nosotros </string>
+    <string name="Favoris">Favoritos</string>
+    <string name="About_us">Sobre nosotros</string>
+    <string name="Settings">Configuración</string>
+    <string name="MapStores">Geo tiendas</string>
+    <string name="Login">Iniciar sesión</string>
+    <string name="Logout">Cerrar sesión</string>
+    <string name="parameter">Parámetros</string>
+    <string name="close">Cerrar</string>
+    <string name="EventLike">Mis eventos</string>
+    <string name="categories">Categorías</string>
+
+
+    <string name="my_stores">Mis tiendas</string>
+    <string name="my_events">Mis eventos</string>
+
+    <!--category--><![CDATA[
+    >
+    ]]>
+    <string name="Categories">Categorias</string>
+
+    <!--event-->
+
+
+    <!--notification & messages-->
+    <string name="check_network">revisa tu conexión</string>
+    <string name="network_error">Sin conexión! click para reintentar</string>
+    <string name="check_nework">Revisa tu conexion a internet</string>
+    <string name="enable_network">Activa la conexión de internet en tu dispositivo</string>
+
+    <string name="editProfile">Editar perfil</string>
+
+    <!--store-->
+    <string name="store_to_far_map">Demasiado lejos para mostrar la ruta</string>
+    <string name="store_call_error">Error en la llamada</string>
+
+    <!--messages settings-->
+
+    <string name="settings_notifications">NOTIFICACIONES</string>
+    <string name="settings_app_infos">APLICACION</string>
+
+
+    <!-- OFFERS -->
+    <string name="settings_notification_offers">Recibe notificaciones de ofertas</string>
+    <string name="settings_notification_offers_title">Notificación de Ofertas</string>
+
+
+    <!-- EVENTS -->
+    <string name="settings_notification_events">Recibe notificación de eventos cercanos</string>
+    <string name="settings_notification_events_title">Notificación de Eventos</string>
+
+    <!-- STORES -->
+    <string name="settings_notification_stores">Recibe notificación cuando haya una tienda cercana</string>
+    <string name="settings_notification_stores_title">Notificación de tiendas</string>
+
+
+    <!-- MESSENGER -->
+    <string name="settings_notification_messenger">Recibe notificaciones cuando recibas un mensaje</string>
+    <string name="settings_notification_messenger_title">Notificaciones de mensajes</string>
+
+    <!-- DISTANCE -->
+    <string name="settings_notification_distance_dis">%1$s KM</string>
+
+    <!-- APP_INFOS -->
+    <string name="settings_app_infos_title">Versión de la aplicación</string>
+
+    <!--login & sign up-->
+
+    <string name="lessThan1km">menos de 1 km</string>
+    <string name="MoreThan2km">+2 Km</string>
+    <string name="MoreThan5km">+5 Km</string>
+    <string name="MoreThan10km">+10 Km</string>
+
+    <string name="description">Descripción</string>
+
+    <string name="permission_disabled_notice">Guiame funciona con permisos de geolocalizacion. Si cancelas estos permisos la aplicacion puede no funcionar correctamente</string>
+    <string name="save">Guardar</string>
+    <string name="find_new_neighbours">Busca gente cerca</string>
+
+
+    <string name="youHaveDiscussions">Tienes %1$d respuesta %2$d mensaje</string>
+    <string name="youHaveMessage">Tienes nuevos mensajes</string>
+    <string name="offers">Ofertas</string>
+    <string name="reviews">Reseñas (%1$s)</string>
+    <string name="noOffers">No hay Ofertas</string>
+    <string name="noReviews">Sin reseñas</string>
+    <string name="addReview">Agregar Reseña</string>
+    <string name="settings">Configuración</string>
+    <string name="pseudo">Alias</string>
+    <string name="error">Error!</string>
+
+    <string name="selectRating">Por favor, seleccione de 1 a 5 estrellas</string>
+    <string name="pleaseWriteReview">Escriba una reseña</string>
+    <string name="writeReview">Escribir reseña</string>
+    <string name="thankYou">Gracias!</string>
+
+    <string name="searchOn">Buscar</string>
+
+    <string name="email">Email</string>
+
+
+    <string name="people_around_me">Gente cerca de mi</string>
+    <string name="promo">PROMO</string>
+
+
+    <string name="fileUploading">Subiendo ...</string>
+
+    <string name="rateUs">Califica la aplicación</string>
+    <string name="rateIt">Califícalo</string>
+
+    <string name="you_ve_already_reviewd">Ya has agregado tu opinión!</string>
+
+    <string name="shared_text">%1$s - Only on %2$s \n %3$s</string>
+    <string name="reload">Recargar</string>
+    <string name="mail">Mail</string>
+    <string name="today">Hoy</string>
+    <string name="Send_message">Envía un mensaje</string>
+    <string name="version">Version :</string>
+    <string name="phone">Teléfono</string>
+    <string name="featured">Destacado</string>
+    <string name="app_privacy">Privacidad</string>
+    <string name="app_term_of_uses">Terminos de uso</string>
+
+
+
+    <string name="offer_start_at">Empieza el %1$s</string>
+    <string name="offer_end_at">Termina el %1$s</string>
+    <string name="offer_ended_at">Finalizada el %1$s</string>
+
+
+    <string name="nbr_stores_message">%1$s tienda</string>
+
+
+    <string name="tab_stores">Tiendas</string>
+    <string name="tab_offers">Ofertas</string>
+    <string name="tab_events">Eventos</string>
+    <string name="your_destination">Tu destino</string>
+    <string name="refresh">Refrescar</string>
+    <string name="no_users">No usuarios</string>
+    <string name="settings_notification_upcomingevent">Reciba una notificación cuando haya un nuevo evento próximo</string>
+    <string name="settings_notification_upcomingevent_title" >Evento proximo</string>
+    <string name="chat_notification_title">Galicia Gangas</string>
+    <string name="authentification_error_msg">Usuario o contraseña incorrectos.</string>
+    <string name="enable_network_map_direction">Please enable your network</string>
+    <string name="enable_gps_map_direction">Please enable your GPS first</string>
+    <string name="skip">Desactivado</string>
+    <string name="start">Activado</string>
+    <string name="intro_slide_1_title" />
+    <string name="intro_slide_1_description">Description introduction slider 1</string>
+    <string name="alert_gps_dialog">Active su ubicación</string>
+    <string name="confirm_gps_relaunch">Confirmar</string>
+    <string name="MapStoresMenu">Geolocalización</string>
+    <string name="review_title">Opiniones</string>
+    <string name="load_more">Carga más</string>
+    <string name="store_not_found">Extraviado</string>
+    <string name="logout_alert">Su cuenta está desconectada, debido a que su cuenta está bloqueada o eliminada \ Más información póngase en contacto con el administrador</string>
+    <string name="block">Bloquear</string>
+    <string name="unblock">Desbloquear</string>
+    <string name="less_than_1_km">Menos de 1 km</string>
+    <string name="noDiscussions">Sin mensajes</string>
+    <string name="stores_near_by">Stores Near by</string>
+    <string name="searching_for_stores_bearby">Searching for stores nearby</string>
+    <string name="Account">Account</string>
+    <string name="Notification">Notification</string>
+    <string name="price">Price</string>
+    <string name="discount">Discount</string>
+    <string name="photo">Photo</string>
+    <string name="editPassword">Edit Password</string>
+
+
+</resources>
+
+

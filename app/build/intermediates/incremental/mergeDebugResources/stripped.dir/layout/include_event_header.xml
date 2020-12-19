@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_bg_bottom_to_top_70" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/event_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_xlarge">
+
+                    <include layout="@layout/v2_fragment_detail_event_calendar" />
+
+
+                    <TextView
+                        android:id="@+id/header_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/event_calender_layout"
+                        android:singleLine="true"
+                        android:text="consectetur adipiscing elit.Lorem ipsum dolor sit amet"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/title_size_large"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/event_date_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/header_title"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:layout_toEndOf="@id/event_calender_layout"
+                        android:layout_toRightOf="@id/event_calender_layout"
+                        android:background="@drawable/rounded_layout_item"
+                        android:backgroundTint="@color/colorWhiteTransparent"
+                        android:elevation="@dimen/spacing_small"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/spacing_xmedium"
+                        android:paddingLeft="@dimen/spacing_xmedium"
+                        android:paddingTop="@dimen/spacing_xsmall"
+                        android:paddingEnd="@dimen/spacing_xmedium"
+                        android:paddingRight="@dimen/spacing_xmedium"
+                        android:paddingBottom="@dimen/spacing_xsmall">
+
+                        <ImageView
+                            android:id="@+id/event_icon"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/black"
+                            app:srcCompat="@drawable/ic_date_calendar" />
+
+                        <TextView
+                            android:id="@+id/event_date_begin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:text="22 August 2019" />
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:layout_marginEnd="@dimen/spacing_small"
+                            android:layout_marginRight="@dimen/spacing_small"
+                            android:background="@color/black"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:id="@+id/event_begin_date_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/spacing_small"
+                            android:layout_marginLeft="@dimen/spacing_small"
+                            android:text="29 nov. 2019" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/address_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/event_date_detail"
+                        android:layout_marginStart="@dimen/spacing_medium"
+                        android:layout_marginLeft="@dimen/spacing_medium"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:text="Aliquam Non Erat Tristique "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/v2_fragment_detail_event_btn_quick_access" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
+
+

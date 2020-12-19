@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bluecabin.textoo:textoo:1.0.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/672b59f22395bfe0b84355d66f951635/jetified-textoo-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5334d0040915d285e1d5d5d83ddaf0b/jetified-textoo-1.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5334d0040915d285e1d5d5d83ddaf0b/jetified-textoo-1.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5334d0040915d285e1d5d5d83ddaf0b/jetified-textoo-1.0.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bluecabin.textoo/textoo/1.0.1/3f7f78f99fd75c4a987d6dfdd165f27c1db341b4/textoo-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bluecabin.textoo/textoo/1.0.1/808ff7c3bd67c9bc9e30e5a356ac978409c9d577/textoo-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
