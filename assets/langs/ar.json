@@ -1,0 +1,162 @@
+{
+  "app_name": "Directorio Delicias AR",
+  "nearby_stores": "المتاجر القريبة",
+  "featured" : "متميز",
+  "search_stores" : "البحث في المتاجر",
+  "top_rated" : "أعلى التقييمات",
+  "open" : "افتح",
+  "close_now" : "إغلاق الآن",
+  "home" : "الصفحة الرئيسية",
+  "favorites" : "المفضلة",
+  "map" : "خريطة",
+  "messages" : "الرسائل",
+  "about_us" : "معلومات عنا",
+  "terms" : "شروط",
+  "profile" : "الملف الشخصي",
+  "register" : "تسجيل",
+  "login" : "تسجيل الدخول",
+  "categories" : "التصنيفات",
+  "rate_the_app" : "قيم التطبيق",
+  "ratings" : "التقييمات",
+  "km" : "KM",
+  "stores_found" : "وجدت المتاجر",
+  "sort" : "فرز",
+  "categories_found" : "تم العثور على فئات",
+
+  "username" : "اسم المستخدم",
+  "password" : "كلمه السر",
+  "your_password" : "كلمتك السرية",
+  "enter_username" : "ادخل اسم المستخدم",
+  "or" : "or via Social",
+  "account" : "الحساب",
+  "email" : "البريد الإلكتروني",
+  "full_name" : "الاسم الكامل",
+
+  "email_placeholder" : "johndoe@mail.com",
+  "full_name_placeholder" : "e.g. John Doe",
+  "confirm_password" : "تأكيد كلمة المرور",
+  "logout" : "تسجيل خروج",
+  "rate_store" : "تقييم المتجر",
+  "ok": "حسنا",
+  "cancel": "إلغاء",
+
+  "error_rating": "خطأ في التصنيف",
+  "error_rating_details": "لقد انتهيت بالفعل من تصنيف المتجر.",
+  "error_problems_ecountered_details": "واجهت مشاكل أثناء الاتصال. حاول مرة أخرى في وقت لاحق.",
+
+  "rate": "معدل",
+  "update": "تحديث",
+  "error_not_logged_rating": "خطأ في التصنيف",
+  "error_not_logged_rating_details": "تحتاج إلى تسجيل الدخول من أجل تقييم متجر.",
+
+  "error_not_logged_review": "مراجعة الخطأ",
+  "error_not_logged_review_details": "تحتاج إلى تسجيل الدخول من أجل مراجعة متجر.",
+
+  "rating_success_details" : "شكرا لتقييمك. سيساعدنا هذا في تحسين متجرنا.",
+  "rating_success" : "نجاح",
+  "reviews" : "المراجعات",
+
+  "for" : "إلى عن على",
+  "add" : "أضف",
+  "add_review" : "إضافة مراجعة",
+
+  "error_review" : "مراجعة الخطأ",
+  "send" : "إرسال",
+  "your_review" : "أدخل مراجعة ...",
+  "my_stores" : "متاجري",
+
+  "store_name" : "اسم المتجر",
+  "store_name_empty" : "يرجى تقديم اسم المتجر.",
+  "action_error" : "خطأ في العمل",
+
+  "store_address" : "عنوان المتجر",
+  "store_address_empty" : "يرجى تقديم عنوان المتجر.",
+
+  "desc" : "وصف",
+
+  "sms_no" : "رقم SMS",
+  "phone_no" : "رقم الهاتف",
+  "website" : "موقع الكتروني",
+
+  "category" : "الفئة",
+
+  "operating_hours" : "ساعات العمل",
+  "mon" : "يوم الاثنين",
+  "tue" : "الثلاثاء",
+  "wed" : "الأربعاء",
+  "thu" : "الخميس",
+  "fri" : "يوم الجمعة",
+  "sat" : "يوم السبت",
+  "sun" : "الأحد",
+  "add_store" : "أضف المتجر",
+  "store_location" : "موقع المتجر",
+
+  "tap_and_hold" : "انقر مع الاستمرار",
+  "drag_me_around" : "اسحبني للتحرك",
+  "select" : "تحديد",
+  "store_photos" : "مخزن الصور",
+  "max_photos_reached_details": "تم الوصول إلى أقصى عدد من تحميلات الصور.",
+  "max_photos_reached": "خطأ في التحميل",
+
+  "delete_photo": "حذف الصورة",
+  "delete_photo_details": "هل أنت متأكد أنك تريد حذف الصورة التي تم تحميلها؟",
+
+  "location_error": "خطأ في الموقع",
+  "location_error_details": "يرجى تقديم موقع المتجر.",
+  "photo_error_details" : "يرجى تحميل صورة واحدة على الأقل.",
+  "photo_error" : "خطأ في الصورة",
+  "error_not_logged_details": "أنت لم تسجل. الرجاء تسجيل الدخول.",
+  "error_not_logged": "خطأ في تسجيل الدخول",
+
+  "error_sms_details": "لا يمكن المتابعة. لم يتم توفير رقم SMS.",
+  "error_email_details": "لا يمكن المتابعة. لم يتم توفير عنوان بريد إلكتروني.",
+  "error_website_details": "لا يمكن المتابعة. لم يتم توفير عنوان URL لموقع الويب.",
+  "error_call_details": "لا يمكن المتابعة. لم يتم تقديم رقم هاتف.",
+
+  "edit_store": "تحرير المتجر",
+
+  "add_store_error_details": "لا يمكن إضافة متجر. تمت مصادفة مشاكل أثناء المزامنة. حاول مرة أخرى في وقت لاحق.", 
+
+  "error_signin_twitter": "حدث خطأ أثناء تسجيل الدخول إلى Twitter. حاول مرة أخرى في وقت لاحق.",
+  "error_signin_fb": "حدث خطأ أثناء تسجيل الدخول إلى Facebook. حاول مرة أخرى في وقت لاحق.",
+
+
+  "news": "أخبار",
+  "something_went_wrong": "هناك خطأ ما.",
+  "news_found": "وجدت الأخبار",
+
+  "settings": "إعدادات",
+
+  "app_settings": "إعدادات",
+  "nearby_radius": "الشعاع القريب",
+  "visuals": "المرئيات",
+  "dark_mode": "الوضع المظلم",
+  "app_version": "نسخة التطبيق",
+  "version": "الإصدار",
+  "push_notifications": "دفع الإخطارات",
+
+  "radius_in_km_placeholder" : "e.g. 50",
+  "nearby_radius_in_km" : "نصف القطر: (كم)",
+
+  "results_found": "تم العثور على نتائج لـ",
+
+  "no_categories_to_show" : "لا توجد فئات للعرض",
+
+  "download_our_app_now" : "قم بتنزيل تطبيقنا الآن!",
+  "language" : "لغة",
+  "app_language" : "لغة التطبيق",
+  "done" : "منجز",
+
+  "terms_and_conditions_details" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?<br/><br/>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "about_us_details" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br/><br/>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?<br/><br/>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.<br/><br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+
+  "notifications_found" : "تم العثور على الإخطارات",
+  "notifications" : "إشعارات",
+
+  "disabled_social_password" : "**We disable the password for you. Social accounts cannot alter password in our app.",
+  "delete_store_details" : "Are you sure you want to delete this store? This is irreversible.",
+  "delete_store_error_details" : "Cannot delete store as of the moment. Please try again later or relogin.",
+  "delete_store" : "Delete Store",
+  "delete" : "Delete"
+
+}

@@ -1,0 +1,161 @@
+{"app_name": "Directorio Delicias",
+    "nearby_stores": "Negocios cerca de Tí",
+    "featured" : "Destacados",
+    "search_stores" : "Buscar Empresa",
+    "top_rated" : "Lo Top del Momento",
+    "open" : "Abierto",
+    "close_now" : "Cerrado Ahora",
+    "home" : "Inicio",
+    "favorites" : "Favoritos",
+    "map" : "Mapa",
+    "messages" : "Mensajes",
+    "about_us" : "Acerca de",
+    "terms" : "Terminos de Uso",
+    "profile" : "Perfil",
+    "register" : "Registrarse",
+    "login" : "Iniciar Sesión",
+    "categories" : "Categorias",
+    "rate_the_app" : "Califica la app",
+    "ratings" : "Calificaciones",
+    "km" : "KM",
+    "stores_found" : "Tiendas encontradas",
+    "sort" : "Clasificar",
+    "categories_found" : "Categorías encontradas",
+
+    "username" : "Nombre de Usuario",
+    "password" : "Contraseña",
+    "your_password" : "Introduce tu Contraseña",
+    "enter_username" : "Introduzca su nombre de usuario",
+    "or" : "or via Social",
+    "account" : "Cuenta",
+    "email" : "Email",
+    "full_name" : "Nombre Completo",
+
+    "email_placeholder" : "johndoe@mail.com",
+    "full_name_placeholder" : "e.g. John Doe",
+    "confirm_password" : "Confirmar Contraseña",
+    "logout" : "Cerrar Sesión",
+    "rate_store" : "Valorar tienda",
+    "ok": "Ok",
+    "cancel": "Cancelar",
+
+    "error_rating": "Error de calificación",
+    "error_rating_details": "Ya terminaste de calificar la tienda.",
+    "error_problems_ecountered_details": "Problemas encontrados durante la conexión. Inténtelo de nuevo más tarde.",
+
+    "rate": "Califica",
+    "update": "Actualizar",
+    "error_not_logged_rating": "Error de calificación",
+    "error_not_logged_rating_details": "Debes iniciar sesión para calificar una tienda.",
+
+    "error_not_logged_review": "Error de revisión",
+    "error_not_logged_review_details": "Necesita iniciar sesión para revisar una tienda.",
+
+    "rating_success_details" : "Gracias por tu valoración. Esto nos ayudará a mejorar nuestra tienda.",
+    "rating_success" : "Satisfactorio",
+    "reviews" : "Reviews",
+
+    "for" : "por",
+    "add" : "Agregar",
+    "add_review" : "Agregar una opinión",
+
+    "error_review" : "Error de Revisión",
+    "send" : "Enviar",
+    "your_review" : "Ingresar revisión...",
+    "my_stores" : "Mis tiendas",
+
+    "store_name" : "Nombre de la tienda",
+    "store_name_empty" : "Proporcione el nombre de una tienda.",
+    "action_error" : "Error de acción",
+
+    "store_address" : "Dirección de la tienda",
+    "store_address_empty" : "Proporcione una dirección de la tienda.",
+
+    "desc" : "Descripción",
+
+    "sms_no" : "Número de SMS",
+    "phone_no" : "Número de Teléfono",
+    "website" : "Website",
+
+    "category" : "Categoria",
+
+    "operating_hours" : "Horario",
+    "mon" : "Lunes",
+    "tue" : "Martes",
+    "wed" : "Miercoles",
+    "thu" : "Jueves",
+    "fri" : "Viernes",
+    "sat" : "Sabado",
+    "sun" : "Domingo",
+    "add_store" : "Agregar Tienda",
+    "store_location" : "Ubicación de la Tienda",
+
+    "tap_and_hold" : "Toque y mantenga",
+    "drag_me_around" : "Arrástrame para moverme",
+    "select" : "Seleccionar",
+    "store_photos" : "Fotos de la Tienda",
+    "max_photos_reached_details": "Se alcanzó el máximo de cargas de fotos.",
+    "max_photos_reached": "Error de Subida",
+
+    "delete_photo": "Eliminar Foto",
+    "delete_photo_details": "¿Estás seguro de que deseas eliminar la foto cargada?",
+
+    "location_error": "Error en la Ubicación",
+    "location_error_details": "Proporcione una ubicación de la tienda.",
+    "photo_error_details" : "Sube al menos 1 foto.",
+    "photo_error" : "Error en la Imagen",
+    "error_not_logged_details": "No estás registrado. Por favor Iniciar sesión.",
+    "error_not_logged": "Error en Inicio de Sesión",
+
+    "error_sms_details": "No se puede continuar. No se proporcionó un número de SMS.",
+    "error_email_details": "No se puede continuar. No se proporcionó una dirección de correo electrónico.",
+    "error_website_details": "No se puede continuar. No se proporcionó la URL del sitio web.",
+    "error_call_details": "No se puede continuar. No se proporcionó un número de teléfono.",
+
+    "edit_store": "Editar Tienda",
+
+    "add_store_error_details": "No se puede agregar una tienda. Problemas encontrados durante la sincronización. Inténtelo de nuevo más tarde.", 
+
+    "error_signin_twitter": "Se produjo un error durante el inicio de sesión de Twitter. Inténtelo de nuevo más tarde.",
+    "error_signin_fb": "Se produjo un error durante el inicio de sesión de Facebook. Inténtelo de nuevo más tarde.",
+
+
+    "news": "Novedades",
+    "something_went_wrong": "Algo salió mal.",
+    "news_found": "Novedades encontradas",
+
+    "settings": "Configuración",
+
+    "app_settings": "Configuración",
+    "nearby_radius": "Radio cercano",
+    "visuals": "Visualización",
+    "dark_mode": "Modo Dark",
+    "app_version": "Versión de App",
+    "version": "Version",
+    "push_notifications": "Notificationes Push",
+
+    "radius_in_km_placeholder" : "e.g. 50",
+    "nearby_radius_in_km" : "Radio: (KM)",
+
+    "results_found": "Resultados encontrados para",
+
+    "no_categories_to_show" : "No hay categorías para mostrar",
+
+    "download_our_app_now" : "¡Descarga nuestra aplicación ahora!",
+
+    "language" : "Lenguaje",
+    "app_language" : "Lenguaje de la App",
+    "done" : "Hecho",
+
+    "terms_and_conditions_details" : "Para conocer nuestros Términos y Condiciones visita https://directoriodelicias.website/terminos",
+    "about_us_details" : "Somos el Primer Directorio Empresarial y el más grande de la Región Centro Sur del estado de Chihuahua reuniendo en un solo lugar a la mayor cantidad de empresarios y emprendedores para dar a conocer sus productos o servicios ",
+
+    "notifications_found" : "Notificaciones encontradas",
+    "notifications" : "Notificationes",
+
+    "disabled_social_password" : "**Deshabilitamos la contraseña por ti. Las cuentas sociales no pueden alterar la contraseña en nuestra aplicación.",
+    "delete_store_details" : "¿Estás seguro de que deseas eliminar esta tienda? Esto es irreversible.",
+    "delete_store_error_details" : "No se puede eliminar la tienda en este momento. Vuelva a intentarlo más tarde o vuelva a iniciar sesión.",
+    "delete_store" : "Eliminar Tienda",
+    "delete" : "Eliminar"
+  }

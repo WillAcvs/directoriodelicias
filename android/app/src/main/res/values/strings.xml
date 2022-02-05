@@ -1,0 +1,5 @@
+<resources>
+    <string name="facebook_app_id">199243947441185</string>
+    <string name="app_name">Directorio Delicias</string>
+    <string name="fb_login_protocol_scheme">login</string>
+</resources>
