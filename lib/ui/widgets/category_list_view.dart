@@ -1,14 +1,13 @@
-
 import 'package:flutter/material.dart';
 import 'package:directorio_delicias/commons/helpers.dart';
 import 'package:directorio_delicias/models/category.dart';
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView(
-      {Key key,
-      this.category,
-      this.padding,
-      this.callback})
+      {Key? key,
+      required this.category,
+      required this.padding,
+      required this.callback})
       : super(key: key);
 
   final VoidCallback callback;
@@ -18,8 +17,7 @@ class CategoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String photoUrl = "";
-    if(category.categoryIcon.length > 0)
-      photoUrl = category.categoryIcon;
+    if (category.categoryIcon.length > 0) photoUrl = category.categoryIcon;
 
     return Padding(
       padding: padding,
@@ -30,7 +28,7 @@ class CategoryListView extends StatelessWidget {
         },
         child: Container(
           decoration: BoxDecoration(
-            color: Theme.of(context).textTheme.bodyText1.color,
+            color: Theme.of(context).textTheme.bodyText1!.color,
             borderRadius: const BorderRadius.all(Radius.circular(16.0)),
             boxShadow: <BoxShadow>[
               BoxShadow(
@@ -49,9 +47,8 @@ class CategoryListView extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     AspectRatio(
-                      aspectRatio: 2.0,
-                      child: Helpers.loadCacheImage(imageUrl: photoUrl)
-                    ),
+                        aspectRatio: 2.0,
+                        child: Helpers.loadCacheImage(imageUrl: photoUrl)),
                     Container(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -60,7 +57,8 @@ class CategoryListView extends StatelessWidget {
                           Expanded(
                             child: Container(
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 16, top: 8, bottom: 8, right: 16),
+                                padding: const EdgeInsets.only(
+                                    left: 16, top: 8, bottom: 8, right: 16),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -71,7 +69,10 @@ class CategoryListView extends StatelessWidget {
                                       style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize: 22,
-                                        color: Theme.of(context).textTheme.caption.color,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .caption!
+                                            .color,
                                       ),
                                     ),
                                   ],

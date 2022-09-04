@@ -1,13 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:directorio_delicias/commons/helpers.dart';
 import 'package:directorio_delicias/models/news.dart';
 
 class NewsWidget extends StatelessWidget {
-  const NewsWidget(
-      {Key key,
-      this.news,
-      this.callback})
+  const NewsWidget({Key? key, required this.news, required this.callback})
       : super(key: key);
 
   final VoidCallback callback;
@@ -16,12 +12,10 @@ class NewsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String photoUrl = "";
-    if(news.photoUrl.length > 0)
-      photoUrl = news.photoUrl;
-      
+    if (news.photoUrl.length > 0) photoUrl = news.photoUrl;
+
     return Padding(
-      padding: const EdgeInsets.only(
-          left: 24, right: 24, top: 8, bottom: 16),
+      padding: const EdgeInsets.only(left: 24, right: 24, top: 8, bottom: 16),
       child: InkWell(
         splashColor: Colors.transparent,
         onTap: () {
@@ -49,7 +43,7 @@ class NewsWidget extends StatelessWidget {
                       child: Helpers.loadCacheImage(imageUrl: photoUrl),
                     ),
                     Container(
-                      color: Theme.of(context).textTheme.bodyText1.color,
+                      color: Theme.of(context).textTheme.bodyText1!.color,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,8 +54,8 @@ class NewsWidget extends StatelessWidget {
                                 padding: const EdgeInsets.only(
                                     left: 16, top: 8, bottom: 8, right: 16),
                                 child: Column(
-                                  mainAxisAlignment:MainAxisAlignment.center,
-                                  crossAxisAlignment:CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text(
                                       news.newsTitle,
@@ -71,26 +65,35 @@ class NewsWidget extends StatelessWidget {
                                       style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize: 22,
-                                        color: Theme.of(context).textTheme.caption.color,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .caption!
+                                            .color,
                                       ),
                                     ),
                                     Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                      mainAxisAlignment:MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       children: <Widget>[
                                         Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(top: 4),
-                                              child: Text(
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsets.only(top: 4),
+                                            child: Text(
                                               news.newsContent,
                                               overflow: TextOverflow.ellipsis,
                                               maxLines: 2,
                                               style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Theme.of(context).textTheme.subtitle1.color,
-                                                ),
-                                          ),
+                                                fontSize: 14,
+                                                color: Theme.of(context)
+                                                    .textTheme
+                                                    .subtitle1!
+                                                    .color,
+                                              ),
                                             ),
+                                          ),
                                         )
                                       ],
                                     ),
@@ -99,10 +102,12 @@ class NewsWidget extends StatelessWidget {
                                       child: Row(
                                         children: <Widget>[
                                           Text(
-                                            Helpers.formatDate(news.createdAt, 'MM/dd/yyyy hh:mm a'),
+                                            Helpers.formatDate(news.createdAt,
+                                                'MM/dd/yyyy hh:mm a'),
                                             style: TextStyle(
                                                 fontSize: 14,
-                                                color: Colors.grey.withOpacity(0.8)),
+                                                color: Colors.grey
+                                                    .withOpacity(0.8)),
                                           ),
                                         ],
                                       ),

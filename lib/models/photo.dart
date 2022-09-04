@@ -1,13 +1,12 @@
-
 class Photo {
   Photo({
-    this.photoId,
+    required this.photoId,
     this.photoUrl = '',
     this.thumbUrl = '',
-    this.storeId,
-    this.createdAt,
-    this.updatedAt,
-    this.isDeleted,
+    required this.storeId,
+    required this.createdAt,
+    required this.updatedAt,
+    required this.isDeleted,
   });
 
   int photoId;
@@ -20,35 +19,33 @@ class Photo {
 
   factory Photo.fromJson(Map<String, dynamic> json) {
     return new Photo(
-      photoId: int.parse(json['photo_id']),
-      photoUrl: json['photo_url'],
-      thumbUrl: json['thumb_url'],
-      storeId: int.parse(json['store_id']),
-      updatedAt: int.parse(json['updated_at']),
-      isDeleted: int.parse(json['is_deleted']),
-      createdAt: int.parse(json['created_at'])
-    );
+        photoId: int.parse(json['photo_id']),
+        photoUrl: json['photo_url'],
+        thumbUrl: json['thumb_url'],
+        storeId: int.parse(json['store_id']),
+        updatedAt: int.parse(json['updated_at']),
+        isDeleted: int.parse(json['is_deleted']),
+        createdAt: int.parse(json['created_at']));
   }
 
   factory Photo.fromJsonRaw(Map<String, dynamic> json) {
     return new Photo(
-      photoId: json['photo_id'],
-      photoUrl: json['photo_url'],
-      thumbUrl: json['thumb_url'],
-      storeId: json['store_id'],
-      updatedAt: json['updated_at'],
-      isDeleted: json['is_deleted'],
-      createdAt: json['created_at']
-    );
+        photoId: json['photo_id'],
+        photoUrl: json['photo_url'],
+        thumbUrl: json['thumb_url'],
+        storeId: json['store_id'],
+        updatedAt: json['updated_at'],
+        isDeleted: json['is_deleted'],
+        createdAt: json['created_at']);
   }
 
   Map<String, dynamic> toMap() => {
-    "photo_id": photoId,
-    "photo_url": photoUrl,
-    "thumb_url": thumbUrl,
-    "store_id": storeId,
-    "updated_at": updatedAt,
-    "is_deleted": isDeleted,
-    "created_at": createdAt,
-  };
+        "photo_id": photoId,
+        "photo_url": photoUrl,
+        "thumb_url": thumbUrl,
+        "store_id": storeId,
+        "updated_at": updatedAt,
+        "is_deleted": isDeleted,
+        "created_at": createdAt,
+      };
 }

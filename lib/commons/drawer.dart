@@ -6,27 +6,27 @@ import 'package:flutter/foundation.dart';
 
 class ZoomDrawerController {
   /// callback function to open the drawer
-  Function open;
+  late Function open;
 
   /// callback function to close the drawer
-  Function close;
+  late Function close;
 
   /// callback function to toggle the drawer
-  Function toggle;
+  late Function toggle;
 
   /// callback function to determine the status of the drawer
-  Function isOpen;
+  late Function isOpen;
 
   /// Drawer state notifier
   /// opening, closing, open, closed
-  ValueNotifier<DrawerState> stateNotifier;
+  late ValueNotifier<DrawerState> stateNotifier;
 }
 
 class ZoomDrawer extends StatefulWidget {
   ZoomDrawer({
     this.controller,
-    @required this.menuScreen,
-    @required this.mainScreen,
+    required this.menuScreen,
+    required this.mainScreen,
     this.slideWidth = 275.0,
     this.borderRadius = 16.0,
     this.angle = -12.0,
@@ -37,7 +37,7 @@ class ZoomDrawer extends StatefulWidget {
   }) : assert(angle <= 0.0 && angle >= -30.0);
 
   /// controller to have access to the open/close/toggle function of the drawer
-  final ZoomDrawerController controller;
+  final ZoomDrawerController? controller;
 
   /// Screen containing the menu/bottom screen
   final Widget menuScreen;
@@ -61,22 +61,22 @@ class ZoomDrawer extends StatefulWidget {
   final bool showShadow;
 
   /// Drawer slide out curve
-  final Curve openCurve;
+  final Curve? openCurve;
 
   /// Drawer slide in curve
-  final Curve closeCurve;
-  
+  final Curve? closeCurve;
+
   /// Boolean, whether to make it rtl - defaults to false
   static bool rtl = false;
 
   @override
-  _ZoomDrawerState createState() => new _ZoomDrawerState();
+  State<ZoomDrawer> createState() => new _ZoomDrawerState();
 
   /// static function to provide the drawer state
-  static _ZoomDrawerState of(BuildContext context) {
-    return context.findAncestorStateOfType<State<ZoomDrawer>>();
-  }
 
+  static _ZoomDrawerState of(BuildContext context) {
+    return context.findRootAncestorStateOfType()!;
+  }
 }
 
 class _ZoomDrawerState extends State<ZoomDrawer>
@@ -85,13 +85,13 @@ class _ZoomDrawerState extends State<ZoomDrawer>
   final Curve _scaleUpCurve = Interval(0.0, 1.0, curve: Curves.easeOut);
   final Curve _slideOutCurve = Interval(0.0, 1.0, curve: Curves.easeOut);
   final Curve _slideInCurve =
-  Interval(0.0, 1.0, curve: Curves.easeOut); // Curves.bounceOut
+      Interval(0.0, 1.0, curve: Curves.easeOut); // Curves.bounceOut
 
   /// check the slide direction
-   int _rtlSlide = 1;
-   bool _rtl = false;
+  int _rtlSlide = 1;
+  bool _rtl = false;
 
-  AnimationController _animationController;
+  late AnimationController _animationController;
   DrawerState _state = DrawerState.closed;
 
   double get _percentOpen => _animationController.value;
@@ -120,13 +120,13 @@ class _ZoomDrawerState extends State<ZoomDrawer>
       _state == DrawerState.open /* || _state == DrawerState.opening*/;
 
   /// Drawer state
-  ValueNotifier<DrawerState> stateNotifier;
+  late ValueNotifier<DrawerState> stateNotifier;
 
   @override
   void initState() {
     super.initState();
 
-     _rtlSlide = ZoomDrawer.rtl ? -1 : 1;
+    _rtlSlide = ZoomDrawer.rtl ? -1 : 1;
     _rtl = ZoomDrawer.rtl;
 
     stateNotifier = ValueNotifier(_state);
@@ -158,14 +158,13 @@ class _ZoomDrawerState extends State<ZoomDrawer>
 
     /// assign controller function to the widget methods
     if (widget.controller != null) {
-      widget.controller.open = open;
-      widget.controller.close = close;
-      widget.controller.toggle = toggle;
-      widget.controller.isOpen = isOpen;
-      widget.controller.stateNotifier = stateNotifier;
+      widget.controller!.open = open;
+      widget.controller!.close = close;
+      widget.controller!.toggle = toggle;
+      widget.controller!.isOpen = isOpen;
+      widget.controller!.stateNotifier = stateNotifier;
     }
   }
-
 
   _updateStatusNotifier() {
     stateNotifier.value = _state;
@@ -189,7 +188,7 @@ class _ZoomDrawerState extends State<ZoomDrawer>
   /// * [slide] is the sliding amount of the drawer
   ///
   Widget _zoomAndSlideContent(Widget container,
-      {double angle, double scale, double slide = 0}) {
+      {double? angle, double? scale, double slide = 0}) {
     var slidePercent, scalePercent;
 
     /// determine current slide percent based on the MenuStatus
@@ -214,7 +213,7 @@ class _ZoomDrawerState extends State<ZoomDrawer>
         break;
     }
 
-    if(ZoomDrawer.rtl != _rtl) {
+    if (ZoomDrawer.rtl != _rtl) {
       _rtlSlide = ZoomDrawer.rtl ? -1 : 1;
       _rtl = ZoomDrawer.rtl;
     }
@@ -231,7 +230,6 @@ class _ZoomDrawerState extends State<ZoomDrawer>
     /// calculated rotation amount based on the provided angle and animation value
     final rotationAngle =
         (((angle ?? widget.angle) * pi * _rtlSlide) / 180) * _percentOpen;
-        
 
     return Transform(
       transform: Matrix4.translationValues(slideAmount, 0.0, 0.0)
@@ -269,10 +267,7 @@ class _ZoomDrawerState extends State<ZoomDrawer>
   @override
   Widget build(BuildContext context) {
     final slidePercent =
-    ZoomDrawer.rtl ? MediaQuery
-        .of(context)
-        .size
-        .width * .1 : 15.0;
+        ZoomDrawer.rtl ? MediaQuery.of(context).size.width * .1 : 15.0;
 
     return Stack(
       children: [
@@ -288,15 +283,13 @@ class _ZoomDrawerState extends State<ZoomDrawer>
           },
         ),
         if (widget.showShadow) ...[
-
           /// Displaying the first shadow
           AnimatedBuilder(
             animation: _animationController,
-            builder: (_, w) =>
-                _zoomAndSlideContent(w,
-                    angle: (widget.angle == 0.0) ? 0.0 : widget.angle - 8,
-                    scale: .9,
-                    slide: slidePercent * 2),
+            builder: (_, w) => _zoomAndSlideContent(w!,
+                angle: (widget.angle == 0.0) ? 0.0 : widget.angle - 8,
+                scale: .9,
+                slide: slidePercent * 2),
             child: Container(
               color: widget.backgroundColor.withAlpha(31),
             ),
@@ -305,11 +298,10 @@ class _ZoomDrawerState extends State<ZoomDrawer>
           /// Displaying the second shadow
           AnimatedBuilder(
             animation: _animationController,
-            builder: (_, w) =>
-                _zoomAndSlideContent(w,
-                    angle: (widget.angle == 0.0) ? 0.0 : widget.angle - 4.0,
-                    scale: .95,
-                    slide: slidePercent),
+            builder: (_, w) => _zoomAndSlideContent(w!,
+                angle: (widget.angle == 0.0) ? 0.0 : widget.angle - 4.0,
+                scale: .95,
+                slide: slidePercent),
             child: Container(
               color: widget.backgroundColor,
             ),
@@ -319,7 +311,7 @@ class _ZoomDrawerState extends State<ZoomDrawer>
         /// Displaying the main screen
         AnimatedBuilder(
           animation: _animationController,
-          builder: (_, w) => _zoomAndSlideContent(w),
+          builder: (_, w) => _zoomAndSlideContent(w!),
           child: widget.mainScreen,
         ),
       ],

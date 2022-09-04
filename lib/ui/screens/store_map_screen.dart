@@ -1,4 +1,3 @@
-
 import 'dart:async';
 import 'dart:collection';
 import 'dart:typed_data';
@@ -14,8 +13,7 @@ import 'package:directorio_delicias/dataparser/data_handler.dart';
 import 'package:directorio_delicias/ui/widgets/load_widget.dart';
 
 class StoreMapScreen extends StatefulWidget {
-
-  StoreMapScreen({Key key, this.lat = 0, this.lon = 0}) : super(key: key);
+  StoreMapScreen({Key? key, this.lat = 0, this.lon = 0}) : super(key: key);
 
   final double lat;
   final double lon;
@@ -25,12 +23,11 @@ class StoreMapScreen extends StatefulWidget {
 }
 
 class _StoreMapScreenState extends State<StoreMapScreen> {
-  
-  String _darkMapStyle;
-  String _lightMapStyle;
+  String? _darkMapStyle;
+  String? _lightMapStyle;
 
   @override
-  void initState() {  
+  void initState() {
     super.initState();
     rootBundle.loadString('assets/maps/dark_map_style.json').then((string) {
       _darkMapStyle = string;
@@ -40,9 +37,9 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
     });
   }
 
-  GoogleMapController ctrl;
-  LatLng selectedLatLng;
-  Uint8List bytes;
+  GoogleMapController? ctrl;
+  late LatLng selectedLatLng;
+  Uint8List? bytes;
 
   void done() async {
     DataHandler dataHandler = new DataHandler();
@@ -60,7 +57,7 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
   Widget build(BuildContext context) {
     return FutureBuilder<bool>(
       future: getData(200),
-      builder:(BuildContext context, AsyncSnapshot<bool> snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
         if (!snapshot.hasData) {
           return LoadingWidget(
             size: 30.0,
@@ -72,7 +69,6 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
       },
     );
   }
-
 
   Widget delayBeforeFetch() {
     return FutureBuilder<bool>(
@@ -92,19 +88,16 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
 
   Widget showMain() {
     return Scaffold(
-          backgroundColor: Theme.of(context).backgroundColor,
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              getAppBarUI(),
-              Expanded( child: delayBeforeFetch() ),
-            ]
-          ),
-        
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            getAppBarUI(),
+            Expanded(child: delayBeforeFetch()),
+          ]),
     );
   }
-
 
   Widget showMap() {
     return Stack(
@@ -118,10 +111,10 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
               color: Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.circular(20),
               boxShadow: <BoxShadow>[
-              BoxShadow(
-                color: Theme.of(context).shadowColor,
-                offset: const Offset(1.1, 1.1),
-                blurRadius: 10.0),
+                BoxShadow(
+                    color: Theme.of(context).shadowColor,
+                    offset: const Offset(1.1, 1.1),
+                    blurRadius: 10.0),
               ],
             ),
             child: Padding(
@@ -151,7 +144,9 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
                           letterSpacing: 0.0,
-                          color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                          color: Theme.of(context)
+                              .floatingActionButtonTheme
+                              .foregroundColor,
                         ),
                       ),
                     ),
@@ -159,7 +154,6 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
                 ),
               ),
             ),
-            
           ),
         )
       ],
@@ -167,11 +161,9 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
   }
 
   Widget googleMap() {
-    
-    if(widget.lat == 0 || widget.lon == 0) {
+    if (widget.lat == 0 || widget.lon == 0) {
       selectedLatLng = LatLng(Config.DEFAULT_LAT, Config.DEFAULT_LON);
-    }
-    else {
+    } else {
       selectedLatLng = LatLng(widget.lat, widget.lon);
     }
 
@@ -181,66 +173,55 @@ class _StoreMapScreenState extends State<StoreMapScreen> {
     );
 
     Marker marker = Marker(
-      consumeTapEvents: false,
-      markerId: MarkerId("CURRENT_LOCATION"),
-      position: selectedLatLng,
-      anchor: Offset(0, -0.75),
-      draggable: true,
-      icon: BitmapDescriptor.defaultMarker,
-      infoWindow: InfoWindow(
-        title: tr("tap_and_hold"),
-        snippet: tr("drag_me_around"),
-      ),
-      onDragEnd: (latlng) async {
-        selectedLatLng = latlng;
-        ctrl.animateCamera(
-          CameraUpdate.newCameraPosition(
-            CameraPosition(
-              target: selectedLatLng,
-              zoom: await ctrl.getZoomLevel(),
-            )
-          )
-        );
-      }
-    );
+        consumeTapEvents: false,
+        markerId: MarkerId("CURRENT_LOCATION"),
+        position: selectedLatLng,
+        anchor: Offset(0, -0.75),
+        draggable: true,
+        icon: BitmapDescriptor.defaultMarker,
+        infoWindow: InfoWindow(
+          title: tr("tap_and_hold"),
+          snippet: tr("drag_me_around"),
+        ),
+        onDragEnd: (latlng) async {
+          selectedLatLng = latlng;
+          ctrl?.animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
+            target: selectedLatLng,
+            zoom: await ctrl!.getZoomLevel(),
+          )));
+        });
 
     Set<Marker> markers = HashSet<Marker>();
     markers.add(marker);
-    
+
     return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
-      child: GoogleMap(
-        markers: markers,
-        myLocationButtonEnabled: false,
-        mapType: MapType.normal,
-        initialCameraPosition: cameraPosition,
-        onMapCreated: (GoogleMapController controller) {
-          ctrl = controller;
-          if (Helpers.isDarkMode(context)) {
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        child: GoogleMap(
+          markers: markers,
+          myLocationButtonEnabled: false,
+          mapType: MapType.normal,
+          initialCameraPosition: cameraPosition,
+          onMapCreated: (GoogleMapController controller) {
+            ctrl = controller;
+            if (Helpers.isDarkMode(context)) {
               controller.setMapStyle(_darkMapStyle);
-          }
-          else {
+            } else {
               controller.setMapStyle(_lightMapStyle);
-          }
-          
-          ctrl.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-          ctrl.showMarkerInfoWindow(marker.markerId);
-        },
-        onCameraIdle: () async {
-          ctrl.showMarkerInfoWindow(marker.markerId);
-          bytes = await ctrl.takeSnapshot();
-        },
-        onCameraMoveStarted: ()  async {
-          bytes = await ctrl.takeSnapshot();
-        },
-      )
-    );
+            }
+
+            ctrl?.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+            ctrl?.showMarkerInfoWindow(marker.markerId);
+          },
+          onCameraIdle: () async {
+            ctrl?.showMarkerInfoWindow(marker.markerId);
+            bytes = await ctrl?.takeSnapshot();
+          },
+          onCameraMoveStarted: () async {
+            bytes = await ctrl?.takeSnapshot();
+          },
+        ));
   }
 
-  
-  
-
-  
   Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(

@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:easy_localization/easy_localization.dart';
@@ -22,18 +21,16 @@ import '../../main.dart';
 import 'home_screen.dart';
 import 'map_screen.dart';
 
-
 class NavigationScreen extends StatefulWidget {
   @override
   _NavigationScreenState createState() => _NavigationScreenState();
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
-
-  static MenuIndex drawerIndex;
+  static MenuIndex? drawerIndex;
   var selectedMenuItemId;
   ZoomDrawerController _drawerController = ZoomDrawerController();
-  List<DrawerEntry> sideMenus;
+  late List<DrawerEntry> sideMenus;
 
   @override
   void initState() {
@@ -42,7 +39,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   }
 
   Future<bool> getData() async {
-    MyApp.loggedUser =  await DBProvider.instance.getLoggedUser();
+    MyApp.loggedUser = await DBProvider.instance.getLoggedUser();
     return true;
   }
 
@@ -68,16 +65,15 @@ class _NavigationScreenState extends State<NavigationScreen> {
         body: ZoomDrawer(
           controller: _drawerController,
           menuScreen: Selector<MenuProvider, bool>(
-            selector: (_, provider) => provider.isLogged,
-            builder: (_, isLogged, __) {
-              return sideMenuScreen();
-            }
-          ),
+              selector: (_, provider) => provider.isLogged,
+              builder: (_, isLogged, __) {
+                return sideMenuScreen();
+              }),
           mainScreen: screens(),
           borderRadius: 24.0,
           showShadow: true,
           angle: 0.0,
-          backgroundColor: Colors.grey[300],
+          backgroundColor: Colors.grey[300]!,
           slideWidth: MediaQuery.of(context).size.width * 0.65,
           openCurve: Curves.fastOutSlowIn,
           closeCurve: Curves.fastOutSlowIn,
@@ -89,72 +85,60 @@ class _NavigationScreenState extends State<NavigationScreen> {
   Widget sideMenuScreen() {
     sideMenus = <DrawerEntry>[
       DrawerEntry(
-        index: MenuIndex.HOME,
-        labelName: tr("home"),
-        iconData: Icons.home,
-        isFullScreen: false
-      ),
+          index: MenuIndex.HOME,
+          labelName: tr("home"),
+          iconData: Icons.home,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.CATEGORIES,
-        labelName: tr("categories"),
-        iconData: Icons.list,
-        isFullScreen: false
-      ),
+          index: MenuIndex.CATEGORIES,
+          labelName: tr("categories"),
+          iconData: Icons.list,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.FEATURED,
-        labelName: tr("featured"),
-        iconData: Icons.fact_check_outlined,
-        isFullScreen: false
-      ),
+          index: MenuIndex.FEATURED,
+          labelName: tr("featured"),
+          iconData: Icons.fact_check_outlined,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.FAVE,
-        labelName: tr("favorites"),
-        iconData: Icons.favorite_outline_sharp,
-        isFullScreen: false
-      ),
+          index: MenuIndex.FAVE,
+          labelName: tr("favorites"),
+          iconData: Icons.favorite_outline_sharp,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.MAP,
-        labelName: tr("map"),
-        iconData: Icons.map_outlined,
-        isFullScreen: false
-      ),
+          index: MenuIndex.MAP,
+          labelName: tr("map"),
+          iconData: Icons.map_outlined,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.NEWS,
-        labelName: tr("news"),
-        iconData: Icons.text_snippet,
-        isFullScreen: false
-      ),
+          index: MenuIndex.NEWS,
+          labelName: tr("news"),
+          iconData: Icons.text_snippet,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.TERMS,
-        labelName: tr("terms"),
-        iconData: Icons.featured_play_list_outlined,
-        isFullScreen: false
-      ),
+          index: MenuIndex.TERMS,
+          labelName: tr("terms"),
+          iconData: Icons.featured_play_list_outlined,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.ABOUT,
-        labelName: tr("about_us"),
-        iconData: Icons.info_outline,
-        isFullScreen: false
-      ),
+          index: MenuIndex.ABOUT,
+          labelName: tr("about_us"),
+          iconData: Icons.info_outline,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.LOGIN,
-        labelName: tr("account"),
-        iconData: Icons.person,
-        isFullScreen: true
-      ),
+          index: MenuIndex.LOGIN,
+          labelName: tr("account"),
+          iconData: Icons.person,
+          isFullScreen: true),
       DrawerEntry(
-        index: MenuIndex.SETTINGS,
-        labelName: tr("settings"),
-        iconData: Icons.settings,
-        isFullScreen: false
-      ),
+          index: MenuIndex.SETTINGS,
+          labelName: tr("settings"),
+          iconData: Icons.settings,
+          isFullScreen: false),
       DrawerEntry(
-        index: MenuIndex.MY_STORES,
-        labelName: tr("my_stores"),
-        iconData: Icons.storefront,
-        isFullScreen: false
-      ),
-      
+          index: MenuIndex.MY_STORES,
+          labelName: tr("my_stores"),
+          iconData: Icons.storefront,
+          isFullScreen: false),
     ];
     return Container(
       child: Center(
@@ -162,37 +146,38 @@ class _NavigationScreenState extends State<NavigationScreen> {
           sideMenus: sideMenus,
           onCallbackFullScreen: (drawerEntry) async {
             if (drawerEntry.index == MenuIndex.LOGIN) {
-              if(MyApp.loggedUser != null) {
+              if (MyApp.loggedUser != null) {
                 _drawerController.close();
                 Timer(Duration(milliseconds: 700), () async {
-                  final DataHandler dataHandler = await Navigator.push<dynamic>(
+                  final DataHandler? dataHandler =
+                      await Navigator.push<dynamic>(
                     context,
                     MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => ProfileScreen(),
-                      fullscreenDialog: true
-                    ),
+                        builder: (BuildContext context) => ProfileScreen(),
+                        fullscreenDialog: true),
                   );
-                  if(dataHandler != null && !dataHandler.isLogged) {
-                    Provider.of<MenuProvider>(context, listen: false).setLogged(false);
+                  if (dataHandler != null && dataHandler.isLogged!) {
+                    Provider.of<MenuProvider>(context, listen: false)
+                        .setLogged(false);
+                  }
+                });
+              } else {
+                _drawerController.close();
+                Timer(Duration(milliseconds: 700), () async {
+                  final DataHandler? dataHandler =
+                      await Navigator.push<dynamic>(
+                    context,
+                    MaterialPageRoute<dynamic>(
+                        builder: (BuildContext context) => LoginScreen(),
+                        fullscreenDialog: true),
+                  );
+                  if (dataHandler != null && dataHandler.isLogged!) {
+                    Provider.of<MenuProvider>(context, listen: false)
+                        .setLogged(true);
                   }
                 });
               }
-              else {
-                _drawerController.close();
-                Timer(Duration(milliseconds: 700), () async {
-                  final DataHandler dataHandler = await Navigator.push<dynamic>(
-                    context,
-                    MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => LoginScreen(),
-                      fullscreenDialog: true
-                    ),
-                  );
-                  if(dataHandler != null && dataHandler.isLogged) {
-                    Provider.of<MenuProvider>(context, listen: false).setLogged(true);
-                  }
-                });
-              }
-            } 
+            }
           },
         ),
       ),
@@ -201,41 +186,31 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   Widget screens() {
     return Selector<MenuProvider, int>(
-      selector: (_, provider) => provider.currentPage,
-      builder: (_, index, __) {
-        _drawerController.close();
-        DrawerEntry drawerEntry = sideMenus[index];
-        drawerIndex = drawerEntry.index; 
-        if(drawerIndex == MenuIndex.FEATURED) {
-          return const FeaturePage();
-        }
-        else if (drawerIndex == MenuIndex.CATEGORIES) {
-          return const CategoryPage();
-        } 
-        else if (drawerIndex == MenuIndex.MAP) {
-          return const MapPage();
-        } 
-        else if (drawerIndex == MenuIndex.FAVE) {
-          return const FavePage();
-        } 
-        else if (drawerIndex == MenuIndex.TERMS) {
-          return const TermsPage();
-        } 
-        else if (drawerIndex == MenuIndex.ABOUT) {
-          return const AboutUsPage();
-        } 
-        else if (drawerIndex == MenuIndex.MY_STORES) {
-          return const MyStoresPage();
-        } 
-        else if (drawerIndex == MenuIndex.NEWS) {
-          return NewsPage();
-        } 
-        else if (drawerIndex == MenuIndex.SETTINGS) {
-          return SettingsScreen();
-        } 
-        return MyHomePage();
-      }
-    );
+        selector: (_, provider) => provider.currentPage,
+        builder: (_, index, __) {
+          _drawerController.close();
+          DrawerEntry drawerEntry = sideMenus[index];
+          drawerIndex = drawerEntry.index;
+          if (drawerIndex == MenuIndex.FEATURED) {
+            return const FeaturePage();
+          } else if (drawerIndex == MenuIndex.CATEGORIES) {
+            return const CategoryPage();
+          } else if (drawerIndex == MenuIndex.MAP) {
+            return const MapPage();
+          } else if (drawerIndex == MenuIndex.FAVE) {
+            return const FavePage();
+          } else if (drawerIndex == MenuIndex.TERMS) {
+            return const TermsPage();
+          } else if (drawerIndex == MenuIndex.ABOUT) {
+            return const AboutUsPage();
+          } else if (drawerIndex == MenuIndex.MY_STORES) {
+            return const MyStoresPage();
+          } else if (drawerIndex == MenuIndex.NEWS) {
+            return NewsPage();
+          } else if (drawerIndex == MenuIndex.SETTINGS) {
+            return SettingsScreen();
+          }
+          return MyHomePage();
+        });
   }
-
 }

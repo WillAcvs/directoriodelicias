@@ -24,22 +24,21 @@ import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 import 'detail_screen.dart';
 
 class MapPage extends StatefulWidget {
-  const MapPage({Key key}) : super(key: key);
+  const MapPage({Key? key}) : super(key: key);
 
   @override
   _MapPageState createState() => _MapPageState();
 }
 
 class _MapPageState extends State<MapPage> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
-  GoogleMapController _controller;
-  Position position;
-  String _darkMapStyle;
-  String _lightMapStyle;
+  GoogleMapController? _controller;
+  Position? position;
+  String? _darkMapStyle;
+  String? _lightMapStyle;
 
   @override
   void initState() {
@@ -70,25 +69,24 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(200),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget getDataFromServer() {
@@ -100,15 +98,15 @@ class _MapPageState extends State<MapPage> {
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
-          DataHandler dataHandler = snapshot.data;
+        } else {
+          DataHandler? dataHandler = snapshot.data;
           hasData = true;
-          Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandler(dataHandler);
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget delayBeforeFetch() {
@@ -139,7 +137,8 @@ class _MapPageState extends State<MapPage> {
           height: 50,
           child: NestedScrollView(
             controller: _scrollController,
-            headerSliverBuilder:(BuildContext context, bool innerBoxIsScrolled) {
+            headerSliverBuilder:
+                (BuildContext context, bool innerBoxIsScrolled) {
               return <Widget>[
                 SliverPersistentHeader(
                   pinned: true,
@@ -154,19 +153,17 @@ class _MapPageState extends State<MapPage> {
           ),
         ),
         Expanded(
-          child: Stack( 
-            children: <Widget>[
-              Container(
-                height: (MediaQuery.of(context).size.height / 1.2) - 230,
-                color:Theme.of(context).backgroundColor,
-                child: Consumer<DataHandlerNotifier>(
-                  builder: (context, provider, child) => GoogleMap(
+          child: Stack(children: <Widget>[
+            Container(
+              height: (MediaQuery.of(context).size.height / 1.2) - 230,
+              color: Theme.of(context).backgroundColor,
+              child: Consumer<DataHandlerNotifier>(
+                builder: (context, provider, child) => GoogleMap(
                     gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>[
                       new Factory<OneSequenceGestureRecognizer>(
                         () => new EagerGestureRecognizer(),
                       ),
                     ].toSet(),
-                    
                     compassEnabled: true,
                     myLocationEnabled: true,
                     mapToolbarEnabled: true,
@@ -177,10 +174,9 @@ class _MapPageState extends State<MapPage> {
                     onMapCreated: (GoogleMapController controller) {
                       _controller = controller;
                       if (Helpers.isDarkMode(context)) {
-                          controller.setMapStyle(_darkMapStyle);
-                      }
-                      else {
-                          controller.setMapStyle(_lightMapStyle);
+                        controller.setMapStyle(_darkMapStyle);
+                      } else {
+                        controller.setMapStyle(_lightMapStyle);
                       }
 
                       Future.delayed(Duration(milliseconds: 200), () {
@@ -188,62 +184,55 @@ class _MapPageState extends State<MapPage> {
                       });
 
                       Future.delayed(Duration(milliseconds: 500), () {
-                        List<LatLng> list = new List<LatLng>();
-                        for(Marker marker in provider.markers) {
+                        List<LatLng> list = <LatLng>[];
+                        for (Marker marker in provider.markers) {
                           list.add(marker.position);
                         }
-                        _controller.moveCamera(
-                          CameraUpdate.newLatLngBounds(Services().boundsFromLatLngList(list), 40),
+                        _controller?.moveCamera(
+                          CameraUpdate.newLatLngBounds(
+                              Services().boundsFromLatLngList(list), 40),
                         );
                       });
-                    }
-                  ),
-                ),
+                    }),
               ),
-              Positioned(
+            ),
+            Positioned(
                 top: (MediaQuery.of(context).size.height / 1.2) - 280,
                 bottom: 0,
                 left: 0,
                 right: 0,
-                child: getCarouselUI()
-              ),
-            ]
-          ),
+                child: getCarouselUI()),
+          ]),
         ),
       ],
     );
-    
   }
 
-  Widget showMain() { 
+  Widget showMain() {
     root = Container(
-      child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          FutureBuilder<bool>(
-            future: getLocation(),
-            builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-              if (!snapshot.hasData) {
-                return const SizedBox();
-              } else {
-                return Expanded( child: delayBeforeFetch());
-              }
-            },
-          )
-        ]
+        child: Column(children: <Widget>[
+      getAppBarUI(),
+      FutureBuilder<bool>(
+        future: getLocation(),
+        builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+          if (!snapshot.hasData) {
+            return const SizedBox();
+          } else {
+            return Expanded(child: delayBeforeFetch());
+          }
+        },
       )
-    );
-    return root;
+    ]));
+    return root!;
   }
-  
+
   Widget getCarouselUI() {
     return Container(
       height: 280,
       decoration: BoxDecoration(
         color: Theme.of(context).backgroundColor,
         borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(20.0),
-            topRight: Radius.circular(20.0)),
+            topLeft: Radius.circular(20.0), topRight: Radius.circular(20.0)),
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Theme.of(context).shadowColor,
@@ -256,16 +245,15 @@ class _MapPageState extends State<MapPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height:10),
+          SizedBox(height: 10),
           Text(
             tr("nearby_stores"),
             textAlign: TextAlign.left,
             style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 22,
-              letterSpacing: 0.27,
-              color: Theme.of(context).textTheme.caption.color
-            ),
+                fontWeight: FontWeight.w600,
+                fontSize: 22,
+                letterSpacing: 0.27,
+                color: Theme.of(context).textTheme.caption?.color),
           ),
           Consumer<DataHandlerNotifier>(
             builder: (context, provider, child) => SliderView(
@@ -274,14 +262,15 @@ class _MapPageState extends State<MapPage> {
               },
               stores: provider.dataHandler.stores,
               onPageChanged: (index, reason) {
-                Marker marker = provider.dataHandler.stores[index].marker;
+                Marker? marker = provider.dataHandler.stores![index].marker;
                 CameraPosition cameraPosition = CameraPosition(
-                  target: marker.position,
+                  target: marker!.position,
                   zoom: 12,
                 );
 
-                _controller.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-                _controller.showMarkerInfoWindow(marker.markerId);
+                _controller?.animateCamera(
+                    CameraUpdate.newCameraPosition(cameraPosition));
+                _controller?.showMarkerInfoWindow(marker.markerId);
               },
             ),
           )
@@ -294,7 +283,7 @@ class _MapPageState extends State<MapPage> {
     Navigator.push<dynamic>(
       context,
       MaterialPageRoute<dynamic>(
-        builder: (BuildContext context) => DetailScreen(store: store), 
+        builder: (BuildContext context) => DetailScreen(store: store),
         fullscreenDialog: true,
       ),
     );
@@ -303,7 +292,6 @@ class _MapPageState extends State<MapPage> {
   Widget getFilterBarUI() {
     return Stack(
       children: <Widget>[
-        
         Container(
           color: Theme.of(context).backgroundColor,
           child: Padding(
@@ -316,14 +304,14 @@ class _MapPageState extends State<MapPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                        sprintf("%d %s", 
-                          [provider.dataHandler.stores.length, 
-                          tr("stores_found")]),
+                        sprintf("%d %s", [
+                          provider.dataHandler.stores?.length,
+                          tr("stores_found")
+                        ]),
                         style: TextStyle(
-                          fontWeight: FontWeight.w100,
-                          fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color
-                        ),
+                            fontWeight: FontWeight.w100,
+                            fontSize: 16,
+                            color: Theme.of(context).textTheme.caption?.color),
                       ),
                     ),
                   ),
@@ -354,8 +342,10 @@ class _MapPageState extends State<MapPage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Color.fromRGBO(1, 1, 1, 0),),
+                            child: Icon(
+                              Icons.sort,
+                              color: Color.fromRGBO(1, 1, 1, 0),
+                            ),
                           ),
                         ],
                       ),
@@ -445,14 +435,17 @@ class _MapPageState extends State<MapPage> {
                         ),
                         onTap: () {
                           CameraPosition cameraPosition = CameraPosition(
-                            target: LatLng(position.latitude, position.longitude),
+                            target:
+                                LatLng(position!.latitude, position!.longitude),
                             zoom: 12,
                           );
-                          _controller.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+                          _controller?.animateCamera(
+                              CameraUpdate.newCameraPosition(cameraPosition));
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Icon(Icons.my_location_rounded,
+                          child: Icon(
+                            Icons.my_location_rounded,
                             color: Theme.of(context).appBarTheme.color,
                           ),
                         ),
@@ -468,4 +461,3 @@ class _MapPageState extends State<MapPage> {
     );
   }
 }
-

@@ -7,7 +7,7 @@ import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:directorio_delicias/app/config.dart';
 import 'package:directorio_delicias/commons/drawer.dart';
 import 'package:get_it/get_it.dart';
-import 'package:get_version/get_version.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:sprintf/sprintf.dart';
 import 'package:directorio_delicias/commons/app_builder.dart';
@@ -18,21 +18,17 @@ import 'package:directorio_delicias/notifiers/theme_notifier.dart';
 import 'package:directorio_delicias/session/session_storage.dart';
 import 'package:directorio_delicias/ui/widgets/load_widget.dart';
 
-
 class SettingsScreen extends StatefulWidget {
-
-  const SettingsScreen({Key key}) : super(key: key);
+  const SettingsScreen({Key? key}) : super(key: key);
 
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-
-  SessionStorage sessionStorage;
+  SessionStorage? sessionStorage;
   String projectCode = "1.1";
 
-  
   @override
   void initState() {
     super.initState();
@@ -40,62 +36,59 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   Future<SessionStorage> getData() async {
     try {
-      projectCode = await GetVersion.projectCode;
+      PackageInfo packageInfo = await PackageInfo.fromPlatform();
+
+      projectCode = packageInfo.buildNumber;
     } on PlatformException {
       projectCode = '1.1';
     }
     sessionStorage = GetIt.instance.get<SessionStorage>();
-    return sessionStorage;
+    return sessionStorage!;
   }
 
   Future<void> disablePush(val) async {
-    await OneSignal.shared.setSubscription(val);
+    await OneSignal.shared.disablePush(val);
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Theme.of(context).backgroundColor,
-      child: Scaffold(
-        body: root(),
-      )
-    );
+        color: Theme.of(context).backgroundColor,
+        child: Scaffold(
+          body: root(),
+        ));
   }
 
   Widget updateMain() {
     return FutureBuilder<SessionStorage>(
-        future: getData(),
-        builder: (BuildContext context, AsyncSnapshot<SessionStorage> snapshot) {
-          if (!snapshot.hasData) {
-            return LoadingWidget(
-              size: 30.0,
-              iconColor: Theme.of(context).accentColor,
-            );
-          } 
-          else {
-            return Expanded(child: getContent());
-          }
-        },
+      future: getData(),
+      builder: (BuildContext context, AsyncSnapshot<SessionStorage> snapshot) {
+        if (!snapshot.hasData) {
+          return LoadingWidget(
+            size: 30.0,
+            iconColor: Theme.of(context).accentColor,
+          );
+        } else {
+          return Expanded(child: getContent());
+        }
+      },
     );
   }
-  
+
   Widget root() {
     return Container(
       color: Theme.of(context).backgroundColor,
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          updateMain()
-        ],
+        children: <Widget>[getAppBarUI(), updateMain()],
       ),
     );
   }
 
   Widget getContent() {
     int indexLanguage = 0;
-    for(int x = 0; x < Config.languageLocales.length; x++) {
+    for (int x = 0; x < Config.languageLocales.length; x++) {
       Language lang = Config.languageLocales[x];
-      if(lang.locale == context.locale) {
+      if (lang.locale == context.locale) {
         indexLanguage = x;
         break;
       }
@@ -118,9 +111,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Text(
                       tr("app_settings"),
                       style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).textTheme.caption.color,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Theme.of(context).textTheme.caption?.color,
                       ),
                     ),
                   ),
@@ -129,31 +122,34 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ItemCard(
                     title: tr("nearby_radius"),
-                    color: Theme.of(context).textTheme.bodyText1.color,
-                    textColor: Theme.of(context).textTheme.subtitle1.color,
-                    callback: () { },
+                    color: Theme.of(context).textTheme.bodyText1!.color!,
+                    textColor: Theme.of(context).textTheme.subtitle1!.color!,
+                    callback: () {},
                     rightWidget: Material(
                       color: Colors.transparent,
                       child: InkWell(
                         onTap: () {
                           Helpers.showRadiusDialog(
-                            context:context,
-                            onTap: (text) { },
-                            initialValue: sessionStorage.getRadius.toString(),
-                            onTapOk: (radius) {
-                              setState(() {
-                                sessionStorage.setRadius(double.parse(radius));
+                              context: context,
+                              onTap: (text) {},
+                              initialValue:
+                                  sessionStorage!.getRadius.toString(),
+                              onTapOk: (radius) {
+                                setState(() {
+                                  sessionStorage
+                                      ?.setRadius(double.parse(radius));
+                                });
                               });
-                            }
-                          );
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            sprintf("%.01f %s", [sessionStorage.getRadius, tr("km")]),
+                            sprintf("%.01f %s",
+                                [sessionStorage?.getRadius, tr("km")]),
                             style: TextStyle(
                               fontSize: 15,
-                              color: Theme.of(context).textTheme.subtitle1.color,
+                              color:
+                                  Theme.of(context).textTheme.subtitle1?.color,
                             ),
                           ),
                         ),
@@ -165,15 +161,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ItemCard(
                     title: tr("push_notifications"),
-                    color: Theme.of(context).textTheme.bodyText1.color,
-                    textColor: Theme.of(context).textTheme.subtitle1.color,
-                    callback: () { },
+                    color: Theme.of(context).textTheme.bodyText1!.color!,
+                    textColor: Theme.of(context).textTheme.subtitle1!.color!,
+                    callback: () {},
                     rightWidget: Checkbox(
                       activeColor: Theme.of(context).accentColor,
-                      value: sessionStorage.isPushEnabled,
+                      value: sessionStorage!.isPushEnabled,
                       onChanged: (val) {
                         setState(() {
-                          sessionStorage.setPushEnabled(val);
+                          sessionStorage?.setPushEnabled(val!);
                           disablePush(val);
                         });
                       },
@@ -184,9 +180,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ItemCard(
                     title: tr("language"),
-                    color: Theme.of(context).textTheme.bodyText1.color,
-                    textColor: Theme.of(context).textTheme.subtitle1.color,
-                    callback: () { },
+                    color: Theme.of(context).textTheme.bodyText1!.color!,
+                    textColor: Theme.of(context).textTheme.subtitle1!.color!,
+                    callback: () {},
                     rightWidget: Material(
                       color: Colors.transparent,
                       child: InkWell(
@@ -196,19 +192,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           // context.locale = currentLocale;
                           // MyApp.selectedLocale = currentLocale;
                           Helpers.showLanguageDialog(
-                            context: context,
-                            initialValue: indexLanguage,
-                            onTap: (index) {
-                              Language lang = Config.languageLocales[index];
-                              Locale currentLocale = lang.locale;
-                              ZoomDrawer.rtl = currentLocale.languageCode.toLowerCase() == "ar";
-                              context.locale = currentLocale;
-                              MyApp.selectedLocale = currentLocale;
-                             },
-                             onTapOk: () {
-                               Provider.of<MenuProvider>(context, listen: false).forceReload();
-                             }
-                          );
+                              context: context,
+                              initialValue: indexLanguage,
+                              onTap: (index) {
+                                Language lang = Config.languageLocales[index];
+                                Locale currentLocale = lang.locale;
+                                ZoomDrawer.rtl =
+                                    currentLocale.languageCode.toLowerCase() ==
+                                        "ar";
+                                context.locale = currentLocale;
+                                MyApp.selectedLocale = currentLocale;
+                              },
+                              onTapOk: () {
+                                Provider.of<MenuProvider>(context,
+                                        listen: false)
+                                    .forceReload();
+                              });
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -216,7 +215,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             Config.languageLocales[indexLanguage].name,
                             style: TextStyle(
                               fontSize: 15,
-                              color: Theme.of(context).textTheme.subtitle1.color,
+                              color:
+                                  Theme.of(context).textTheme.subtitle1?.color,
                             ),
                           ),
                         ),
@@ -234,9 +234,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Text(
                       tr("visuals"),
                       style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).textTheme.caption.color,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Theme.of(context).textTheme.caption?.color,
                       ),
                     ),
                   ),
@@ -245,20 +245,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ItemCard(
                     title: tr("dark_mode"),
-                    color: Theme.of(context).textTheme.bodyText1.color,
-                    textColor: Theme.of(context).textTheme.subtitle1.color,
-                    callback: () { },
+                    color: Theme.of(context).textTheme.bodyText1!.color!,
+                    textColor: Theme.of(context).textTheme.subtitle1!.color!,
+                    callback: () {},
                     rightWidget: Checkbox(
                       activeColor: Theme.of(context).accentColor,
-                      value: Provider.of<ThemeNotifier>(context, listen: false).isDarkMode,
-                      onChanged: (bool val) {
-                        sessionStorage.setDarkMode(val);
-                        Provider.of<ThemeNotifier>(context, listen: false).updateTheme(val);
-                        AppBuilder.of(context).rebuild();
+                      value: Provider.of<ThemeNotifier>(context, listen: false)
+                          .isDarkMode,
+                      onChanged: (bool? val) {
+                        sessionStorage?.setDarkMode(val!);
+                        Provider.of<ThemeNotifier>(context, listen: false)
+                            .updateTheme(val!);
+                        AppBuilder.of(context)?.rebuild();
                       },
                     ),
-                    
-                    
                   ),
                   SizedBox(
                     height: 40,
@@ -268,9 +268,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     child: Text(
                       tr("app_version"),
                       style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: Theme.of(context).textTheme.caption.color,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Theme.of(context).textTheme.caption?.color,
                       ),
                     ),
                   ),
@@ -279,20 +279,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   ItemCard(
                     title: tr("version"),
-                    color: Theme.of(context).textTheme.bodyText1.color,
-                    textColor: Theme.of(context).textTheme.subtitle1.color,
+                    color: Theme.of(context).textTheme.bodyText1!.color!,
+                    textColor: Theme.of(context).textTheme.subtitle1!.color!,
                     rightWidget: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         "1.1.1",
                         style: TextStyle(
                           fontSize: 15,
-                          color: Theme.of(context).textTheme.subtitle1.color,
+                          color: Theme.of(context).textTheme.subtitle1!.color,
                         ),
                       ),
                     ),
                   ),
-                  
                 ],
               ),
             ),
@@ -353,9 +352,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  
-                ],
+                children: <Widget>[],
               ),
             )
           ],
@@ -366,18 +363,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
 }
 
 class ItemCard extends StatelessWidget {
+  ItemCard(
+      {this.title,
+      this.color,
+      this.rightWidget,
+      this.callback,
+      this.textColor});
 
-  ItemCard({this.title, this.color, this.rightWidget, this.callback, this.textColor});
-
-  final Color color;
-  final Color textColor;
-  final String title;
-  final Widget rightWidget;
-  final Function callback;
+  final Color? color;
+  final Color? textColor;
+  final String? title;
+  final Widget? rightWidget;
+  final Function()? callback;
 
   @override
   Widget build(BuildContext context) {
-
     return GestureDetector(
       child: Container(
         height: 60,
@@ -389,7 +389,7 @@ class ItemCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 24, right: 24),
               child: Center(
                 child: Text(
-                  title,
+                  title!,
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
@@ -399,7 +399,7 @@ class ItemCard extends StatelessWidget {
                 ),
               ),
             ),
-            rightWidget
+            rightWidget!
           ],
         ),
       ),
@@ -407,4 +407,3 @@ class ItemCard extends StatelessWidget {
     );
   }
 }
-

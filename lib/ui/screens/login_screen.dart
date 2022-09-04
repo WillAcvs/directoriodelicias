@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:easy_localization/easy_localization.dart';
@@ -15,8 +14,7 @@ import 'package:directorio_delicias/main.dart';
 import 'package:directorio_delicias/ui/screens/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
-
-  LoginScreen({Key key}) : super(key: key);
+  LoginScreen({Key? key}) : super(key: key);
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -25,12 +23,13 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
-    
     super.initState();
   }
 
-  final RoundedLoadingButtonController _btnController = new RoundedLoadingButtonController();
-  final RoundedLoadingButtonController _btnRegisterController = new RoundedLoadingButtonController();
+  final RoundedLoadingButtonController _btnController =
+      new RoundedLoadingButtonController();
+  final RoundedLoadingButtonController _btnRegisterController =
+      new RoundedLoadingButtonController();
   final TextEditingController _usernameController = new TextEditingController();
   final TextEditingController _passwordController = new TextEditingController();
 
@@ -63,41 +62,35 @@ class _LoginScreenState extends State<LoginScreen> {
           fullscreenDialog: true),
     );
 
-    if(dataHandler != null) {
+    if (dataHandler != null) {
       _btnRegisterController.success();
       Timer(Duration(seconds: 2), () {
         dataHandler.isLogged = true;
-          Navigator.pop(context, dataHandler);
+        Navigator.pop(context, dataHandler);
       });
-    }
-    else {
+    } else {
       _btnRegisterController.reset();
     }
   }
 
   void _login() async {
-    AuthFetcher(
-      didError: (DataHandler dataHandler) {
-        _btnController.error();
-        Timer(Duration(seconds: 2), () {
-          _btnController.reset();
-        });
-      },
-      didLogged: (DataHandler dataHandler) {
-        _btnController.success();
-        Timer(Duration(seconds: 2), () {
-          dataHandler.isLogged = true;
-          MyApp.loggedUser = dataHandler.user;
-          Navigator.pop(context, dataHandler);
-        });
-      }
-    ).loginUser(
-      username:_usernameController.text, 
-      password: _passwordController.text
-    );
-  } 
+    AuthFetcher(didError: (DataHandler dataHandler) {
+      _btnController.error();
+      Timer(Duration(seconds: 2), () {
+        _btnController.reset();
+      });
+    }, didLogged: (DataHandler dataHandler) {
+      _btnController.success();
+      Timer(Duration(seconds: 2), () {
+        dataHandler.isLogged = true;
+        MyApp.loggedUser = dataHandler.user;
+        Navigator.pop(context, dataHandler);
+      });
+    }).loginUser(
+        username: _usernameController.text, password: _passwordController.text);
+  }
 
- /* void _loginFacebook() async {
+  /* void _loginFacebook() async {
     AuthFetcher(
       didError: (DataHandler dataHandler) {
         Helpers.showAlertDialog(
@@ -127,13 +120,12 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Scaffold(
           backgroundColor: Theme.of(context).backgroundColor,
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              getAppBarUI(),
-              main(),
-            ]
-          ),
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                getAppBarUI(),
+                main(),
+              ]),
         ),
       ),
     );
@@ -141,58 +133,62 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget main() {
     return Expanded(
-    child: Padding(
-      padding: EdgeInsets.all(20),
-      child: SingleChildScrollView(
-        child: SizedBox(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              createTextTitle(tr("username")),
-              _buildUsername(),
-              createTextTitle(tr("password")),
-              _buildPassword(),
-              Padding(
-                padding: const EdgeInsets.only(top: 16),
-                child: Center(
-                  child: RoundedLoadingButton(
-                    width: MediaQuery.of(context).size.width,
-                    color: Theme.of(context).accentColor,
-                    controller: _btnController,
-                    onPressed: _login,
-                    child: Text(
-                      tr("login"),
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+      child: Padding(
+        padding: EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: SizedBox(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                createTextTitle(tr("username")),
+                _buildUsername(),
+                createTextTitle(tr("password")),
+                _buildPassword(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Center(
+                    child: RoundedLoadingButton(
+                      width: MediaQuery.of(context).size.width,
+                      color: Theme.of(context).accentColor,
+                      controller: _btnController,
+                      onPressed: _login,
+                      child: Text(
+                        tr("login"),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Theme.of(context)
+                              .floatingActionButtonTheme
+                              .foregroundColor,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16),
-                child: Center(
-                  child: RoundedLoadingButton(
-                    width: MediaQuery.of(context).size.width,
-                    color: Theme.of(context).accentColor,
-                    controller: _btnRegisterController,
-                    onPressed: _register,
-                    child: Text(
-                      tr("register"),
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Center(
+                    child: RoundedLoadingButton(
+                      width: MediaQuery.of(context).size.width,
+                      color: Theme.of(context).accentColor,
+                      controller: _btnRegisterController,
+                      onPressed: _register,
+                      child: Text(
+                        tr("register"),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Theme.of(context)
+                              .floatingActionButtonTheme
+                              .foregroundColor,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              /*Row(
+                SizedBox(
+                  height: 50,
+                ),
+                /*Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
@@ -272,12 +268,12 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 ]
               ),*/
-            ],
+              ],
+            ),
           ),
         ),
       ),
-    ),
-  );
+    );
   }
 
   Widget createTextTitle(String str) {
@@ -287,10 +283,9 @@ class _LoginScreenState extends State<LoginScreen> {
         str,
         textAlign: TextAlign.left,
         style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: Theme.of(context).textTheme.subtitle1.color
-        ),
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).textTheme.subtitle1!.color),
       ),
     );
   }
@@ -300,7 +295,7 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.only(top: 10, left: 0, right: 0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1!.color,
           borderRadius: BorderRadius.circular(8),
         ),
         child: ClipRRect(
@@ -317,12 +312,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 onChanged: (String txt) {},
                 style: TextStyle(
                   fontSize: 16,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption!.color,
                 ),
                 cursorColor: Theme.of(context).accentColor,
                 decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: tr("enter_username")),
+                    border: InputBorder.none, hintText: tr("enter_username")),
               ),
             ),
           ),
@@ -336,7 +330,7 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.only(top: 10, left: 0, right: 0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1!.color,
           borderRadius: BorderRadius.circular(8),
         ),
         child: ClipRRect(
@@ -353,12 +347,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 onChanged: (String txt) {},
                 style: TextStyle(
                   fontSize: 16,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption!.color,
                 ),
                 cursorColor: Theme.of(context).accentColor,
                 decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: tr("your_password")),
+                    border: InputBorder.none, hintText: tr("your_password")),
               ),
             ),
           ),
@@ -397,7 +390,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            
             Container(
               width: AppBar().preferredSize.height + 40,
               height: AppBar().preferredSize.height,

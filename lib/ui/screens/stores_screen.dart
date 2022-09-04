@@ -15,19 +15,17 @@ import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 import 'detail_screen.dart';
 
 class StoresPage extends StatefulWidget {
-  
-  StoresPage({Key key, this.category}) : super(key: key);
-  final Category category;
+  StoresPage({Key? key, this.category}) : super(key: key);
+  final Category? category;
 
   @override
   _StoresPageState createState() => _StoresPageState();
 }
 
 class _StoresPageState extends State<StoresPage> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
 
   @override
@@ -48,9 +46,9 @@ class _StoresPageState extends State<StoresPage> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
             child: Scaffold(
               backgroundColor: Theme.of(context).backgroundColor,
               body: FutureBuilder<bool>(
@@ -65,8 +63,7 @@ class _StoresPageState extends State<StoresPage> {
               ),
             ),
           );
-      }
-    );
+        });
   }
 
   Widget delayBeforeFetch() {
@@ -84,41 +81,39 @@ class _StoresPageState extends State<StoresPage> {
 
   Widget getDataFromServer() {
     return FutureBuilder<DataHandler>(
-      future: GetIt.instance.get<DataParser>().fetchCategoryStoresNearby(widget.category),
+      future: GetIt.instance
+          .get<DataParser>()
+          .fetchCategoryStoresNearby(widget.category!),
       builder: (BuildContext context, AsyncSnapshot<DataHandler> snapshot) {
         if (!snapshot.hasData) {
           return LoadingWidget(
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
+        } else {
           hasData = true;
-          DataHandler dataHandler = snapshot.data;
-          Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandler(dataHandler);
+          DataHandler dataHandler = snapshot.data!;
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget showMain() {
     root = Container(
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
-    return root;
+    return root!;
   }
-  
+
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -133,7 +128,7 @@ class _StoresPageState extends State<StoresPage> {
         color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
           builder: (context, provider, child) => ListView.builder(
-            itemCount: provider.dataHandler.stores.length,
+            itemCount: provider.dataHandler.stores!.length,
             padding: const EdgeInsets.only(top: 8),
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
@@ -142,13 +137,13 @@ class _StoresPageState extends State<StoresPage> {
                   Navigator.push<dynamic>(
                     context,
                     MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => 
-                        DetailScreen(store: provider.dataHandler.stores[index]),
-                        fullscreenDialog: true,
+                      builder: (BuildContext context) => DetailScreen(
+                          store: provider.dataHandler.stores![index]),
+                      fullscreenDialog: true,
                     ),
                   );
                 },
-                store: provider.dataHandler.stores[index],
+                store: provider.dataHandler.stores![index],
               );
             },
           ),
@@ -172,14 +167,14 @@ class _StoresPageState extends State<StoresPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                        sprintf("%d %s", 
-                          [provider.dataHandler.stores.length, 
-                          tr("stores_found")]),
+                        sprintf("%d %s", [
+                          provider.dataHandler.stores!.length,
+                          tr("stores_found")
+                        ]),
                         style: TextStyle(
-                          fontWeight: FontWeight.w100,
-                          fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color
-                        ),
+                            fontWeight: FontWeight.w100,
+                            fontSize: 16,
+                            color: Theme.of(context).textTheme.caption!.color),
                       ),
                     ),
                   ),
@@ -210,8 +205,10 @@ class _StoresPageState extends State<StoresPage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Color.fromRGBO(1, 1, 1, 0),),
+                            child: Icon(
+                              Icons.sort,
+                              color: Color.fromRGBO(1, 1, 1, 0),
+                            ),
                           ),
                         ],
                       ),
@@ -259,10 +256,8 @@ class _StoresPageState extends State<StoresPage> {
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.arrow_back_ios_outlined,
-                      color: Theme.of(context).appBarTheme.color
-                    ),
+                    child: Icon(Icons.arrow_back_ios_outlined,
+                        color: Theme.of(context).appBarTheme.color),
                   ),
                 ),
               ),
@@ -270,12 +265,11 @@ class _StoresPageState extends State<StoresPage> {
             Expanded(
               child: Center(
                 child: Text(
-                  widget.category.category,
+                  widget.category!.category,
                   style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22,
-                    color: Theme.of(context).appBarTheme.color
-                  ),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 22,
+                      color: Theme.of(context).appBarTheme.color),
                 ),
               ),
             ),
@@ -300,9 +294,10 @@ class _StoresPageState extends State<StoresPage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Icon(
-                            isNearMe ? Icons.near_me : FontAwesomeIcons.sortAlphaUp,
-                            color: Theme.of(context).appBarTheme.color
-                            ),
+                              isNearMe
+                                  ? Icons.near_me
+                                  : FontAwesomeIcons.sortAlphaUp,
+                              color: Theme.of(context).appBarTheme.color),
                         ),
                       ),
                     ),
@@ -316,5 +311,3 @@ class _StoresPageState extends State<StoresPage> {
     );
   }
 }
-
-

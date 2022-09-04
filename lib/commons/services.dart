@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:crypto/crypto.dart';
@@ -10,7 +9,6 @@ import 'package:directorio_delicias/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 
-
 class Services {
   void call(String number) => launch("tel:$number");
   void sendSms(String number) => launch("sms:$number");
@@ -18,8 +16,7 @@ class Services {
 
   void launchURL(String url) async {
     String newUrl = url;
-    if(!url.contains("http"))
-      newUrl = "http://" + url;
+    if (!url.contains("http")) newUrl = "http://" + url;
 
     if (await canLaunch(newUrl)) {
       await launch(newUrl);
@@ -28,30 +25,31 @@ class Services {
     }
   }
 
-  Future<Position> getLocation() async {
-    Position position = await MyApp.determinePosition();
+  Future<Position?> getLocation() async {
+    Position? position = await MyApp.determinePosition();
     return position;
   }
 
   LatLngBounds boundsFromLatLngList(List<LatLng> list) {
-    assert(list.isNotEmpty);
-    double x0, x1, y0, y1;
+    assert(list.isEmpty);
+    double? x0, x1, y0, y1;
     for (LatLng latLng in list) {
       if (x0 == null) {
         x0 = x1 = latLng.latitude;
         y0 = y1 = latLng.longitude;
       } else {
-        if (latLng.latitude > x1) x1 = latLng.latitude;
+        if (latLng.latitude > x1!) x1 = latLng.latitude;
         if (latLng.latitude < x0) x0 = latLng.latitude;
-        if (latLng.longitude > y1) y1 = latLng.longitude;
-        if (latLng.longitude < y0) y0 = latLng.longitude;
+        if (latLng.longitude > y1!) y1 = latLng.longitude;
+        if (latLng.longitude < y0!) y0 = latLng.longitude;
       }
     }
-    return LatLngBounds(northeast: LatLng(x1, y1), southwest: LatLng(x0, y0));
+    return LatLngBounds(
+        northeast: LatLng(x1!, y1!), southwest: LatLng(x0!, y0!));
   }
 
-  static String generateSignature(
-      String method, String base, List<String> sortedItems, String secret, String key1) {
+  static String generateSignature(String method, String base,
+      List<String> sortedItems, String secret, String key1) {
     String param = '';
 
     for (int i = 0; i < sortedItems.length; i++) {
@@ -61,20 +59,23 @@ class Services {
         param += '&${sortedItems[i]}';
     }
 
-    String sig = '$method&${Uri.encodeComponent(base)}&${Uri.encodeComponent(param)}';
+    String sig =
+        '$method&${Uri.encodeComponent(base)}&${Uri.encodeComponent(param)}';
     String key = '${Uri.encodeComponent(key1)}&${Uri.encodeComponent(secret)}';
     var digest = Hmac(sha1, utf8.encode(key)).convert(utf8.encode(sig));
     return base64.encode(digest.bytes);
   }
 
-  Future<http.Response> _twitterGet(String base, List<List<String>> params, String _consumerKey, String token, String secret) async {
-  
-    String oauthConsumer = 'oauth_consumer_key="${Uri.encodeComponent(_consumerKey)}"';
+  Future<http.Response> _twitterGet(String base, List<List<String>> params,
+      String _consumerKey, String token, String secret) async {
+    String oauthConsumer =
+        'oauth_consumer_key="${Uri.encodeComponent(_consumerKey)}"';
     String oauthToken = 'oauth_token="${Uri.encodeComponent(token)}"';
-    String oauthNonce = 'oauth_nonce="${Uri.encodeComponent(randomAlphaNumeric(42))}"';
+    String oauthNonce =
+        'oauth_nonce="${Uri.encodeComponent(randomAlphaNumeric(42))}"';
     String oauthVersion = 'oauth_version="${Uri.encodeComponent("1.0")}"';
     String oauthTime =
-'oauth_timestamp="${(DateTime.now().millisecondsSinceEpoch / 1000).toString()}"';
+        'oauth_timestamp="${(DateTime.now().millisecondsSinceEpoch / 1000).toString()}"';
     String oauthMethod =
         'oauth_signature_method="${Uri.encodeComponent("HMAC-SHA1")}"';
     var oauthList = [
@@ -98,23 +99,26 @@ class Services {
     String oauthSig =
         'oauth_signature="${Uri.encodeComponent(generateSignature("GET", "https://api.twitter.com$base", oauthList, secret, _consumerKey))}"';
 
-    return await http.get(new Uri.https("api.twitter.com", base, paramMap), headers: {
+    return await http
+        .get(new Uri.https("api.twitter.com", base, paramMap), headers: {
       "Authorization":
           'Oauth $oauthConsumer, $oauthNonce, $oauthSig, $oauthMethod, $oauthTime, $oauthToken, $oauthVersion',
       "Content-Type": "application/x-www-form-urlencoded"
     }).timeout(Duration(seconds: 15));
   }
 
-  Future<dynamic> getUser(String tag, String _consumerKey, String token, String secret) async {
+  Future<dynamic> getUser(
+      String tag, String _consumerKey, String token, String secret) async {
     String base = '/1.1/users/show.json';
-    final response = await _twitterGet(base, [
-      ["screen_name", tag],
-      ["tweet_mode", "extended"],
-      ],
-      _consumerKey,
-      token,
-      secret
-    );
+    final response = await _twitterGet(
+        base,
+        [
+          ["screen_name", tag],
+          ["tweet_mode", "extended"],
+        ],
+        _consumerKey,
+        token,
+        secret);
 
     if (response.statusCode == 200) {
       try {
@@ -129,7 +133,6 @@ class Services {
       return null;
     }
   }
-  
 }
 
 class HexColor extends Color {

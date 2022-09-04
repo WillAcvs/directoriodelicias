@@ -18,26 +18,25 @@ import 'package:directorio_delicias/ui/widgets/store_list_view.dart';
 import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 
 class SearchStoresScreen extends StatefulWidget {
-
-  final String searchStr;
-  const SearchStoresScreen({Key key, this.searchStr}) : super(key: key);
+  final String? searchStr;
+  const SearchStoresScreen({Key? key, this.searchStr}) : super(key: key);
 
   @override
   _SearchStoresState createState() => _SearchStoresState();
 }
 
 class _SearchStoresState extends State<SearchStoresScreen> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
   int min = 0;
   int max = Config.MAX_STORES_COUNT_FETCH;
-  
+
   @override
   void initState() {
     super.initState();
+    print(widget.searchStr);
   }
 
   Future<bool> getData() async {
@@ -53,30 +52,31 @@ class _SearchStoresState extends State<SearchStoresScreen> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Future<DataHandler> pauseBeforeServer() async {
     await Future<dynamic>.delayed(const Duration(milliseconds: 500));
-    return GetIt.instance.get<DataParser>().searchStores(min: min, max:max, searchStr: widget.searchStr);
+    return GetIt.instance
+        .get<DataParser>()
+        .searchStores(min: min, max: max, searchStr: widget.searchStr);
   }
 
   Widget getDataFromServer() {
@@ -84,45 +84,42 @@ class _SearchStoresState extends State<SearchStoresScreen> {
       future: pauseBeforeServer(),
       builder: (BuildContext context, AsyncSnapshot<DataHandler> snapshot) {
         switch (snapshot.connectionState) {
-            case ConnectionState.waiting:
-              return LoadingWidget(
-                size: 30.0,
-                iconColor: Theme.of(context).accentColor,
-              );
+          case ConnectionState.waiting:
+            return LoadingWidget(
+              size: 30.0,
+              iconColor: Theme.of(context).accentColor,
+            );
 
-            case ConnectionState.done:
-              DataHandler dataHandler = snapshot.data;
-              hasData = true;
-              var provider = Provider.of<DataHandlerNotifier>(context, listen: false);
-              provider.setDataHandler(dataHandler);
-              provider.setCount(dataHandler.stores.length);
-              provider.setHasMore(dataHandler.stores.length == max); 
-              return showList();
+          case ConnectionState.done:
+            DataHandler dataHandler = snapshot.data!;
+            hasData = true;
+            var provider =
+                Provider.of<DataHandlerNotifier>(context, listen: false);
+            provider.setDataHandler(dataHandler);
+            provider.setCount(dataHandler.stores!.length);
+            provider.setHasMore(dataHandler.stores!.length == max);
+            return showList();
 
-            default:
-              return Center();
+          default:
+            return Center();
         }
       },
-    );      
+    );
   }
 
   Widget showMain() {
     root = Container(
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: getDataFromServer() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: getDataFromServer())],
       ),
     );
-    return root;
+    return root!;
   }
 
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -139,29 +136,33 @@ class _SearchStoresState extends State<SearchStoresScreen> {
           builder: (context, provider, child) => IncrementallyLoadingListView(
             padding: EdgeInsets.all(0.0),
             hasMore: () => provider.hasMore,
-            itemCount: () => provider.dataHandler == null ? 0 : provider.dataHandler.stores.length,
+            itemCount: () => provider.dataHandler.stores == null
+                ? 0
+                : provider.dataHandler.stores!.length,
             loadMore: () async {
               min += max;
-              DataHandler dataHandler = await GetIt.instance.get<DataParser>().searchStores(min: min, max: max, searchStr: widget.searchStr);
-              if(dataHandler.stores.length > 0) {
-                for(Store store in dataHandler.stores) {
-                  provider.dataHandler.stores.add(store);
+              DataHandler dataHandler = await GetIt.instance
+                  .get<DataParser>()
+                  .searchStores(
+                      min: min, max: max, searchStr: widget.searchStr);
+              if (dataHandler.stores!.length > 0) {
+                for (Store store in dataHandler.stores!) {
+                  provider.dataHandler.stores?.add(store);
                 }
               }
-              provider.setHasMore(dataHandler.stores.length == max);  
+              provider.setHasMore(dataHandler.stores!.length == max);
             },
-            onLoadMore: () {
-              
-            },
+            onLoadMore: () {},
             onLoadMoreFinished: () {
-              var provider = Provider.of<DataHandlerNotifier>(context, listen: false);
-              provider.setCountNotify(provider.dataHandler.stores.length);
-              if(provider.hasMore)
-                provider.notifyListenersOnly();
+              var provider =
+                  Provider.of<DataHandlerNotifier>(context, listen: false);
+              provider.setCountNotify(provider.dataHandler.stores!.length);
+              if (provider.hasMore) provider.notifyListenersOnly();
             },
             loadMoreOffsetFromBottom: 1,
             itemBuilder: (context, index) {
-              if ((provider.hasMore) && index == provider.dataHandler.stores.length - 1) {
+              if ((provider.hasMore) &&
+                  index == provider.dataHandler.stores!.length - 1) {
                 return Column(
                   children: <Widget>[
                     entry(provider, index),
@@ -186,9 +187,9 @@ class _SearchStoresState extends State<SearchStoresScreen> {
         Navigator.push<dynamic>(
           context,
           MaterialPageRoute<dynamic>(
-            builder: (BuildContext context) => 
-              DetailScreen(store: provider.dataHandler.stores[index]),
-              fullscreenDialog: true,
+            builder: (BuildContext context) =>
+                DetailScreen(store: provider.dataHandler.stores[index]),
+            fullscreenDialog: true,
           ),
         );
       },
@@ -216,16 +217,15 @@ class _SearchStoresState extends State<SearchStoresScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Selector<DataHandlerNotifier, int>(
                       selector: (ctxN, provider) => provider.count,
-                      builder: (ctxN, count, widgt) => 
-                        Text(
-                          sprintf("%d %s '%s'", [count, tr("results_found"), widget.searchStr]),
-                          style: TextStyle(
+                      builder: (ctxN, count, widgt) => Text(
+                        sprintf("%d %s '%s'",
+                            [count, tr("results_found"), widget.searchStr!]),
+                        style: TextStyle(
                             fontWeight: FontWeight.w100,
                             fontSize: 16,
-                            color: Theme.of(context).textTheme.caption.color
-                          ),
-                        ),
+                            color: Theme.of(context).textTheme.caption?.color),
                       ),
+                    ),
                   ),
                 ),
                 Material(
@@ -254,9 +254,7 @@ class _SearchStoresState extends State<SearchStoresScreen> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Colors.transparent
-                              ),
+                            child: Icon(Icons.sort, color: Colors.transparent),
                           ),
                         ],
                       ),
@@ -341,4 +339,3 @@ class _SearchStoresState extends State<SearchStoresScreen> {
     );
   }
 }
-

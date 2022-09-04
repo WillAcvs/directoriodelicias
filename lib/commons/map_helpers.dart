@@ -8,18 +8,16 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
 
 class MapHelpers {
-
-  static Future<BitmapDescriptor> fetchMapIcon(String imageUrl)  async {
-
+  static Future<BitmapDescriptor> fetchMapIcon(String imageUrl) async {
     final int targetWidth = 80;
-    final File markerImageFile = await DefaultCacheManager().getSingleFile(imageUrl);
+    final File markerImageFile =
+        await DefaultCacheManager().getSingleFile(imageUrl);
 
     Uint8List markerImageBytes;
-    if(markerImageFile != null) {
+    if (markerImageFile != null) {
       markerImageBytes = await markerImageFile.readAsBytes();
-    }
-    else {
-      final http.Response response = await http.get(imageUrl);
+    } else {
+      final http.Response response = await http.get(Uri.parse(imageUrl));
       markerImageBytes = response.bodyBytes;
     }
 
@@ -29,26 +27,25 @@ class MapHelpers {
     );
 
     final FrameInfo frameInfo = await markerImageCodec.getNextFrame();
-    final ByteData byteData = await frameInfo.image.toByteData(
+    final ByteData? byteData = await frameInfo.image.toByteData(
       format: ImageByteFormat.png,
     );
 
-    final Uint8List resizedMarkerImageBytes = byteData.buffer.asUint8List();
+    final Uint8List resizedMarkerImageBytes = byteData!.buffer.asUint8List();
     return BitmapDescriptor.fromBytes(resizedMarkerImageBytes);
   }
 
-  static Future<BitmapDescriptor> convertImageFileToBitmapDescriptor( File imageFile, {
-    int size = 100,
-    bool addBorder = false,
-    Color borderColor = Colors.white,
-    double borderSize = 10,
-    Color titleColor = Colors.transparent,
-    Color titleBackgroundColor = Colors.transparent
-  }) async {
-    
+  static Future<BitmapDescriptor> convertImageFileToBitmapDescriptor(
+      File imageFile,
+      {int size = 100,
+      bool addBorder = false,
+      Color borderColor = Colors.white,
+      double borderSize = 10,
+      Color titleColor = Colors.transparent,
+      Color titleBackgroundColor = Colors.transparent}) async {
     final ui.PictureRecorder pictureRecorder = ui.PictureRecorder();
     final Canvas canvas = Canvas(pictureRecorder);
-    
+
     //make canvas clip path to prevent image drawing over the circle
     final Path clipPath = Path();
     clipPath.addRRect(RRect.fromRectAndRadius(
@@ -76,7 +73,6 @@ class MapHelpers {
     final data = await _image.toByteData(format: ui.ImageByteFormat.png);
 
     //convert PNG bytes as BitmapDescriptor
-    return BitmapDescriptor.fromBytes(data.buffer.asUint8List());
+    return BitmapDescriptor.fromBytes(data!.buffer.asUint8List());
   }
-    
 }

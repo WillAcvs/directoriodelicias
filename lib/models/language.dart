@@ -1,12 +1,7 @@
-
 import 'dart:ui';
 
-
 class Language {
-  Language({
-    this.name,
-    this.locale
-  });
+  Language({required this.name, required this.locale});
 
   final String name;
   final Locale locale;

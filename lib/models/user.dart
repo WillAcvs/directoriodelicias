@@ -1,5 +1,4 @@
 class User {
-  
   int userId;
   String username;
   String facebookId;
@@ -12,31 +11,30 @@ class User {
   String appleId;
 
   User({
-    this.userId,
-    this.username,
-    this.facebookId,
-    this.twitterId,
-    this.loginHash,
-    this.fullName,
-    this.thumbUrl,
-    this.photoUrl,
-    this.appleId,
-    this.email
+    this.userId = 0,
+    this.username = "",
+    this.facebookId = "",
+    this.twitterId = "",
+    this.loginHash = "",
+    this.fullName = "",
+    this.thumbUrl = "",
+    this.photoUrl = "",
+    this.appleId = "",
+    this.email = "",
   });
 
   factory User.fromJsonRaw(Map<String, dynamic> json) {
     return new User(
-      userId: json['user_id'],
-      username: json['username'],
-      facebookId: json['facebook_id'],
-      twitterId: json['twitter_id'],
-      loginHash: json['login_hash'],
-      fullName: json['full_name'],
-      thumbUrl: json['thumb_url'],
-      photoUrl: json['photo_url'],
-      appleId: json['apple_id'],
-      email: json['email']
-    );
+        userId: json['user_id'],
+        username: json['username'],
+        facebookId: json['facebook_id'],
+        twitterId: json['twitter_id'],
+        loginHash: json['login_hash'],
+        fullName: json['full_name'],
+        thumbUrl: json['thumb_url'],
+        photoUrl: json['photo_url'],
+        appleId: json['apple_id'],
+        email: json['email']);
   }
 
   User.fromJson(Map<String, dynamic> json)
@@ -65,5 +63,4 @@ class User {
     data['email'] = this.email;
     return data;
   }
-
 }

@@ -16,21 +16,20 @@ import 'package:directorio_delicias/ui/widgets/review_widget.dart';
 import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 
 class ReviewsScreen extends StatefulWidget {
+  const ReviewsScreen({Key? key, this.store, this.loggedUser})
+      : super(key: key);
 
-  const ReviewsScreen({Key key,this.store, this.loggedUser}) : super(key: key);
+  final Store? store;
+  final User? loggedUser;
 
-  final Store store;
-  final User loggedUser;
-  
   @override
   _ReviewsPageState createState() => _ReviewsPageState();
 }
 
 class _ReviewsPageState extends State<ReviewsScreen> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -52,87 +51,83 @@ class _ReviewsPageState extends State<ReviewsScreen> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget1) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            key: _scaffoldKey,
-            body: FutureBuilder<bool>(
-              future: getData(),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
-            ),
-            floatingActionButton: FloatingActionButton.extended(
-              onPressed: () {
-                ReviewServices.showReview(
-                  context: context, 
-                  storeId: widget.store.storeId,
-                  loggedUser: widget.loggedUser,
-                  onSuccessReview: () {
-                    setState(() {
-                      root = null;
-                    });
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget1) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              key: _scaffoldKey,
+              body: FutureBuilder<bool>(
+                future: getData(),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
                   }
-                );
-              },
-              foregroundColor: Theme.of(context).floatingActionButtonTheme.foregroundColor,
-              label: Text(tr("add")),
-              icon: Icon(Icons.add_comment),
-              backgroundColor: Theme.of(context).accentColor,
+                },
+              ),
+              floatingActionButton: FloatingActionButton.extended(
+                onPressed: () {
+                  ReviewServices.showReview(
+                      context: context,
+                      storeId: widget.store!.storeId,
+                      loggedUser: widget.loggedUser,
+                      onSuccessReview: () {
+                        setState(() {
+                          root = null;
+                        });
+                      });
+                },
+                foregroundColor:
+                    Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                label: Text(tr("add")),
+                icon: Icon(Icons.add_comment),
+                backgroundColor: Theme.of(context).accentColor,
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget getDataFromServer() {
-    return FutureBuilder<DataHandler>(
-      future: GetIt.instance.get<DataParser>().getReviews(min: 0, 
-        max:Config.MAX_REVIEW_COUNT, storeId: widget.store.storeId),
-      builder: (BuildContext context, AsyncSnapshot<DataHandler> snapshot) {
+    return FutureBuilder<DataHandler?>(
+      future: GetIt.instance.get<DataParser>().getReviews(
+          min: 0, max: Config.MAX_REVIEW_COUNT, storeId: widget.store?.storeId),
+      builder: (BuildContext context, AsyncSnapshot<DataHandler?> snapshot) {
         if (!snapshot.hasData) {
           return LoadingWidget(
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
-          DataHandler dataHandler = snapshot.data;
+        } else {
+          DataHandler dataHandler = snapshot.data!;
           hasData = true;
-          bool hasMore = dataHandler.rowCount < dataHandler.totalRowCount;
-          Provider.of<DataHandlerNotifier>(context, listen: false).setHasMore(hasMore);
-          Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandler(dataHandler);
+          bool hasMore = dataHandler.rowCount! < dataHandler.totalRowCount!;
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setHasMore(hasMore);
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget showMain() {
     root = Container(
       color: Colors.transparent,
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: getDataFromServer() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: getDataFromServer())],
       ),
     );
-    return root;
+    return root!;
   }
 
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -144,48 +139,53 @@ class _ReviewsPageState extends State<ReviewsScreen> {
         ];
       },
       body: Container(
-        color:Theme.of(context).backgroundColor,
+        color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
           builder: (context, provider, child) => ListView.builder(
             cacheExtent: 9999,
-            itemCount: provider.hasMore 
-                        ? provider.dataHandler.reviews.length + 1 
-                        : provider.dataHandler.reviews.length,
-
+            itemCount: provider.hasMore
+                ? provider.dataHandler.reviews!.length + 1
+                : provider.dataHandler.reviews?.length,
             padding: const EdgeInsets.only(top: 8),
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
-              if (index < provider.dataHandler.reviews.length) {
+              if (index < provider.dataHandler.reviews!.length) {
                 return ReviewView(
-                  callback: () {
-                    
-                  },
-                  review: provider.dataHandler.reviews[index],
+                  callback: () {},
+                  review: provider.dataHandler.reviews![index],
                 );
-              }
-              else {
+              } else {
                 // Don't trigger if one async loading is already under way
                 if (!provider.isLoading) {
                   provider.setIsLoading(true);
-                  GetIt.instance.get<DataParser>().getReviews(
-                    min: provider.dataHandler.min + provider.dataHandler.max, 
-                    max: provider.dataHandler.max, 
-                    storeId: widget.store.storeId).then( (DataHandler dataH) {
-                      Provider.of<DataHandlerNotifier>(context, listen: false)
-                        .setHasMore(dataH.rowCount < dataH.totalRowCount);
+                  GetIt.instance
+                      .get<DataParser>()
+                      .getReviews(
+                          min: provider.dataHandler.min +
+                              provider.dataHandler.max,
+                          max: provider.dataHandler.max,
+                          storeId: widget.store?.storeId)
+                      .then((DataHandler? dataH) {
+                    Provider.of<DataHandlerNotifier>(context, listen: false)
+                        .setHasMore(dataH!.rowCount! < dataH.totalRowCount!);
 
-                      if (dataH.reviews.isEmpty) {
-                        Provider.of<DataHandlerNotifier>(context, listen: false).setIsLoading(false);
-                      } else {
-                        Provider.of<DataHandlerNotifier>(context, listen: false).setIsLoading(false);
-                        List<Review> reviews = Provider.of<DataHandlerNotifier>(context, listen: false).dataHandler.reviews;
-                        reviews.addAll(dataH.reviews);
-                        dataH.reviews = reviews;
-                        Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandlerNotify(dataH);
-                      }
+                    if (dataH.reviews!.isEmpty) {
+                      Provider.of<DataHandlerNotifier>(context, listen: false)
+                          .setIsLoading(false);
+                    } else {
+                      Provider.of<DataHandlerNotifier>(context, listen: false)
+                          .setIsLoading(false);
+                      List<Review>? reviews = Provider.of<DataHandlerNotifier>(
+                              context,
+                              listen: false)
+                          .dataHandler
+                          .reviews;
+                      reviews?.addAll(dataH.reviews!);
+                      dataH.reviews = reviews;
+                      Provider.of<DataHandlerNotifier>(context, listen: false)
+                          .setDataHandlerNotify(dataH);
                     }
-                  );
-                  
+                  });
                 }
                 return Center(
                   child: SizedBox(
@@ -194,7 +194,7 @@ class _ReviewsPageState extends State<ReviewsScreen> {
                     width: 24,
                   ),
                 );
-              }                          
+              }
             },
           ),
         ),
@@ -205,7 +205,6 @@ class _ReviewsPageState extends State<ReviewsScreen> {
   Widget getFilterBarUI() {
     return Stack(
       children: <Widget>[
-        
         Container(
           color: Theme.of(context).backgroundColor,
           child: Padding(
@@ -218,17 +217,21 @@ class _ReviewsPageState extends State<ReviewsScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                        sprintf("%d %s %s \"%s\"", 
-                          [Provider.of<DataHandlerNotifier>(context, listen: false).dataHandler.totalRowCount, 
+                        sprintf("%d %s %s \"%s\"", [
+                          Provider.of<DataHandlerNotifier>(context,
+                                  listen: false)
+                              .dataHandler
+                              .totalRowCount,
                           tr("reviews"),
                           tr("for"),
-                          widget.store.storeName]),
+                          widget.store?.storeName
+                        ]),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color,
+                          color: Theme.of(context).textTheme.caption?.color,
                         ),
                       ),
                     ),
@@ -260,10 +263,7 @@ class _ReviewsPageState extends State<ReviewsScreen> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              Icons.sort,
-                              color: Colors.transparent
-                            ),
+                            child: Icon(Icons.sort, color: Colors.transparent),
                           ),
                         ],
                       ),
@@ -328,7 +328,7 @@ class _ReviewsPageState extends State<ReviewsScreen> {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 22,
-                    color: Theme.of(context).textTheme.caption.color,
+                    color: Theme.of(context).textTheme.caption?.color,
                   ),
                 ),
               ),
@@ -347,9 +347,7 @@ class _ReviewsPageState extends State<ReviewsScreen> {
                         borderRadius: const BorderRadius.all(
                           Radius.circular(32.0),
                         ),
-                        onTap: () {
-                          
-                        },
+                        onTap: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: null,
@@ -366,4 +364,3 @@ class _ReviewsPageState extends State<ReviewsScreen> {
     );
   }
 }
-

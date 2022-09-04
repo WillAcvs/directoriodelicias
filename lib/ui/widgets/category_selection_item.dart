@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:directorio_delicias/models/category.dart';
 
@@ -7,7 +5,8 @@ class CategorySelectionItem extends StatelessWidget {
   final Category category;
   final bool isForList;
 
-  const CategorySelectionItem({Key key, this.category, this.isForList = true})
+  const CategorySelectionItem(
+      {Key? key, required this.category, this.isForList = true})
       : super(key: key);
 
   @override
@@ -17,9 +16,9 @@ class CategorySelectionItem extends StatelessWidget {
       child: isForList
           ? Padding(
               child: _buildItem(
-                context: context, 
+                context: context,
                 alignment: Alignment.center,
-                color: Theme.of(context).textTheme.caption.color,
+                color: Theme.of(context).textTheme.caption?.color,
               ),
               padding: EdgeInsets.all(10.0),
             )
@@ -29,15 +28,15 @@ class CategorySelectionItem extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     decoration: BoxDecoration(
-                      color: Theme.of(context).textTheme.bodyText1.color,
+                      color: Theme.of(context).textTheme.bodyText1?.color,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(10),
                       child: _buildItem(
-                        context: context, 
+                        context: context,
                         alignment: AlignmentDirectional.centerStart,
-                        color: Theme.of(context).textTheme.caption.color,
+                        color: Theme.of(context).textTheme.caption?.color,
                       ),
                     ),
                   ),
@@ -45,7 +44,7 @@ class CategorySelectionItem extends StatelessWidget {
                     alignment: AlignmentDirectional.centerEnd,
                     child: Icon(
                       Icons.arrow_drop_down,
-                      color: Theme.of(context).textTheme.caption.color,
+                      color: Theme.of(context).textTheme.caption?.color,
                     ),
                   )
                 ],
@@ -54,17 +53,14 @@ class CategorySelectionItem extends StatelessWidget {
     );
   }
 
-  _buildItem({BuildContext context, alignment, color}) {
+  _buildItem({required BuildContext context, alignment, color}) {
     return Container(
       width: MediaQuery.of(context).size.width,
       alignment: alignment,
       child: Text(
         category.category,
-        style: TextStyle(
-          color: color
-        ),
+        style: TextStyle(color: color),
       ),
     );
   }
-  
 }

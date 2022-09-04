@@ -1,13 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:directorio_delicias/commons/helpers.dart';
 import 'package:directorio_delicias/models/notification.dart' as notif;
 
 class NotificationView extends StatelessWidget {
   const NotificationView(
-      {Key key,
-      this.notification,
-      this.callback})
+      {Key? key, required this.notification, required this.callback})
       : super(key: key);
 
   final VoidCallback callback;
@@ -15,11 +12,8 @@ class NotificationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    
     return Padding(
-      padding: const EdgeInsets.only(
-          left: 24, right: 24, top: 0, bottom: 16),
+      padding: const EdgeInsets.only(left: 24, right: 24, top: 0, bottom: 16),
       child: InkWell(
         splashColor: Colors.transparent,
         onTap: () {
@@ -59,52 +53,65 @@ class NotificationView extends StatelessWidget {
                                   padding: const EdgeInsets.only(
                                       left: 16, top: 0, bottom: 8, right: 16),
                                   child: Column(
-                                    mainAxisAlignment:MainAxisAlignment.center,
-                                    crossAxisAlignment:CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: <Widget>[
                                       Text(
                                         notification.pushTitle,
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 18,
-                                          color: Theme.of(context).textTheme.caption.color
-                                        ),
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 18,
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .caption!
+                                                .color),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(top:5.0),
+                                        padding:
+                                            const EdgeInsets.only(top: 5.0),
                                         child: Text(
                                           notification.pushMsg,
                                           overflow: TextOverflow.ellipsis,
                                           maxLines: 99999,
                                           style: TextStyle(
                                               fontSize: 14,
-                                              color: Theme.of(context).textTheme.subtitle1.color),
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1!
+                                                  .color),
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(top:10, bottom: 15),
+                                        padding: EdgeInsets.only(
+                                            top: 10, bottom: 15),
                                         child: Text(
-                                          Helpers.formatDate(int.parse(notification.createdAt), 'MM/dd/yyyy hh:mm a'),
+                                          Helpers.formatDate(
+                                              int.parse(notification.createdAt),
+                                              'MM/dd/yyyy hh:mm a'),
                                           overflow: TextOverflow.ellipsis,
                                           maxLines: 1,
                                           style: TextStyle(
                                               fontSize: 12,
-                                              color: Theme.of(context).textTheme.subtitle1.color),
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1!
+                                                  .color),
                                         ),
                                       ),
-                                      Divider(height: 1,)
+                                      Divider(
+                                        height: 1,
+                                      )
                                     ],
                                   ),
                                 ),
                               ),
                             ),
-                            
                           ],
                         ),
                       ),
                     ),
-                    
                   ],
                 ),
               ],

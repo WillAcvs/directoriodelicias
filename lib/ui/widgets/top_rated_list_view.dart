@@ -1,4 +1,3 @@
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sprintf/sprintf.dart';
@@ -6,17 +5,17 @@ import 'package:directorio_delicias/commons/helpers.dart';
 import 'package:directorio_delicias/models/store.dart';
 
 class TopRatedListView extends StatefulWidget {
-  const TopRatedListView({Key key, this.callBack, this.stores}) : super(key: key);
+  const TopRatedListView({Key? key, required this.callBack, this.stores})
+      : super(key: key);
 
   final Function(Store) callBack;
-  final List<Store> stores;
+  final List<Store>? stores;
 
   @override
   _TopRatedListViewState createState() => _TopRatedListViewState();
 }
 
 class _TopRatedListViewState extends State<TopRatedListView> {
-  
   @override
   void initState() {
     super.initState();
@@ -47,14 +46,15 @@ class _TopRatedListViewState extends State<TopRatedListView> {
             } else {
               return ListView.builder(
                 cacheExtent: 9999,
-                padding: const EdgeInsets.only(top: 0, bottom: 0, right: 16, left: 16),
-                itemCount: widget.stores.length,
+                padding: const EdgeInsets.only(
+                    top: 0, bottom: 0, right: 16, left: 16),
+                itemCount: widget.stores?.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int index) {
                   return CategoryView(
-                    store: widget.stores[index],
+                    store: widget.stores![index],
                     callback: () {
-                      widget.callBack(widget.stores[index]);
+                      widget.callBack(widget.stores![index]);
                     },
                   );
                 },
@@ -68,10 +68,7 @@ class _TopRatedListViewState extends State<TopRatedListView> {
 }
 
 class CategoryView extends StatelessWidget {
-  const CategoryView(
-      {Key key,
-      this.store,
-      this.callback})
+  const CategoryView({Key? key, required this.store, required this.callback})
       : super(key: key);
 
   final VoidCallback callback;
@@ -80,8 +77,7 @@ class CategoryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String photoUrl = "";
-    if(store.photos.length > 0)
-      photoUrl = store.photos[0].thumbUrl;
+    if (store.photos!.length > 0) photoUrl = store.photos![0].thumbUrl;
 
     return InkWell(
       splashColor: Colors.transparent,
@@ -101,8 +97,9 @@ class CategoryView extends StatelessWidget {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Theme.of(context).textTheme.bodyText2.color,
-                        borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                        color: Theme.of(context).textTheme.bodyText2?.color,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(16.0)),
                       ),
                       child: Row(
                         children: <Widget>[
@@ -111,7 +108,10 @@ class CategoryView extends StatelessWidget {
                           ),
                           Expanded(
                             child: Container(
-                              padding: const EdgeInsets.only(left: 10, right: 10,),
+                              padding: const EdgeInsets.only(
+                                left: 10,
+                                right: 10,
+                              ),
                               child: Center(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -128,42 +128,57 @@ class CategoryView extends StatelessWidget {
                                           fontWeight: FontWeight.w600,
                                           fontSize: 17,
                                           letterSpacing: 0.27,
-                                          color: Theme.of(context).textTheme.caption.color,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .caption!
+                                              .color,
                                         ),
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(bottom: 0, top: 10),
+                                      padding: const EdgeInsets.only(
+                                          bottom: 0, top: 10),
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment: CrossAxisAlignment.center,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
                                         children: <Widget>[
                                           Text(
-                                            sprintf("%.2f%s", [store.distance, "KM"]),
+                                            sprintf("%.2f%s",
+                                                [store.distance, "KM"]),
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                               fontWeight: FontWeight.w200,
                                               fontSize: 12,
                                               letterSpacing: 0.27,
-                                              color: Theme.of(context).textTheme.subtitle1.color,
+                                              color: Theme.of(context)
+                                                  .textTheme
+                                                  .subtitle1!
+                                                  .color,
                                             ),
                                           ),
                                           Container(
                                             child: Row(
                                               children: <Widget>[
                                                 Text(
-                                                  sprintf("%.1f", [store.ratingAve]),
+                                                  sprintf("%.1f",
+                                                      [store.ratingAve]),
                                                   textAlign: TextAlign.start,
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.w200,
                                                     fontSize: 18,
                                                     letterSpacing: 0.27,
-                                                    color: Theme.of(context).textTheme.subtitle1.color,
+                                                    color: Theme.of(context)
+                                                        .textTheme
+                                                        .subtitle1!
+                                                        .color,
                                                   ),
                                                 ),
                                                 Icon(
                                                   Icons.star,
-                                                  color: Theme.of(context).accentColor,
+                                                  color: Theme.of(context)
+                                                      .accentColor,
                                                   size: 20,
                                                 ),
                                               ],
@@ -175,27 +190,38 @@ class CategoryView extends StatelessWidget {
                                     Padding(
                                       padding: const EdgeInsets.only(bottom: 0),
                                       child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: <Widget>[
                                           Text(
-                                            sprintf("%d %s", [store.ratingCount, tr("ratings")]),
+                                            sprintf("%d %s", [
+                                              store.ratingCount,
+                                              tr("ratings")
+                                            ]),
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                               fontWeight: FontWeight.w600,
                                               fontSize: 15,
                                               letterSpacing: 0.27,
-                                              color: Theme.of(context).accentColor,
+                                              color:
+                                                  Theme.of(context).accentColor,
                                             ),
                                           ),
                                           Container(
                                             decoration: BoxDecoration(
                                               color: Colors.transparent,
-                                              borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+                                              borderRadius:
+                                                  const BorderRadius.all(
+                                                      Radius.circular(8.0)),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsets.all(4.0),
-                                              child: SizedBox(height: 25,),
+                                              padding:
+                                                  const EdgeInsets.all(4.0),
+                                              child: SizedBox(
+                                                height: 25,
+                                              ),
                                             ),
                                           )
                                         ],
@@ -215,16 +241,17 @@ class CategoryView extends StatelessWidget {
             ),
             Container(
               child: Padding(
-                padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16, right: 16),
+                padding: const EdgeInsets.only(
+                    top: 24, bottom: 24, left: 16, right: 16),
                 child: Row(
                   children: <Widget>[
                     ClipRRect(
-                      borderRadius: const BorderRadius.all(Radius.circular(16.0)),
-                      child: AspectRatio(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(16.0)),
+                        child: AspectRatio(
                           aspectRatio: 1.0,
                           child: Helpers.loadCacheImage(imageUrl: photoUrl),
-                      )
-                    )
+                        ))
                   ],
                 ),
               ),

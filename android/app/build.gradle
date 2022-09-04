@@ -47,7 +47,7 @@ def keystoreProperties = new Properties()
    }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -65,6 +65,7 @@ android {
         versionCode 2
         versionName "1.5"
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     signingConfigs {

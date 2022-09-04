@@ -1,3 +1,4 @@
+// ignore_for_file: non_constant_identifier_names
 
 import 'dart:async';
 import 'dart:io';
@@ -13,10 +14,8 @@ import 'package:directorio_delicias/main.dart';
 import 'package:directorio_delicias/models/user.dart';
 import 'package:directorio_delicias/ui/widgets/load_widget.dart';
 
-
 class ProfileScreen extends StatefulWidget {
-
-  ProfileScreen({Key key}) : super(key: key);
+  ProfileScreen({Key? key}) : super(key: key);
 
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
@@ -28,57 +27,56 @@ class _ProfileScreenState extends State<ProfileScreen> {
     super.initState();
   }
 
-  final RoundedLoadingButtonController _btnController = new RoundedLoadingButtonController();
+  final RoundedLoadingButtonController _btnController =
+      new RoundedLoadingButtonController();
   final TextEditingController _passwordController = new TextEditingController();
-  final TextEditingController _passwordConfirmController = new TextEditingController();
+  final TextEditingController _passwordConfirmController =
+      new TextEditingController();
   final TextEditingController _fullNameController = new TextEditingController();
-  final RoundedLoadingButtonController _btnLogoutController = new RoundedLoadingButtonController();
-  PickedFile photoFile;
+  final RoundedLoadingButtonController _btnLogoutController =
+      new RoundedLoadingButtonController();
+  PickedFile? photoFile;
   final picker = ImagePicker();
-  User loggedUser;
-  
-  
+  User? loggedUser;
+
   void _logout() {
     AuthFetcher(
-      didLogged: (DataHandler dataHandler) {
-        _btnLogoutController.success();
-        Timer(Duration(seconds: 2), () {
-          dataHandler.isLogged = false;
-          MyApp.loggedUser = null;
-          Navigator.pop(context, dataHandler);
-        });
-      }
-    ).logoutUser();
+            didLogged: (DataHandler dataHandler) {
+              _btnLogoutController.success();
+              Timer(Duration(seconds: 2), () {
+                dataHandler.isLogged = false;
+                MyApp.loggedUser = null;
+                Navigator.pop(context, dataHandler);
+              });
+            },
+            didError: (DataHandler) {})
+        .logoutUser();
   }
-  
+
   void update() async {
-    AuthFetcher(
-      didError: (DataHandler dataHandler) {
-        _btnController.error();
-        Timer(Duration(seconds: 2), () {
-          _btnController.reset();
-        });
-      },
-      didLogged: (DataHandler dataHandler) {
-        _btnController.success();
-        Timer(Duration(seconds: 2), () {
-          Navigator.pop(context, dataHandler);
-        });
-      }
-    ).updateProfile(
-      userId: loggedUser.userId, 
-      password: _passwordController.text, 
-      fullName: _fullNameController.text, 
-      thumbUrl: loggedUser.thumbUrl,
-      photoFile: photoFile != null ? photoFile.path : null
-    );
-  } 
+    AuthFetcher(didError: (DataHandler dataHandler) {
+      _btnController.error();
+      Timer(Duration(seconds: 2), () {
+        _btnController.reset();
+      });
+    }, didLogged: (DataHandler dataHandler) {
+      _btnController.success();
+      Timer(Duration(seconds: 2), () {
+        Navigator.pop(context, dataHandler);
+      });
+    }).updateProfile(
+        userId: loggedUser!.userId,
+        password: _passwordController.text,
+        fullName: _fullNameController.text,
+        thumbUrl: loggedUser!.thumbUrl,
+        photoFile: photoFile != null ? photoFile!.path : null);
+  }
 
   Future<User> getData() async {
     loggedUser = MyApp.loggedUser;
-    print(loggedUser.toMap().toString());
-    print(loggedUser.fullName.toString());
-    return loggedUser;
+    print(loggedUser?.toMap().toString());
+    print(loggedUser?.fullName.toString());
+    return loggedUser!;
   }
 
   @override
@@ -91,8 +89,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
+        } else {
           return Container(
             color: Theme.of(context).backgroundColor,
             child: SafeArea(
@@ -100,33 +97,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Scaffold(
                 backgroundColor: Theme.of(context).backgroundColor,
                 body: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    getAppBarUI(),
-                    main(),
-                  ]
-                ),
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      getAppBarUI(),
+                      main(),
+                    ]),
               ),
             ),
           );
         }
       },
-    ); 
+    );
   }
 
   Widget main() {
     return Expanded(
-    child: Padding(
-      padding: EdgeInsets.all(20),
-      child: SingleChildScrollView(
-        child: SizedBox(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Center(
-                child: Material(
+      child: Padding(
+        padding: EdgeInsets.all(20),
+        child: SingleChildScrollView(
+          child: SizedBox(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Center(
+                    child: Material(
                   color: Colors.transparent,
                   child: InkWell(
                     borderRadius: const BorderRadius.all(Radius.circular(60.0)),
@@ -137,111 +133,125 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         shape: BoxShape.circle,
                         boxShadow: <BoxShadow>[
                           BoxShadow(
-                            color: Theme.of(context).shadowColor, 
-                            offset: const Offset(2.0, 4.0), 
-                            blurRadius: 8),
+                              color: Theme.of(context).shadowColor,
+                              offset: const Offset(2.0, 4.0),
+                              blurRadius: 8),
                         ],
                       ),
                       child: ClipRRect(
-                          borderRadius: const BorderRadius.all(Radius.circular(60.0)),
-                          child: photoFile != null ? Image.file(
-                            File(photoFile.path), 
-                            width: 120, 
-                            height: 120, 
-                            fit: BoxFit.cover
-                          ) : loggedUser.thumbUrl != null ? FadeInImage(
-                            fit: BoxFit.cover,
-                            placeholder: AssetImage(Helpers.getThemedPhotoPlaceHolder(context)),
-                            image: NetworkImage(loggedUser.thumbUrl),
-                            width: 120, 
-                            height: 120, 
-                          ) : Image.asset(Helpers.getThemedPhotoPlaceHolder(context)),
-                        ),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(60.0)),
+                        child: photoFile != null
+                            ? Image.file(File(photoFile!.path),
+                                width: 120, height: 120, fit: BoxFit.cover)
+                            : loggedUser?.thumbUrl != null
+                                ? FadeInImage(
+                                    fit: BoxFit.cover,
+                                    placeholder: AssetImage(
+                                        Helpers.getThemedPhotoPlaceHolder(
+                                            context)),
+                                    image: NetworkImage(loggedUser!.thumbUrl),
+                                    width: 120,
+                                    height: 120,
+                                  )
+                                : Image.asset(
+                                    Helpers.getThemedPhotoPlaceHolder(context)),
                       ),
-                      onTap: () async {
-                        PickedFile pickedFile = await picker.getImage(source: ImageSource.gallery);
-                        print(pickedFile);
-                        setState(() {
-                          if (pickedFile != null) {
-                            photoFile = pickedFile;
-                          }
+                    ),
+                    onTap: () async {
+                      PickedFile? pickedFile =
+                          await picker.getImage(source: ImageSource.gallery);
+                      print(pickedFile);
+                      setState(() {
+                        if (pickedFile != null) {
+                          photoFile = pickedFile;
                         }
-                      );
+                      });
                     },
                   ),
-                )
-              ),
-              createTextTitle(tr("full_name")),
-              _buildFullName(),
+                )),
+                createTextTitle(tr("full_name")),
+                _buildFullName(),
 
-              Helpers.checkIfLoggedSocial() ? Center() : createTextTitle(tr("password")),
-              Helpers.checkIfLoggedSocial() ? Center() : _buildPassword(),
+                Helpers.checkIfLoggedSocial()
+                    ? Center()
+                    : createTextTitle(tr("password")),
+                Helpers.checkIfLoggedSocial() ? Center() : _buildPassword(),
 
-              Helpers.checkIfLoggedSocial() ? Center() : createTextTitle(tr("confirm_password")),
-              Helpers.checkIfLoggedSocial() ? Center() : _buildConfirmPassword(),
+                Helpers.checkIfLoggedSocial()
+                    ? Center()
+                    : createTextTitle(tr("confirm_password")),
+                Helpers.checkIfLoggedSocial()
+                    ? Center()
+                    : _buildConfirmPassword(),
 
-              Helpers.checkIfLoggedSocial() ? Container(height: 200) : Container(height: 0),
+                Helpers.checkIfLoggedSocial()
+                    ? Container(height: 200)
+                    : Container(height: 0),
 
-              // Helpers.checkIfLoggedSocial() ? Container(
-              //   padding: EdgeInsets.only(top: 20, bottom: 10),
-              //   child: Center(
-              //     child: Text(
-              //       tr("disabled_social_password"),
-              //       style: TextStyle(
-              //         fontSize: 17,
-              //         fontWeight: FontWeight.normal,
-              //         color: Theme.of(context).textTheme.subtitle1.color
-              //       ),
-              //     ),
-              //   ),
-              // ) : Container(height: 0),
-              
-              Padding(
-                padding: const EdgeInsets.only(top: 16),
-                child: Center(
-                  child: RoundedLoadingButton(
-                    width: MediaQuery.of(context).size.width,
-                    color: Theme.of(context).accentColor,
-                    controller: _btnController,
-                    onPressed: update,
-                    child: Text(
-                      tr("update"),
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                // Helpers.checkIfLoggedSocial() ? Container(
+                //   padding: EdgeInsets.only(top: 20, bottom: 10),
+                //   child: Center(
+                //     child: Text(
+                //       tr("disabled_social_password"),
+                //       style: TextStyle(
+                //         fontSize: 17,
+                //         fontWeight: FontWeight.normal,
+                //         color: Theme.of(context).textTheme.subtitle1.color
+                //       ),
+                //     ),
+                //   ),
+                // ) : Container(height: 0),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Center(
+                    child: RoundedLoadingButton(
+                      width: MediaQuery.of(context).size.width,
+                      color: Theme.of(context).accentColor,
+                      controller: _btnController,
+                      onPressed: update,
+                      child: Text(
+                        tr("update"),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Theme.of(context)
+                              .floatingActionButtonTheme
+                              .foregroundColor,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 16),
-                child: Center(
-                  child: RoundedLoadingButton(
-                    width: MediaQuery.of(context).size.width,
-                    color: Theme.of(context).accentColor,
-                    onPressed: _logout,
-                    controller: _btnLogoutController,
-                    child: Text(
-                      tr("logout"),
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                Padding(
+                  padding: const EdgeInsets.only(top: 16),
+                  child: Center(
+                    child: RoundedLoadingButton(
+                      width: MediaQuery.of(context).size.width,
+                      color: Theme.of(context).accentColor,
+                      onPressed: _logout,
+                      controller: _btnLogoutController,
+                      child: Text(
+                        tr("logout"),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Theme.of(context)
+                              .floatingActionButtonTheme
+                              .foregroundColor,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              
-            ],
+                SizedBox(
+                  height: 50,
+                ),
+              ],
+            ),
           ),
         ),
       ),
-    ),
-  );
+    );
   }
 
   Widget createTextTitle(String str) {
@@ -251,22 +261,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
         str,
         textAlign: TextAlign.left,
         style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: Theme.of(context).textTheme.subtitle1.color
-        ),
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).textTheme.subtitle1?.color),
       ),
     );
   }
-
-  
 
   Widget _buildPassword() {
     return Padding(
       padding: const EdgeInsets.only(top: 10, left: 0, right: 0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1?.color,
           borderRadius: BorderRadius.circular(8),
         ),
         child: ClipRRect(
@@ -284,12 +291,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onChanged: (String txt) {},
                 style: TextStyle(
                   fontSize: 16,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption?.color,
                 ),
                 cursorColor: Theme.of(context).accentColor,
                 decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: tr("your_password")),
+                    border: InputBorder.none, hintText: tr("your_password")),
               ),
             ),
           ),
@@ -303,7 +309,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       padding: const EdgeInsets.only(top: 10, left: 0, right: 0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1?.color,
           borderRadius: BorderRadius.circular(8),
         ),
         child: ClipRRect(
@@ -321,12 +327,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onChanged: (String txt) {},
                 style: TextStyle(
                   fontSize: 16,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption?.color,
                 ),
                 cursorColor: Theme.of(context).accentColor,
                 decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: tr("confirm_password")),
+                    border: InputBorder.none, hintText: tr("confirm_password")),
               ),
             ),
           ),
@@ -340,7 +345,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       padding: const EdgeInsets.only(top: 10, left: 0, right: 0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1?.color,
           borderRadius: BorderRadius.circular(8),
         ),
         child: ClipRRect(
@@ -352,17 +357,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
               padding:
                   const EdgeInsets.only(left: 10, right: 10, top: 0, bottom: 0),
               child: TextField(
-                controller: _fullNameController..text = loggedUser.fullName,
+                controller: _fullNameController..text = loggedUser!.fullName,
                 maxLines: null,
                 onChanged: (String txt) {},
                 style: TextStyle(
                   fontSize: 16,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption?.color,
                 ),
                 cursorColor: Theme.of(context).accentColor,
                 decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: tr("full_name_placeholder")),
+                    border: InputBorder.none,
+                    hintText: tr("full_name_placeholder")),
               ),
             ),
           ),
@@ -401,7 +406,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
-            
             Container(
               width: AppBar().preferredSize.height + 40,
               height: AppBar().preferredSize.height,

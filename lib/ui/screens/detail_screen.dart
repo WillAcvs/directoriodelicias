@@ -1,12 +1,11 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
+
 import 'dart:async';
 import 'package:animated_stack/animated_stack.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:sprintf/sprintf.dart';
 import 'package:directorio_delicias/app/config.dart';
@@ -26,8 +25,8 @@ import 'package:directorio_delicias/ui/widgets/detail_column.dart';
 import 'package:directorio_delicias/ui/widgets/load_widget.dart';
 
 class DetailScreen extends StatefulWidget {
-
-  const DetailScreen({Key key, this.store, this.willEdit = false}) : super(key: key);
+  const DetailScreen({Key? key, required this.store, this.willEdit = false})
+      : super(key: key);
   final Store store;
   final bool willEdit;
 
@@ -35,29 +34,26 @@ class DetailScreen extends StatefulWidget {
   _DetailScreenState createState() => _DetailScreenState();
 }
 
-class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMixin {
-  
+class _DetailScreenState extends State<DetailScreen>
+    with TickerProviderStateMixin {
   final double infoHeight = 364.0;
-  AnimationController animationController;
-  Animation<double> animation;
+  late AnimationController animationController;
+  late Animation<double> animation;
   double opacity1 = 1.0;
-  GoogleMapController ctrl;
-  DataHandler dataHandler;
+  late GoogleMapController ctrl;
+  late DataHandler dataHandler;
   double ratingValue = 0;
-  Widget rootWidget;
-  
+  late Widget rootWidget;
+
   @override
   void initState() {
     animationController = AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
 
-    animation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
+    animation = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
         parent: animationController,
-        curve: Interval(0, 1.0, curve: Curves.fastOutSlowIn)
-      )
-    );
-    
+        curve: Interval(0, 1.0, curve: Curves.fastOutSlowIn)));
+
     animationController.forward();
     super.initState();
   }
@@ -70,25 +66,24 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return root();
-      }
-    );
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return root();
+        });
   }
-  
+
   Widget root() {
-    rootWidget =  AnimatedStack(
+    rootWidget = AnimatedStack(
       backgroundColor: Theme.of(context).canvasColor,
       fabBackgroundColor: Theme.of(context).accentColor,
       buttonIcon: Icons.keyboard_arrow_down_outlined,
       foregroundWidget: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(8)),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).backgroundColor,
-          ),
-          child: FutureBuilder<bool>(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Theme.of(context).backgroundColor,
+            ),
+            child: FutureBuilder<bool>(
               future: getData(300),
               builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
                 if (!snapshot.hasData) {
@@ -98,8 +93,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                 }
               },
             ),
-        )
-      ),
+          )),
       columnWidget: DetailColumn(store: widget.store),
       bottomWidget: Container(
         decoration: BoxDecoration(
@@ -120,15 +114,13 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                 fontWeight: FontWeight.w600,
                 fontSize: 16,
                 letterSpacing: 0.27,
-                color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                color:
+                    Theme.of(context).floatingActionButtonTheme.foregroundColor,
               ),
             ),
           ),
           onTap: () {
-            RatingServices.rate(
-              context: context,
-              store: widget.store
-            );
+            RatingServices.rate(context: context, store: widget.store);
           },
         ),
       ),
@@ -145,9 +137,8 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
-          return snapshot.data;
+        } else {
+          return snapshot.data!;
         }
       },
     );
@@ -155,15 +146,14 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
 
   Future<Widget> main() async {
     String photoUrl = "";
-    if(widget.store.photos.length > 0) {
-      photoUrl = widget.store.photos[0].thumbUrl;
+    if (widget.store.photos!.length > 0) {
+      photoUrl = widget.store.photos![0].thumbUrl;
     }
 
-    List<String> imageUrls = List<String>();
-    for(Photo photo in widget.store.photos) {
-      if(photo.photoUrl != null)
-        imageUrls.add(photo.photoUrl);
-        print(photo.photoUrl);
+    List<String> imageUrls = <String>[];
+    for (Photo photo in widget.store.photos!) {
+      if (photo.photoUrl != null) imageUrls.add(photo.photoUrl);
+      print(photo.photoUrl);
     }
 
     var photoLeft;
@@ -175,17 +165,16 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
     var faveLeft;
     var faveRight;
 
-    if(Helpers.isRTL()) {
+    if (Helpers.isRTL()) {
       photoRight = 20.0;
       faveLeft = 35.0;
       reviewsLeft = 100.0;
-    }
-    else {
+    } else {
       photoLeft = 20.0;
       faveRight = 35.0;
       reviewsRight = 100.0;
     }
-    
+
     return Container(
       color: Theme.of(context).backgroundColor,
       child: Scaffold(
@@ -195,9 +184,8 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
             Column(
               children: <Widget>[
                 AspectRatio(
-                  aspectRatio: 1.2,
-                  child: Helpers.loadCacheImage(imageUrl: photoUrl)
-                ),
+                    aspectRatio: 1.2,
+                    child: Helpers.loadCacheImage(imageUrl: photoUrl)),
               ],
             ),
             Positioned(
@@ -207,20 +195,22 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
               child: ScaleTransition(
                 alignment: Alignment.center,
                 scale: CurvedAnimation(
-                  parent: animationController, curve: Curves.fastOutSlowIn),
-                  child: FloatingActionButton.extended(
+                    parent: animationController, curve: Curves.fastOutSlowIn),
+                child: FloatingActionButton.extended(
                   heroTag: "btnPhotos",
                   onPressed: () {
                     Navigator.push<dynamic>(
                       context,
                       ImageViewerPageRoute(
-                        builder: (BuildContext context) => 
-                          ImageViewerScreen(photos: widget.store.photos),
+                        builder: (BuildContext context) =>
+                            ImageViewerScreen(photos: widget.store.photos!),
                       ),
                     );
                   },
-                  foregroundColor: Theme.of(context).floatingActionButtonTheme.foregroundColor,
-                  label: Text(widget.store.photos.length.toString()),
+                  foregroundColor: Theme.of(context)
+                      .floatingActionButtonTheme
+                      .foregroundColor,
+                  label: Text(widget.store.photos!.length.toString()),
                   icon: Icon(Icons.photo_rounded),
                   backgroundColor: Theme.of(context).accentColor,
                 ),
@@ -253,51 +243,58 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.only(top: 12.0, left: 18, right: 16),
+                            padding: const EdgeInsets.only(
+                                top: 12.0, left: 18, right: 16),
                             child: Text(
                               widget.store.storeName,
                               overflow: TextOverflow.ellipsis,
                               maxLines: 2,
                               textAlign: TextAlign.start,
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 22,
-                                letterSpacing: 0.27,
-                                color: Theme.of(context).textTheme.caption.color
-                              ),
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 22,
+                                  letterSpacing: 0.27,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .caption
+                                      ?.color),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 16, right: 16, bottom: 8, top: 16),
+                            padding: const EdgeInsets.only(
+                                left: 16, right: 16, bottom: 8, top: 16),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Flexible(
-                                  child: Text(
-                                    widget.store.storeAddress,
-                                    overflow: TextOverflow.ellipsis,
-                                    maxLines: 2,
-                                    textAlign: TextAlign.start,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w200,
-                                      fontSize: 22,
-                                      letterSpacing: 0.27,
-                                      color: Theme.of(context).accentColor,
-                                    ),
-                                  )
-                                ),
+                                    child: Text(
+                                  widget.store.storeAddress,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 2,
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w200,
+                                    fontSize: 22,
+                                    letterSpacing: 0.27,
+                                    color: Theme.of(context).accentColor,
+                                  ),
+                                )),
                                 Container(
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        sprintf("%.1f", [widget.store.ratingAve]),
+                                        sprintf(
+                                            "%.1f", [widget.store.ratingAve]),
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w200,
                                           fontSize: 22,
                                           letterSpacing: 0.27,
-                                          color: Theme.of(context).textTheme.subtitle1.color,
+                                          color: Theme.of(context)
+                                              .textTheme
+                                              .subtitle1
+                                              ?.color,
                                         ),
                                       ),
                                       Icon(
@@ -315,36 +312,41 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity1,
                             child: Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: SingleChildScrollView(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    getTimeBoxUI(),
-                                  ],
-                                ),
-                              )
-                            ),
+                                padding: const EdgeInsets.all(8),
+                                child: SingleChildScrollView(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      getTimeBoxUI(),
+                                    ],
+                                  ),
+                                )),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
-                            child: Html(
-                              data: widget.store.storeDesc,
-                              defaultTextStyle: TextStyle(
-                                fontWeight: FontWeight.w200,
-                                fontSize: 14,
-                                letterSpacing: 0.27,
-                                color: Theme.of(context).textTheme.subtitle1.color,
-                              ),
-                            )
-                          ),
+                              padding: const EdgeInsets.only(
+                                  left: 16, right: 16, top: 8, bottom: 8),
+                              child: Html(
+                                data: widget.store.storeDesc,
+                                style: {
+                                  "*": Style(
+                                    fontWeight: FontWeight.w200,
+                                    fontSize: FontSize.em(14),
+                                    letterSpacing: 0.27,
+                                    color: Theme.of(context)
+                                        .textTheme
+                                        .caption!
+                                        .color,
+                                  )
+                                },
+                              )),
                           SizedBox(
                             height: 240,
                             child: Padding(
                               padding: const EdgeInsets.all(20),
-                              child: snapShot() ,
+                              child: snapShot(),
                               // child: imageBytes != null ? snapShot() : delayGoogleMap(),
                             ),
                           ),
@@ -364,10 +366,12 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
               left: faveLeft,
               child: ScaleTransition(
                 alignment: Alignment.center,
-                scale: CurvedAnimation(parent: animationController, curve: Curves.fastOutSlowIn),
+                scale: CurvedAnimation(
+                    parent: animationController, curve: Curves.fastOutSlowIn),
                 child: Card(
                   color: Theme.of(context).accentColor,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0)),
                   elevation: 10.0,
                   child: Consumer<DataHandlerNotifier>(
                     builder: (context, provider, child) => InkWell(
@@ -376,27 +380,33 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                         width: 60,
                         height: 60,
                         child: Center(
-                          child: FutureBuilder<Fave>(
+                          child: FutureBuilder<Fave?>(
                             future: provider.isFave(widget.store.storeId),
-                            builder: (BuildContext context, AsyncSnapshot<Fave> snapshot) {
+                            builder: (BuildContext context,
+                                AsyncSnapshot<Fave?> snapshot) {
                               if (!snapshot.hasData) {
                                 return Icon(
                                   Icons.favorite_border_outlined,
-                                  color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                                  color: Theme.of(context)
+                                      .floatingActionButtonTheme
+                                      .foregroundColor,
                                   size: 30,
                                 );
                               } else {
-                                if(snapshot != null) {
+                                if (snapshot != null) {
                                   return Icon(
                                     Icons.favorite,
-                                    color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                                    color: Theme.of(context)
+                                        .floatingActionButtonTheme
+                                        .foregroundColor,
                                     size: 30,
                                   );
-                                }
-                                else {
+                                } else {
                                   return Icon(
                                     Icons.favorite_border_outlined,
-                                    color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
+                                    color: Theme.of(context)
+                                        .floatingActionButtonTheme
+                                        .foregroundColor,
                                     size: 30,
                                   );
                                 }
@@ -422,34 +432,36 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                 scale: CurvedAnimation(
                     parent: animationController, curve: Curves.fastOutSlowIn),
                 child: Card(
-                  color: Theme.of(context).accentColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(60.0)),
-                  elevation: 10.0,
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(60.0),
-                    child: Container(
-                      width: 60,
-                      height: 60,
-                      child: Center(
-                        child: Icon(
-                          Icons.rate_review,
-                          color: Theme.of(context).floatingActionButtonTheme.foregroundColor,
-                          size: 30,
+                    color: Theme.of(context).accentColor,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(60.0)),
+                    elevation: 10.0,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(60.0),
+                      child: Container(
+                        width: 60,
+                        height: 60,
+                        child: Center(
+                          child: Icon(
+                            Icons.rate_review,
+                            color: Theme.of(context)
+                                .floatingActionButtonTheme
+                                .foregroundColor,
+                            size: 30,
+                          ),
                         ),
                       ),
-                    ),
-                    onTap: () {
-                      Navigator.push<dynamic>(
-                        context,
-                        MaterialPageRoute<dynamic>(
-                          builder: (BuildContext context) => 
-                            ReviewsScreen(store: widget.store, loggedUser: MyApp.loggedUser),
-                        ),
-                      );
-                    },
-                  )
-                ),
+                      onTap: () {
+                        Navigator.push<dynamic>(
+                          context,
+                          MaterialPageRoute<dynamic>(
+                            builder: (BuildContext context) => ReviewsScreen(
+                                store: widget.store,
+                                loggedUser: MyApp.loggedUser!),
+                          ),
+                        );
+                      },
+                    )),
               ),
             ),
             Padding(
@@ -460,7 +472,8 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                    borderRadius:BorderRadius.circular(AppBar().preferredSize.height),
+                    borderRadius:
+                        BorderRadius.circular(AppBar().preferredSize.height),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
@@ -471,9 +484,9 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                           ),
                         ),
                         child: Icon(
-                              Icons.arrow_back,
-                              color: Theme.of(context).appBarTheme.color,
-                            ),
+                          Icons.arrow_back,
+                          color: Theme.of(context).appBarTheme.color,
+                        ),
                       ),
                     ),
                     onTap: () {
@@ -491,12 +504,13 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
   }
 
   Widget widgetEdit() {
-    if(!widget.willEdit) return Container(height: 1);
+    if (!widget.willEdit) return Container(height: 1);
 
     return Align(
       alignment: AlignmentDirectional.topEnd,
       child: Padding(
-        padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top + 10, right: 10, left: 10),
+        padding: EdgeInsets.only(
+            top: MediaQuery.of(context).padding.top + 10, right: 10, left: 10),
         child: SizedBox(
           width: 40,
           height: 40,
@@ -510,25 +524,23 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0)),
                 elevation: 10.0,
-                child: Icon(
-                  Icons.edit,
-                  size: 20,
-                  color: Theme.of(context).floatingActionButtonTheme.foregroundColor
-                ),
+                child: Icon(Icons.edit,
+                    size: 20,
+                    color: Theme.of(context)
+                        .floatingActionButtonTheme
+                        .foregroundColor),
               ),
               onTap: () async {
                 DataHandler dataHandler = await Navigator.push<dynamic>(
                   context,
                   MaterialPageRoute<dynamic>(
-                    builder: (BuildContext context) => 
-                      StoreEditScreen(
-                        store: widget.store,
-                      ),
-                      fullscreenDialog: true
-                  ),
+                      builder: (BuildContext context) => StoreEditScreen(
+                            store: widget.store,
+                          ),
+                      fullscreenDialog: true),
                 );
 
-                if(dataHandler != null) {
+                if (dataHandler != null) {
                   Navigator.pop(context, dataHandler);
                 }
               },
@@ -540,35 +552,29 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
   }
 
   Widget snapShot() {
-    String darkModeUrl = Helpers.isDarkMode(context) 
-      ? Config.STATIC_DARK_GOOGLE_MAPS_URL 
-      : Config.STATIC_GOOGLE_MAPS_URL;
+    String darkModeUrl = Helpers.isDarkMode(context)
+        ? Config.STATIC_DARK_GOOGLE_MAPS_URL
+        : Config.STATIC_GOOGLE_MAPS_URL;
 
     return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
-      child: Container(
-        decoration: BoxDecoration(color: Theme.of(context).shadowColor),
-        height: 180,
-        width: MediaQuery.of(context).size.width,
-        child: Helpers.loadCacheImage(
-          imageUrl: sprintf(
-            darkModeUrl, [
-              widget.store.lon, 
-              widget.store.lat, 
-              widget.store.lon,
-              widget.store.lat, 
-              
-            ]
-          )
-        ),
-      )
-    );    
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        child: Container(
+          decoration: BoxDecoration(color: Theme.of(context).shadowColor),
+          height: 180,
+          width: MediaQuery.of(context).size.width,
+          child: Helpers.loadCacheImage(
+              imageUrl: sprintf(darkModeUrl, [
+            widget.store.lon,
+            widget.store.lat,
+            widget.store.lon,
+            widget.store.lat,
+          ])),
+        ));
   }
 
-  Duration getDuration(String str) {
+  Duration? getDuration(String str) {
     List<String> split = str.split(":");
-    if(split.length <= 1)
-      return null;
+    if (split.length <= 1) return null;
 
     int hr = int.parse(split[0]);
     int min = int.parse(split[1]);
@@ -578,10 +584,10 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
   String formatDuration(Duration duration) {
     int hr = duration.inHours;
     String ampm = "AM";
-    if(duration.inHours > 12) {
+    if (duration.inHours > 12) {
       hr = duration.inHours - 12;
       ampm = "PM";
-    } 
+    }
     int min = duration.inMinutes % 60;
     return sprintf("%02d:%02d %s", [hr, min, ampm]);
   }
@@ -590,43 +596,39 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
     String currDay = DateFormat('EEEE').format(DateTime.now());
     String openStr = tr("close_now");
     String timeStrStr = "";
-    Duration dtOpen;
-    Duration dtClose;
-    if(currDay.compareTo("Monday") == 0) {
+    Duration? dtOpen;
+    Duration? dtClose;
+    if (currDay.compareTo("Monday") == 0) {
       dtOpen = getDuration(widget.store.monOpen);
       dtClose = getDuration(widget.store.monClose);
-    }
-    else if(currDay.compareTo("Tuesday") == 0) {
+    } else if (currDay.compareTo("Tuesday") == 0) {
       dtOpen = getDuration(widget.store.tueOpen);
       dtClose = getDuration(widget.store.tueClose);
-    }
-    else if(currDay.compareTo("Wednesday") == 0) {
+    } else if (currDay.compareTo("Wednesday") == 0) {
       dtOpen = getDuration(widget.store.wedOpen);
       dtClose = getDuration(widget.store.wedClose);
-    }
-    else if(currDay.compareTo("Thursday") == 0) {
+    } else if (currDay.compareTo("Thursday") == 0) {
       dtOpen = getDuration(widget.store.thuOpen);
       dtClose = getDuration(widget.store.thuClose);
-    }
-    else if(currDay.compareTo("Friday") == 0) {
+    } else if (currDay.compareTo("Friday") == 0) {
       dtOpen = getDuration(widget.store.friOpen);
       dtClose = getDuration(widget.store.friClose);
-    }
-    else if(currDay.compareTo("Saturday") == 0) {
+    } else if (currDay.compareTo("Saturday") == 0) {
       dtOpen = getDuration(widget.store.satOpen);
       dtClose = getDuration(widget.store.satClose);
-    }
-    else {
+    } else {
       dtOpen = getDuration(widget.store.sunOpen);
       dtClose = getDuration(widget.store.sunClose);
     }
 
     DateTime dtCurr = DateTime.now();
-    Duration durationCurr = Duration(hours: dtCurr.hour, minutes: dtCurr.minute);
-    timeStrStr = sprintf(" | %s - %s", [formatDuration(dtOpen), formatDuration(dtClose)]);
+    Duration durationCurr =
+        Duration(hours: dtCurr.hour, minutes: dtCurr.minute);
+    timeStrStr = sprintf(
+        " | %s - %s", [formatDuration(dtOpen!), formatDuration(dtClose!)]);
 
     Color color = Theme.of(context).errorColor;
-    if(durationCurr < dtClose && durationCurr > dtOpen) {
+    if (durationCurr < dtClose && durationCurr > dtOpen) {
       openStr = tr("open");
       color = Theme.of(context).accentColor;
     }
@@ -635,7 +637,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).textTheme.bodyText1.color,
+          color: Theme.of(context).textTheme.bodyText1!.color,
           borderRadius: const BorderRadius.all(Radius.circular(16.0)),
           boxShadow: <BoxShadow>[
             BoxShadow(
@@ -669,7 +671,7 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
                   fontWeight: FontWeight.w200,
                   fontSize: 14,
                   letterSpacing: 0.27,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption!.color,
                 ),
               ),
             ],
@@ -678,6 +680,4 @@ class _DetailScreenState extends State<DetailScreen> with TickerProviderStateMix
       ),
     );
   }
-
 }
-

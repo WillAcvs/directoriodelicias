@@ -9,17 +9,15 @@ import 'package:provider/provider.dart';
 import 'package:directorio_delicias/notifiers/datahandler_notifier.dart';
 
 class TermsPage extends StatefulWidget {
-
-  const TermsPage({Key key}) : super(key: key);
+  const TermsPage({Key? key}) : super(key: key);
 
   @override
   _TermsPageState createState() => _TermsPageState();
 }
 
 class _TermsPageState extends State<TermsPage> {
-
   final double infoHeight = 364.0;
-  
+
   @override
   void initState() {
     setData();
@@ -28,97 +26,95 @@ class _TermsPageState extends State<TermsPage> {
 
   Future<void> setData() async {
     await Future<dynamic>.delayed(const Duration(milliseconds: 200));
-   
   }
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return root();
-      }
-    );
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return root();
+        });
   }
-  
+
   Future<bool> getData() async {
     await Future<dynamic>.delayed(const Duration(milliseconds: 200));
     return true;
   }
 
-  
   Widget root() {
     return Container(
-      child: Column(
+        child: Column(children: <Widget>[
+      Stack(
         children: <Widget>[
-          Stack(
+          Column(
             children: <Widget>[
-              Column(
-                children: <Widget>[
-                  Container(
-                    color:Theme.of(context).accentColor,
-                    height: MediaQuery.of(context).size.height,
-                  ),
+              Container(
+                color: Theme.of(context).accentColor,
+                height: MediaQuery.of(context).size.height,
+              ),
+            ],
+          ),
+          Positioned(
+            top: (MediaQuery.of(context).size.width / 3.0) - 24.0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).backgroundColor,
+                borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(32.0),
+                    topRight: Radius.circular(32.0)),
+                boxShadow: <BoxShadow>[
+                  BoxShadow(
+                      color: Theme.of(context).shadowColor,
+                      offset: const Offset(1.1, 1.1),
+                      blurRadius: 10.0),
                 ],
               ),
-              Positioned(
-                top: (MediaQuery.of(context).size.width / 3.0) - 24.0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color:Theme.of(context).backgroundColor,
-                    borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(32.0),
-                        topRight: Radius.circular(32.0)),
-                    boxShadow: <BoxShadow>[
-                      BoxShadow(
-                          color:Theme.of(context).shadowColor,
-                          offset: const Offset(1.1, 1.1),
-                          blurRadius: 10.0),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 8, top: 40),
-                    child: SingleChildScrollView(
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
-                              child: Html(
-                                data: tr("terms_and_conditions_details"),
-                                defaultTextStyle: TextStyle(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8, right: 8, top: 40),
+                child: SingleChildScrollView(
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16, right: 16, top: 8, bottom: 8),
+                            child: Html(
+                              data: tr("terms_and_conditions_details"),
+                              style: {
+                                "*": Style(
                                   fontWeight: FontWeight.w200,
-                                  fontSize: 14,
+                                  fontSize: FontSize.em(14),
                                   letterSpacing: 0.27,
-                                  color:Theme.of(context).textTheme.caption.color,
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .caption!
+                                      .color,
                                 ),
-                              )
-                            ),
-                            SizedBox(
-                              height: MediaQuery.of(context).padding.bottom,
-                            )
-                          ],
-                        ),
-                      ),
+                              },
+                            )),
+                        SizedBox(
+                          height: MediaQuery.of(context).padding.bottom,
+                        )
+                      ],
                     ),
                   ),
                 ),
               ),
-              getAppBarUI(),
-            ],
-          )
-        ]
+            ),
+          ),
+          getAppBarUI(),
+        ],
       )
-      
-    );
+    ]));
   }
 
-Widget getAppBarUI() {
+  Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
         color: Colors.transparent,
@@ -169,9 +165,7 @@ Widget getAppBarUI() {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  
-                ],
+                children: <Widget>[],
               ),
             )
           ],
@@ -180,4 +174,3 @@ Widget getAppBarUI() {
     );
   }
 }
-

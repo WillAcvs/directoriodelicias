@@ -16,17 +16,16 @@ import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 import 'detail_screen.dart';
 
 class FeaturePage extends StatefulWidget {
-  const FeaturePage({Key key}) : super(key: key);
+  const FeaturePage({Key? key}) : super(key: key);
 
   @override
   _FeaturePageState createState() => _FeaturePageState();
 }
 
 class _FeaturePageState extends State<FeaturePage> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
 
   @override
@@ -44,29 +43,27 @@ class _FeaturePageState extends State<FeaturePage> {
     super.dispose();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(200),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget delayBeforeFetch() {
@@ -94,34 +91,30 @@ class _FeaturePageState extends State<FeaturePage> {
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
-          DataHandler dataHandler = snapshot.data;
+        } else {
+          DataHandler? dataHandler = snapshot.data;
           hasData = true;
-          Provider.of<DataHandlerNotifier>(context, listen: true).setDataHandler(dataHandler);
+          Provider.of<DataHandlerNotifier>(context, listen: true)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget showMain() {
     root = Container(
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
-    return root;
+    return root!;
   }
 
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -133,10 +126,10 @@ class _FeaturePageState extends State<FeaturePage> {
         ];
       },
       body: Container(
-        color:Theme.of(context).backgroundColor,
+        color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
           builder: (context, provider, child) => ListView.builder(
-            itemCount: provider.dataHandler.stores.length,
+            itemCount: provider.dataHandler.stores?.length,
             padding: const EdgeInsets.only(top: 8),
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
@@ -145,18 +138,19 @@ class _FeaturePageState extends State<FeaturePage> {
                   Navigator.push<dynamic>(
                     context,
                     MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => 
-                        DetailScreen(store: provider.dataHandler.stores[index]),
-                        fullscreenDialog: true,
+                      builder: (BuildContext context) => DetailScreen(
+                          store: provider.dataHandler.stores![index]),
+                      fullscreenDialog: true,
                     ),
                   );
                 },
                 faveCallback: (bool isFave) {
-                  Store store1 = provider.dataHandler.stores[index];
+                  Store store1 = provider.dataHandler.stores![index];
                   provider.updateDataHandler(store1, index, isFave);
                 },
-                isFave: provider.getStoreIsFave(provider.dataHandler.stores[index]),
-                store: provider.dataHandler.stores[index],
+                isFave: provider
+                    .getStoreIsFave(provider.dataHandler.stores![index]),
+                store: provider.dataHandler.stores![index],
               );
             },
           ),
@@ -180,13 +174,14 @@ class _FeaturePageState extends State<FeaturePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                        sprintf("%d %s", 
-                          [provider.dataHandler.stores.length, 
-                          tr("stores_found")]),
+                        sprintf("%d %s", [
+                          provider.dataHandler.stores!.length,
+                          tr("stores_found")
+                        ]),
                         style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color,
+                          color: Theme.of(context).textTheme.caption!.color,
                         ),
                       ),
                     ),
@@ -218,9 +213,7 @@ class _FeaturePageState extends State<FeaturePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Colors.transparent
-                              ),
+                            child: Icon(Icons.sort, color: Colors.transparent),
                           ),
                         ],
                       ),
@@ -309,15 +302,17 @@ class _FeaturePageState extends State<FeaturePage> {
                           Radius.circular(32.0),
                         ),
                         onTap: () {
-                          if(!hasData) return;
-                          
+                          if (!hasData) return;
+
                           isNearMe = !isNearMe;
                           provider.sortFeatured(isNearMe);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Icon(
-                            isNearMe ? Icons.near_me : FontAwesomeIcons.sortAlphaUp,
+                            isNearMe
+                                ? Icons.near_me
+                                : FontAwesomeIcons.sortAlphaUp,
                             color: Theme.of(context).appBarTheme.color,
                           ),
                         ),
@@ -333,4 +328,3 @@ class _FeaturePageState extends State<FeaturePage> {
     );
   }
 }
-

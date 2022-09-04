@@ -1,14 +1,19 @@
-
 import 'package:flutter/widgets.dart';
 
 class IconTile extends StatelessWidget {
-  final double width;
-  final double height;
-  final IconData iconData;
-  final Color backgroundColor;
-  final Color iconColor;
+  final double? width;
+  final double? height;
+  final IconData? iconData;
+  final Color? backgroundColor;
+  final Color? iconColor;
 
-  const IconTile({Key key, this.width, this.height, this.iconData, this.backgroundColor, this.iconColor})
+  const IconTile(
+      {Key? key,
+      this.width,
+      this.height,
+      this.iconData,
+      this.backgroundColor,
+      this.iconColor})
       : super(key: key);
 
   @override
@@ -19,7 +24,7 @@ class IconTile extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.all(
-          Radius.circular(height),
+          Radius.circular(height!),
         ),
       ),
       child: Icon(

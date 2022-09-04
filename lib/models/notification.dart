@@ -1,16 +1,12 @@
-
-
-
 class Notification {
-  Notification({
-    this.notificationId,
-    this.pushTitle = '',
-    this.pushMsg = '',
-    this.receiveAt = '',
-    this.createdAt = ''
-  });
+  Notification(
+      {this.notificationId,
+      this.pushTitle = '',
+      this.pushMsg = '',
+      this.receiveAt = '',
+      this.createdAt = ''});
 
-  int notificationId;
+  int? notificationId;
   String pushTitle;
   String pushMsg;
   String receiveAt;
@@ -34,8 +30,8 @@ class Notification {
   }
 
   Map<String, dynamic> toMap() => {
-    "push_title": pushTitle,
-    "push_msg": pushMsg,
-    "created_at_notif": createdAt,
-  };
+        "push_title": pushTitle,
+        "push_msg": pushMsg,
+        "created_at_notif": createdAt,
+      };
 }

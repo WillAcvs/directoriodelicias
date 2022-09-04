@@ -18,17 +18,16 @@ import '../../main.dart';
 import 'detail_screen.dart';
 
 class MyStoresPage extends StatefulWidget {
-  const MyStoresPage({Key key}) : super(key: key);
+  const MyStoresPage({Key? key}) : super(key: key);
 
   @override
   _MyStoresPageState createState() => _MyStoresPageState();
 }
 
 class _MyStoresPageState extends State<MyStoresPage> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
 
   @override
@@ -49,59 +48,56 @@ class _MyStoresPageState extends State<MyStoresPage> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
-            ),
-            floatingActionButton: FloatingActionButton.extended(
-              onPressed: () async {
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+                backgroundColor: Theme.of(context).backgroundColor,
+                body: FutureBuilder<bool>(
+                  future: getData(200),
+                  builder:
+                      (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                    if (!snapshot.hasData) {
+                      return const SizedBox();
+                    } else {
+                      return showMain();
+                    }
+                  },
+                ),
+                floatingActionButton: FloatingActionButton.extended(
+                  onPressed: () async {
+                    if (!hasData) return;
 
-                if(!hasData) return;
+                    if (MyApp.loggedUser == null) {
+                      Helpers.showAlertDialog(
+                          context: context,
+                          title: tr("action_error"),
+                          message: tr("error_not_logged_details"),
+                          onTapOk: () {});
+                      return;
+                    }
 
-                if(MyApp.loggedUser == null) {
-                  Helpers.showAlertDialog(
-                    context: context,
-                    title: tr("action_error"), 
-                    message: tr("error_not_logged_details"), 
-                    onTapOk: () {
-
-                    }  
-                  );
-                  return;
-                }
-
-                final dataHandler = await Navigator.push<dynamic>(
-                  context,
-                  MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => StoreAddScreen(),
-                      fullscreenDialog: true),
-                );
-                if(dataHandler != null && dataHandler.status != null) {
-                  setState(() {
-                    root = null;
-                  });
-                }
-              },
-              foregroundColor: Theme.of(context).floatingActionButtonTheme.foregroundColor,
-              label: Text(tr("add")),
-              icon: Icon(Icons.add_business_outlined),
-              backgroundColor: Theme.of(context).accentColor,
-            )
-          ),
-        );
-      }
-    );
+                    final dataHandler = await Navigator.push<dynamic>(
+                      context,
+                      MaterialPageRoute<dynamic>(
+                          builder: (BuildContext context) => StoreAddScreen(),
+                          fullscreenDialog: true),
+                    );
+                    if (dataHandler != null && dataHandler.status != null) {
+                      setState(() {
+                        root = null;
+                      });
+                    }
+                  },
+                  foregroundColor: Theme.of(context)
+                      .floatingActionButtonTheme
+                      .foregroundColor,
+                  label: Text(tr("add")),
+                  icon: Icon(Icons.add_business_outlined),
+                  backgroundColor: Theme.of(context).accentColor,
+                )),
+          );
+        });
   }
 
   Widget delayBeforeFetch() {
@@ -122,8 +118,8 @@ class _MyStoresPageState extends State<MyStoresPage> {
 
   Widget getDataFromServer() {
     int userId = -1;
-    if(MyApp.loggedUser != null) {
-      userId = MyApp.loggedUser.userId;
+    if (MyApp.loggedUser != null) {
+      userId = MyApp.loggedUser!.userId;
     }
 
     return FutureBuilder<DataHandler>(
@@ -134,35 +130,30 @@ class _MyStoresPageState extends State<MyStoresPage> {
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
-          DataHandler dataHandler = snapshot.data;
+        } else {
+          DataHandler? dataHandler = snapshot.data;
           hasData = true;
-          Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandler(dataHandler);
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
-
 
   Widget showMain() {
     root = Container(
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
-    return root;
+    return root!;
   }
-  
+
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -174,10 +165,10 @@ class _MyStoresPageState extends State<MyStoresPage> {
         ];
       },
       body: Container(
-        color:Theme.of(context).backgroundColor,
+        color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
           builder: (context, provider, child) => ListView.builder(
-            itemCount: provider.dataHandler.stores.length,
+            itemCount: provider.dataHandler.stores?.length,
             padding: const EdgeInsets.only(top: 8),
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
@@ -186,26 +177,26 @@ class _MyStoresPageState extends State<MyStoresPage> {
                   DataHandler dataHandler = await Navigator.push<dynamic>(
                     context,
                     MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => 
-                        DetailScreen(
-                          store: provider.dataHandler.stores[index],
-                          willEdit: true,
-                        ),
-                        fullscreenDialog: true,
+                      builder: (BuildContext context) => DetailScreen(
+                        store: provider.dataHandler.stores![index],
+                        willEdit: true,
+                      ),
+                      fullscreenDialog: true,
                     ),
                   );
-                  if(dataHandler != null) {
+                  if (dataHandler != null) {
                     setState(() {
                       root = null;
                     });
                   }
                 },
                 faveCallback: (bool isFave) {
-                  Store store1 = provider.dataHandler.stores[index];
+                  Store store1 = provider.dataHandler.stores![index];
                   provider.updateDataHandler(store1, index, isFave);
                 },
-                isFave: provider.getStoreIsFave(provider.dataHandler.stores[index]),
-                store: provider.dataHandler.stores[index],
+                isFave: provider
+                    .getStoreIsFave(provider.dataHandler.stores![index]),
+                store: provider.dataHandler.stores![index],
               );
             },
           ),
@@ -229,14 +220,14 @@ class _MyStoresPageState extends State<MyStoresPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                        sprintf("%d %s", 
-                          [provider.dataHandler.stores.length, 
-                          tr("stores_found")]),
+                        sprintf("%d %s", [
+                          provider.dataHandler.stores?.length,
+                          tr("stores_found")
+                        ]),
                         style: TextStyle(
-                          fontWeight: FontWeight.w100,
-                          fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color
-                        ),
+                            fontWeight: FontWeight.w100,
+                            fontSize: 16,
+                            color: Theme.of(context).textTheme.caption?.color),
                       ),
                     ),
                   ),
@@ -267,8 +258,10 @@ class _MyStoresPageState extends State<MyStoresPage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Color.fromRGBO(1, 1, 1, 0),),
+                            child: Icon(
+                              Icons.sort,
+                              color: Color.fromRGBO(1, 1, 1, 0),
+                            ),
                           ),
                         ],
                       ),
@@ -351,14 +344,16 @@ class _MyStoresPageState extends State<MyStoresPage> {
                           Radius.circular(32.0),
                         ),
                         onTap: () {
-                          if(!hasData) return;
+                          if (!hasData) return;
 
                           isNearMe = !isNearMe;
                           provider.sortFeatured(isNearMe);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Icon(isNearMe ? Icons.near_me : FontAwesomeIcons.sortAlphaUp),
+                          child: Icon(isNearMe
+                              ? Icons.near_me
+                              : FontAwesomeIcons.sortAlphaUp),
                         ),
                       ),
                     ),
@@ -372,4 +367,3 @@ class _MyStoresPageState extends State<MyStoresPage> {
     );
   }
 }
-

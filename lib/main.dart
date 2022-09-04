@@ -23,106 +23,116 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 GetIt locator = GetIt.instance;
-SessionStorage sessionStorage;
+SessionStorage sessionStorage = SessionStorage();
 
 Future setupLocator() async {
-  sessionStorage = await SessionStorage.getInstance();
+  sessionStorage = (await SessionStorage.getInstance())!;
   locator.registerSingleton(sessionStorage);
   locator.registerSingleton(Services());
   locator.registerSingleton(DataParser());
 }
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await SystemChrome.setPreferredOrientations(
-    <DeviceOrientation>[
-      DeviceOrientation.portraitUp, 
-      DeviceOrientation.portraitDown
-    ])
-    .then((_) => runApp(
-      EasyLocalization(
+  await EasyLocalization.ensureInitialized();
+  await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]).then((_) => runApp(EasyLocalization(
         child: ChangeNotifierProvider<ThemeNotifier>(
-          create: (context) => ThemeNotifier(),
-          child: MyApp()
-        ),
+            create: (context) => ThemeNotifier(), child: MyApp()),
         path: 'assets/langs',
         supportedLocales: Config.LOCALES_LIST,
         useOnlyLangCode: true,
-      )    
-    )
-  );
+      )));
 
   setupLocator();
 
-  //Remove this method to stop OneSignal Debugging 
+  //Remove this method to stop OneSignal Debugging
   OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
 
-  OneSignal.shared.init(
-    Config.ONESIGNAL_APP_ID,
-    iOSSettings: {
-      OSiOSSettings.autoPrompt: false,
-      OSiOSSettings.inAppLaunchUrl: false
-    }
-  );
-  OneSignal.shared.setInFocusDisplayType(OSNotificationDisplayType.notification);
-  
-  // The promptForPushNotificationsWithUserResponse function will show 
-  // the iOS push notification prompt. We recommend removing the following code and 
-  // instead using an In-App Message to prompt for notification permission
-  await OneSignal.shared.promptUserForPushNotificationPermission(fallbackToSettings: true);
+  // OneSignal.shared.init(Config.ONESIGNAL_APP_ID, iOSSettings: {
+  //   OSiOSSettings.autoPrompt: false,
+  //   OSiOSSettings.inAppLaunchUrl: false
+  // });
+  // OneSignal.shared
+  //     .setInFocusDisplayType(OSNotificationDisplayType.notification);
 
-  OneSignal.shared.setNotificationReceivedHandler((OSNotification notification) {
-      // will be called whenever a notification is received
-      String formatDateTime = Helpers.formatDateTime('yyyy-MM-dd h:mm a');
-      notif.Notification obj = notif.Notification(
-        pushTitle: notification.payload.additionalData['push_title'].toString(),
-        pushMsg: notification.payload.additionalData['push_msg'].toString(),
-        createdAt: notification.payload.additionalData['created_at_notif'].toString(),
-        receiveAt: formatDateTime
-      );
-      DBProvider.instance.insertNotification(obj);
+  OneSignal.shared.setAppId(Config.ONESIGNAL_APP_ID);
+
+// The promptForPushNotificationsWithUserResponse function will show the iOS or Android push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission
+  OneSignal.shared.promptUserForPushNotificationPermission().then((accepted) {
+    print("Accepted permission: $accepted");
+  });
+  // The promptForPushNotificationsWithUserResponse function will show
+  // the iOS push notification prompt. We recommend removing the following code and
+  // instead using an In-App Message to prompt for notification permission
+  await OneSignal.shared
+      .promptUserForPushNotificationPermission(fallbackToSettings: true);
+  OneSignal.shared.setNotificationWillShowInForegroundHandler(
+      (OSNotificationReceivedEvent event) {
+    // Will be called whenever a notification is received in foreground
+    // Display Notification, pass null param for not displaying the notification
+    event.complete(event.notification);
+  });
+  OneSignal.shared.setNotificationWillShowInForegroundHandler(
+      (OSNotificationReceivedEvent notification) {
+    // will be called whenever a notification is received
+    print(notification.notification.additionalData);
+    String formatDateTime = Helpers.formatDateTime('yyyy-MM-dd h:mm a');
+    notif.Notification obj = notif.Notification(
+        pushTitle:
+            notification.notification.additionalData!['push_title'].toString(),
+        pushMsg:
+            notification.notification.additionalData!['push_msg'].toString(),
+        createdAt: notification.notification.additionalData!['created_at_notif']
+            .toString(),
+        receiveAt: formatDateTime);
+    DBProvider.instance.insertNotification(obj);
   });
 
-  OneSignal.shared.setNotificationOpenedHandler((OSNotificationOpenedResult result) {
+  OneSignal.shared
+      .setNotificationOpenedHandler((OSNotificationOpenedResult result) {
     // will be called whenever a notification is opened/button pressed.
   });
 
-  OneSignal.shared.setPermissionObserver((OSPermissionStateChanges changes) async {
-      // will be called whenever the permission changes
-      // (ie. user taps Allow on the permission prompt in iOS)
+  OneSignal.shared
+      .setPermissionObserver((OSPermissionStateChanges changes) async {
+    // will be called whenever the permission changes
+    // (ie. user taps Allow on the permission prompt in iOS)
   });
 
-  OneSignal.shared.setSubscriptionObserver((OSSubscriptionStateChanges changes) {
-      // will be called whenever the subscription changes 
-      //(ie. user gets registered with OneSignal and gets a user ID)
-      checkPlayerId();
+  OneSignal.shared
+      .setSubscriptionObserver((OSSubscriptionStateChanges changes) {
+    // will be called whenever the subscription changes
+    //(ie. user gets registered with OneSignal and gets a user ID)
+    checkPlayerId();
   });
 
-  OneSignal.shared.setEmailSubscriptionObserver((OSEmailSubscriptionStateChanges emailChanges) {
-      // will be called whenever then user's email subscription changes
-      // (ie. OneSignal.setEmail(email) is called and the user gets registered
+  OneSignal.shared.setEmailSubscriptionObserver(
+      (OSEmailSubscriptionStateChanges emailChanges) {
+    // will be called whenever then user's email subscription changes
+    // (ie. OneSignal.setEmail(email) is called and the user gets registered
   });
   checkPlayerId();
 }
 
-void checkPlayerId() async{
-  var status = await OneSignal.shared.getPermissionSubscriptionState();
-  var playerId = status.subscriptionStatus.userId;
+void checkPlayerId() async {
+  var status = await OneSignal.shared.getDeviceState();
+
+  var playerId = status?.userId;
   print("playerId = $playerId");
 }
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
-  
-  static User loggedUser;
-  static Locale selectedLocale;
-  static Timer timer;
+  static User? loggedUser;
+  static Locale? selectedLocale;
+  static Timer? timer;
   bool isChecking = false;
-  static Position currentPosition;
+  static Position? currentPosition;
 
-  static Future<Position> determinePosition() async {
-
+  static Future<Position?> determinePosition() async {
     // if(currentPosition != null) return currentPosition;
 
     bool serviceEnabled;
@@ -132,30 +142,53 @@ class MyApp extends StatelessWidget {
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
       // Location services are not enabled don't continue
-      // accessing the position and request users of the 
+      // accessing the position and request users of the
       // App to enable the location services.
       // return Future.error('Location services are disabled.');
-      return Position(latitude: Config.DEFAULT_LAT, longitude: Config.DEFAULT_LON);
+      return Position(
+          longitude: Config.DEFAULT_LAT,
+          latitude: Config.DEFAULT_LON,
+          timestamp: DateTime.now(),
+          accuracy: 0.0,
+          altitude: 0.0,
+          heading: 0.0,
+          speed: 0.0,
+          speedAccuracy: 0.0);
     }
 
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
-      
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.deniedForever) {
-        // Permissions are denied forever, handle appropriately. 
+        // Permissions are denied forever, handle appropriately.
         // return Future.error('Location permissions are permanently denied, we cannot request permissions.');
-        return Position(latitude: Config.DEFAULT_LAT, longitude: Config.DEFAULT_LON);
-      } 
+        return Position(
+            longitude: Config.DEFAULT_LAT,
+            latitude: Config.DEFAULT_LON,
+            timestamp: DateTime.now(),
+            accuracy: 0.0,
+            altitude: 0.0,
+            heading: 0.0,
+            speed: 0.0,
+            speedAccuracy: 0.0);
+      }
 
       if (permission == LocationPermission.denied) {
         // Permissions are denied, next time you could try
         // requesting permissions again (this is also where
-        // Android's shouldShowRequestPermissionRationale 
+        // Android's shouldShowRequestPermissionRationale
         // returned true. According to Android guidelines
         // your App should show an explanatory UI now.
         // return Future.error('Location permissions are denied');
-        return Position(latitude: Config.DEFAULT_LAT, longitude: Config.DEFAULT_LON);
+        return Position(
+            longitude: Config.DEFAULT_LAT,
+            latitude: Config.DEFAULT_LON,
+            timestamp: DateTime.now(),
+            accuracy: 0.0,
+            altitude: 0.0,
+            heading: 0.0,
+            speed: 0.0,
+            speedAccuracy: 0.0);
       }
     }
 
@@ -166,28 +199,26 @@ class MyApp extends StatelessWidget {
   }
 
   void syncPlayerId() async {
-    if(isChecking)
-      return;
+    if (isChecking) return;
 
     isChecking = true;
-    var status = await OneSignal.shared.getPermissionSubscriptionState();
-    if(status != null && status.subscriptionStatus.userId != null) {
-      var playerId = status.subscriptionStatus.userId;
-      var synced = await GetIt.instance.get<DataParser>().postPlayerId(playerId: playerId);
-      if(synced) {
-        timer.cancel();
+    var status = await OneSignal.shared.getDeviceState();
+    if (status != null && status.userId != null) {
+      var playerId = status.userId;
+      var synced = await GetIt.instance
+          .get<DataParser>()
+          .postPlayerId(playerId: playerId);
+      if (synced) {
+        timer!.cancel();
         print("synced playerId = $playerId");
       }
-    }
-    else {
+    } else {
       isChecking = false;
     }
-    
   }
-  
+
   @override
   Widget build(BuildContext context) {
-
     // final windowLocale = ui.window.locale;
     // Locale locale;
     // try {
@@ -203,22 +234,23 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.dark,
-      statusBarBrightness: Platform.isAndroid ? Brightness.dark : Brightness.light,
+      statusBarBrightness:
+          Platform.isAndroid ? Brightness.dark : Brightness.light,
       systemNavigationBarColor: Colors.white,
       systemNavigationBarDividerColor: Colors.grey,
       systemNavigationBarIconBrightness: Brightness.dark,
     ));
-    
+
     return AppBuilder(builder: (context) {
       bool isDarkMode = sessionStorage.isDarkMode;
-      Provider.of<ThemeNotifier>(context, listen: false).updateDarkMode(isDarkMode);
+      Provider.of<ThemeNotifier>(context, listen: false)
+          .updateDarkMode(isDarkMode);
 
-      if(context.locale == null)
-        context.locale = Locale('es', 'MX');
-      
+      if (context.locale == null) context.locale = Locale('es', 'MX');
+
       selectedLocale = context.locale;
-      ZoomDrawer.rtl = selectedLocale.languageCode.toLowerCase() == "ar";
-      
+      ZoomDrawer.rtl = selectedLocale!.languageCode.toLowerCase() == "ar";
+
       return MaterialApp(
         title: tr("app_name"),
         debugShowCheckedModeBanner: false,
@@ -229,20 +261,19 @@ class MyApp extends StatelessWidget {
           create: (_) => MenuProvider(),
           child: NavigationScreen(),
         ),
-        supportedLocales: EasyLocalization.of(context).supportedLocales,
+        supportedLocales: EasyLocalization.of(context)!.supportedLocales,
         locale: context.locale,
         localizationsDelegates: [
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            EasyLocalization.of(context).delegate,
-          ],
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          EasyLocalization.of(context)!.delegate,
+        ],
       );
     });
   }
 }
 
 class MenuProvider extends ChangeNotifier {
-  
   int _currentPage = 0;
   int get currentPage => _currentPage;
   bool _isLogged = false;
@@ -264,4 +295,3 @@ class MenuProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
-

@@ -15,17 +15,16 @@ import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 import 'detail_screen.dart';
 
 class FavePage extends StatefulWidget {
-  const FavePage({Key key}) : super(key: key);
+  const FavePage({Key? key}) : super(key: key);
 
   @override
   _FavePageState createState() => _FavePageState();
 }
 
 class _FavePageState extends State<FavePage> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  late Widget root;
   bool hasData = false;
 
   @override
@@ -46,28 +45,27 @@ class _FavePageState extends State<FavePage> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return LoadingWidget(
-                    size: 30.0,
-                    iconColor: Theme.of(context).accentColor,
-                  );
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(200),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return LoadingWidget(
+                      size: 30.0,
+                      iconColor: Theme.of(context).accentColor,
+                    );
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget getDataFromServer() {
@@ -76,16 +74,16 @@ class _FavePageState extends State<FavePage> {
       builder: (BuildContext context, AsyncSnapshot<List<Store>> snapshot) {
         if (!snapshot.hasData) {
           return const SizedBox();
-        } 
-        else {
+        } else {
           DataHandler dataHandler = new DataHandler();
           dataHandler.stores = snapshot.data;
           hasData = true;
-          Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandler(dataHandler);
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget delayBeforeFetch() {
@@ -108,10 +106,7 @@ class _FavePageState extends State<FavePage> {
     root = Container(
       color: Colors.transparent,
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
     return root;
@@ -120,8 +115,7 @@ class _FavePageState extends State<FavePage> {
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -133,10 +127,10 @@ class _FavePageState extends State<FavePage> {
         ];
       },
       body: Container(
-        color:Theme.of(context).backgroundColor,
+        color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
           builder: (context, provider, child) => ListView.builder(
-            itemCount: provider.dataHandler.stores.length,
+            itemCount: provider.dataHandler.stores!.length,
             padding: const EdgeInsets.only(top: 8),
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
@@ -145,18 +139,19 @@ class _FavePageState extends State<FavePage> {
                   Navigator.push<dynamic>(
                     context,
                     MaterialPageRoute<dynamic>(
-                      builder: (BuildContext context) => 
-                        DetailScreen(store: provider.dataHandler.stores[index]),
-                        fullscreenDialog: true,
+                      builder: (BuildContext context) => DetailScreen(
+                          store: provider.dataHandler.stores![index]),
+                      fullscreenDialog: true,
                     ),
                   );
                 },
                 faveCallback: (bool isFave) {
-                  Store store1 = provider.dataHandler.stores[index];
+                  Store store1 = provider.dataHandler.stores![index];
                   provider.updateDataHandler(store1, index, isFave);
                 },
-                isFave: provider.getStoreIsFave(provider.dataHandler.stores[index]),
-                store: provider.dataHandler.stores[index],
+                isFave: provider
+                    .getStoreIsFave(provider.dataHandler.stores![index]),
+                store: provider.dataHandler.stores![index],
               );
             },
           ),
@@ -176,24 +171,22 @@ class _FavePageState extends State<FavePage> {
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Selector<DataHandlerNotifier, DataHandler>(
-                    selector: (ctxN, provider) => provider.dataHandler,
-                    builder: (ctxN, dataHandler, widgt) {
-                      return Text(
-                        sprintf("%d %s", 
-                          [dataHandler.stores.length, 
-                          tr("stores_found")]),
-                        style: TextStyle(
-                          fontWeight: FontWeight.w100,
-                          fontSize: 16,
-                          color: Theme.of(context).appBarTheme.color,
-                        ),
-                      );
-                    }),
-                  )
-                ),
+                    child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Selector<DataHandlerNotifier, DataHandler>(
+                      selector: (ctxN, provider) => provider.dataHandler,
+                      builder: (ctxN, dataHandler, widgt) {
+                        return Text(
+                          sprintf("%d %s",
+                              [dataHandler.stores!.length, tr("stores_found")]),
+                          style: TextStyle(
+                            fontWeight: FontWeight.w100,
+                            fontSize: 16,
+                            color: Theme.of(context).appBarTheme.color,
+                          ),
+                        );
+                      }),
+                )),
                 Material(
                   color: Colors.transparent,
                   child: InkWell(
@@ -220,9 +213,7 @@ class _FavePageState extends State<FavePage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Colors.transparent
-                              ),
+                            child: Icon(Icons.sort, color: Colors.transparent),
                           ),
                         ],
                       ),
@@ -311,7 +302,7 @@ class _FavePageState extends State<FavePage> {
                           Radius.circular(32.0),
                         ),
                         onTap: () {
-                          if(!hasData) return;
+                          if (!hasData) return;
 
                           isNearMe = !isNearMe;
                           provider.sortFeatured(isNearMe);
@@ -319,7 +310,9 @@ class _FavePageState extends State<FavePage> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Icon(
-                            isNearMe ? Icons.near_me : FontAwesomeIcons.sortAlphaUp,
+                            isNearMe
+                                ? Icons.near_me
+                                : FontAwesomeIcons.sortAlphaUp,
                             color: Theme.of(context).appBarTheme.color,
                           ),
                         ),
@@ -335,4 +328,3 @@ class _FavePageState extends State<FavePage> {
     );
   }
 }
-

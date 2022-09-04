@@ -1,22 +1,19 @@
-
 import 'package:flutter/material.dart';
 import 'package:sprintf/sprintf.dart';
 import 'package:directorio_delicias/commons/helpers.dart';
 import 'package:directorio_delicias/models/store.dart';
 
-
 class NearbyListView extends StatefulWidget {
-  const NearbyListView({Key key, this.callBack, this.stores}) : super(key: key);
+  const NearbyListView({Key? key, this.callBack, this.stores})
+      : super(key: key);
 
-  final Function(Store) callBack;
-  final List<Store> stores;
+  final Function(Store)? callBack;
+  final List<Store>? stores;
   @override
   _NearbyListViewState createState() => _NearbyListViewState();
 }
 
 class _NearbyListViewState extends State<NearbyListView> {
-  
-  
   @override
   void initState() {
     super.initState();
@@ -43,13 +40,13 @@ class _NearbyListViewState extends State<NearbyListView> {
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.vertical,
               children: List<Widget>.generate(
-                widget.stores.length,
+                widget.stores!.length,
                 (int index) {
                   return CategoryView(
                     callback: () {
-                      widget.callBack(widget.stores[index]);
+                      widget.callBack!(widget.stores![index]);
                     },
-                    store: widget.stores[index],
+                    store: widget.stores![index],
                   );
                 },
               ),
@@ -68,25 +65,20 @@ class _NearbyListViewState extends State<NearbyListView> {
 }
 
 class CategoryView extends StatelessWidget {
-  const CategoryView(
-      {Key key,
-      this.store,
-      this.callback})
-      : super(key: key);
+  const CategoryView({Key? key, this.store, this.callback}) : super(key: key);
 
-  final VoidCallback callback;
-  final Store store;
+  final VoidCallback? callback;
+  final Store? store;
 
   @override
   Widget build(BuildContext context) {
     String photoUrl = "";
-    if(store.photos.length > 0)
-      photoUrl = store.photos[0].thumbUrl;
-      
+    if (store!.photos!.length > 0) photoUrl = store!.photos![0].thumbUrl;
+
     return InkWell(
       splashColor: Colors.transparent,
       onTap: () {
-        callback();
+        callback!();
       },
       child: SizedBox(
         height: 280,
@@ -99,9 +91,9 @@ class CategoryView extends StatelessWidget {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Theme.of(context).textTheme.bodyText2.color,
-                        borderRadius: const BorderRadius.all(
-                            Radius.circular(16.0)),
+                        color: Theme.of(context).textTheme.bodyText2!.color,
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(16.0)),
                       ),
                       child: Column(
                         children: <Widget>[
@@ -113,7 +105,7 @@ class CategoryView extends StatelessWidget {
                                     padding: const EdgeInsets.only(
                                         top: 16, left: 16, right: 16),
                                     child: Text(
-                                      store.storeName,
+                                      store!.storeName,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.center,
@@ -121,46 +113,57 @@ class CategoryView extends StatelessWidget {
                                         fontWeight: FontWeight.w600,
                                         fontSize: 16,
                                         letterSpacing: 0.27,
-                                        color: Theme.of(context).textTheme.caption.color,
+                                        color: Theme.of(context)
+                                            .textTheme
+                                            .caption!
+                                            .color,
                                       ),
                                     ),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                        top: 8,
-                                        left: 16,
-                                        right: 16,
-                                        bottom: 8),
+                                        top: 8, left: 16, right: 16, bottom: 8),
                                     child: Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Text(
-                                          sprintf("%.2f%s", [store.distance, "KM"]),
+                                          sprintf("%.2f%s",
+                                              [store!.distance, "KM"]),
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
                                             fontWeight: FontWeight.w200,
                                             fontSize: 12,
                                             letterSpacing: 0.27,
-                                            color: Theme.of(context).textTheme.subtitle1.color,
+                                            color: Theme.of(context)
+                                                .textTheme
+                                                .subtitle1!
+                                                .color,
                                           ),
                                         ),
                                         Container(
                                           child: Row(
                                             children: <Widget>[
                                               Text(
-                                                sprintf("%.1f", [store.ratingAve]),
-                                                textAlign:TextAlign.left,
+                                                sprintf(
+                                                    "%.1f", [store!.ratingAve]),
+                                                textAlign: TextAlign.left,
                                                 style: TextStyle(
-                                                  fontWeight:FontWeight.w200,
+                                                  fontWeight: FontWeight.w200,
                                                   fontSize: 18,
                                                   letterSpacing: 0.27,
-                                                  color:Theme.of(context).textTheme.subtitle1.color,
+                                                  color: Theme.of(context)
+                                                      .textTheme
+                                                      .subtitle1!
+                                                      .color,
                                                 ),
                                               ),
                                               Icon(
                                                 Icons.star,
-                                                color:Theme.of(context).accentColor,
+                                                color: Theme.of(context)
+                                                    .accentColor,
                                                 size: 20,
                                               ),
                                             ],
@@ -188,12 +191,10 @@ class CategoryView extends StatelessWidget {
             ),
             Container(
               child: Padding(
-                padding:
-                    const EdgeInsets.only(top: 24, right: 16, left: 16),
+                padding: const EdgeInsets.only(top: 24, right: 16, left: 16),
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius:
-                        const BorderRadius.all(Radius.circular(16.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
                           color: Theme.of(context).shadowColor,
@@ -202,15 +203,13 @@ class CategoryView extends StatelessWidget {
                     ],
                   ),
                   child: ClipRRect(
-                    borderRadius:
-                        const BorderRadius.all(Radius.circular(16.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                     child: AspectRatio(
                         aspectRatio: 1.28,
                         child: AspectRatio(
                           aspectRatio: 1.0,
                           child: Helpers.loadCacheImage(imageUrl: photoUrl),
-                        )
-                      ),
+                        )),
                   ),
                 ),
               ),

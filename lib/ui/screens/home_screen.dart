@@ -19,7 +19,7 @@ import 'package:directorio_delicias/ui/widgets/slider_view.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   bool multiple = true;
-  Widget root;
+  Widget? root;
   bool hasData = false;
   TextEditingController _searchController = TextEditingController();
 
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       LocationPermission permission = await Geolocator.requestPermission();
       print(permission);
       try {
-        Position pos = await MyApp.determinePosition();
+        Position? pos = await MyApp.determinePosition();
         print(pos);
       } catch (e) {
         print(e);
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 if (!snapshot.hasData) {
                   return const SizedBox();
                 } else {
-                  return root == null ? showMain() : root;
+                  return root == null ? showMain() : root!;
                 }
               },
             ),
@@ -126,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
             iconColor: Theme.of(context).accentColor,
           );
         } else {
-          DataHandler dataHandler = snapshot.data;
+          DataHandler? dataHandler = snapshot.data;
           Provider.of<DataHandlerNotifier>(context, listen: false)
               .setDataHandler(dataHandler);
           hasData = true;
@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
         )
       ],
     );
-    return root;
+    return root!;
   }
 
   Widget appBar() {
@@ -270,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   fontWeight: FontWeight.w600,
                   fontSize: 22,
                   letterSpacing: 0.27,
-                  color: Theme.of(context).textTheme.caption.color,
+                  color: Theme.of(context).textTheme.caption?.color,
                 ),
               )),
           const SizedBox(
@@ -305,7 +305,7 @@ class _MyHomePageState extends State<MyHomePage> {
               fontWeight: FontWeight.w600,
               fontSize: 22,
               letterSpacing: 0.27,
-              color: Theme.of(context).textTheme.caption.color,
+              color: Theme.of(context).textTheme.caption!.color,
             ),
           ),
           Container(
@@ -341,7 +341,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontWeight: FontWeight.w600,
                 fontSize: 22,
                 letterSpacing: 0.27,
-                color: Theme.of(context).textTheme.caption.color,
+                color: Theme.of(context).textTheme.caption!.color,
               ),
             ),
             Selector<DataHandlerNotifier, DataHandler>(
@@ -472,7 +472,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const EdgeInsets.only(right: 16, top: 8, bottom: 8, left: 16),
               child: Container(
                 decoration: BoxDecoration(
-                  color: Theme.of(context).textTheme.bodyText1.color,
+                  color: Theme.of(context).textTheme.bodyText1?.color,
                   borderRadius: const BorderRadius.all(
                     Radius.circular(38.0),
                   ),
@@ -491,7 +491,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     onChanged: (String txt) {},
                     style: TextStyle(
                         fontSize: 18,
-                        color: Theme.of(context).textTheme.caption.color),
+                        color: Theme.of(context).textTheme.caption?.color),
                     cursorColor: Theme.of(context).accentColor,
                     decoration: InputDecoration(
                       border: InputBorder.none,

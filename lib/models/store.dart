@@ -1,51 +1,47 @@
-
-
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:directorio_delicias/models/photo.dart';
 
 class Store {
-  Store({
-    this.storeId,
-    this.storeName,
-    this.storeAddress,
-    this.storeDesc,
-    this.lat,
-    this.lon,
-    this.smsNo,
-    this.phoneNo,
-    this.website,
-    this.categoryId,
-    this.ratingTotal,
-    this.ratingCount,
-    this.ratingAve,
-    this.distance,
-    this.email,
-    
-    this.createdAt,
-    this.updatedAt,
-    this.isDeleted,
-    this.photos,
-    this.monOpen,
-    this.monClose,
-    this.tueOpen,
-    this.tueClose,
-    this.wedOpen,
-    this.wedClose,
-    this.thuOpen,
-    this.thuClose,
-    this.friOpen,
-    this.friClose,
-    this.satOpen,
-    this.satClose,
-    this.sunOpen,
-    this.sunClose,
-    this.isFave = false,
-    this.featured,
-    this.marker,
-    this.category,
-    this.mapIcon,
-    this.mapIconDescriptor
-  });
+  Store(
+      {required this.storeId,
+      required this.storeName,
+      required this.storeAddress,
+      required this.storeDesc,
+      required this.lat,
+      required this.lon,
+      required this.smsNo,
+      required this.phoneNo,
+      required this.website,
+      required this.categoryId,
+      required this.ratingTotal,
+      required this.ratingCount,
+      required this.ratingAve,
+      required this.distance,
+      required this.email,
+      required this.createdAt,
+      required this.updatedAt,
+      required this.isDeleted,
+      this.photos,
+      required this.monOpen,
+      required this.monClose,
+      required this.tueOpen,
+      required this.tueClose,
+      required this.wedOpen,
+      required this.wedClose,
+      required this.thuOpen,
+      required this.thuClose,
+      required this.friOpen,
+      required this.friClose,
+      required this.satOpen,
+      required this.satClose,
+      required this.sunOpen,
+      required this.sunClose,
+      this.isFave = false,
+      required this.featured,
+      this.marker,
+      required this.category,
+      required this.mapIcon,
+      this.mapIconDescriptor = BitmapDescriptor.defaultMarker});
 
   bool isFave;
   int storeId;
@@ -65,11 +61,11 @@ class Store {
   int createdAt;
   int updatedAt;
   int isDeleted;
-  List<Photo> photos;
+  List<Photo>? photos;
 
   String monOpen;
   String monClose;
-  
+
   String tueOpen;
   String tueClose;
 
@@ -90,11 +86,11 @@ class Store {
 
   String email;
   int featured;
-  Marker marker;
+  Marker? marker;
 
   String category;
   String mapIcon;
-  BitmapDescriptor mapIconDescriptor;
+  dynamic mapIconDescriptor;
 
   factory Store.fromJson(Map<String, dynamic> json) {
     return new Store(
@@ -131,50 +127,49 @@ class Store {
       satClose: json['sat_close'],
       sunOpen: json['sun_open'],
       sunClose: json['sun_close'],
-
       category: json['category'],
       mapIcon: json['map_icon'],
+      mapIconDescriptor: null,
     );
   }
 
   Map<String, dynamic> toMap() => {
-    "store_id": storeId,
-    "store_name": storeName,
-    "store_address": storeAddress,
-    "store_desc": storeDesc,
-    "lat": lat,
-    "lon": lon,
-    "sms_no": smsNo,
-    "phone_no": phoneNo,
-    "website": website,
-    "category_id": categoryId,
-    "rating_total": ratingTotal,
-    "rating_count": ratingCount,
-    "rating_ave": ratingAve,
-    "distance": distance,
-    "updated_at": updatedAt,
-    "is_deleted": isDeleted,
-    "created_at": createdAt,
-    "email": email,
-    "mon_open": monOpen,
-    "mon_close": monClose,
-    "tue_open": tueOpen,
-    "tue_close": tueClose,
-    "wed_open": wedOpen,
-    "wed_close": wedClose,
-    "thu_open": thuOpen,
-    "thu_close": thuClose,
-    "fri_open": friOpen,
-    "fri_close": friClose,
-    "sat_open": satOpen,
-    "sat_close": satClose,
-    "sun_open": sunOpen,
-    "sun_close": sunClose,
-    "featured" : featured,
-
-    "category" : category,
-    "map_icon" : mapIcon
-  };
+        "store_id": storeId,
+        "store_name": storeName,
+        "store_address": storeAddress,
+        "store_desc": storeDesc,
+        "lat": lat,
+        "lon": lon,
+        "sms_no": smsNo,
+        "phone_no": phoneNo,
+        "website": website,
+        "category_id": categoryId,
+        "rating_total": ratingTotal,
+        "rating_count": ratingCount,
+        "rating_ave": ratingAve,
+        "distance": distance,
+        "updated_at": updatedAt,
+        "is_deleted": isDeleted,
+        "created_at": createdAt,
+        "email": email,
+        "mon_open": monOpen,
+        "mon_close": monClose,
+        "tue_open": tueOpen,
+        "tue_close": tueClose,
+        "wed_open": wedOpen,
+        "wed_close": wedClose,
+        "thu_open": thuOpen,
+        "thu_close": thuClose,
+        "fri_open": friOpen,
+        "fri_close": friClose,
+        "sat_open": satOpen,
+        "sat_close": satClose,
+        "sun_open": sunOpen,
+        "sun_close": sunClose,
+        "featured": featured,
+        "category": category,
+        "map_icon": mapIcon
+      };
 
   factory Store.fromJsonRaw(Map<String, dynamic> json) {
     return new Store(
@@ -211,7 +206,6 @@ class Store {
       satClose: json['sat_close'],
       sunOpen: json['sun_open'],
       sunClose: json['sun_close'],
-
       category: json['category'],
       mapIcon: json['map_icon'],
     );

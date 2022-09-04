@@ -11,16 +11,15 @@ import 'package:directorio_delicias/ui/widgets/notification_widget.dart';
 import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 
 class NotificationScreen extends StatefulWidget {
-  const NotificationScreen({Key key}) : super(key: key);
+  const NotificationScreen({Key? key}) : super(key: key);
 
   @override
   _NotificationScreenState createState() => _NotificationScreenState();
 }
 
 class _NotificationScreenState extends State<NotificationScreen> {
-
   final ScrollController _scrollController = ScrollController();
-  Widget root;
+  late Widget root;
   bool hasData = false;
 
   @override
@@ -41,25 +40,24 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(200),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget delayBeforeFetch() {
@@ -81,31 +79,29 @@ class _NotificationScreenState extends State<NotificationScreen> {
   Widget getDataFromServer() {
     return FutureBuilder<List<notif.Notification>>(
       future: DBProvider.instance.getNotifications(),
-      builder: (BuildContext context, AsyncSnapshot<List<notif.Notification>> snapshot) {
+      builder: (BuildContext context,
+          AsyncSnapshot<List<notif.Notification>> snapshot) {
         if (!snapshot.hasData) {
           return LoadingWidget(
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
+        } else {
           DataHandler dataHandler = new DataHandler();
           dataHandler.notifications = snapshot.data;
           hasData = true;
-          Provider.of<DataHandlerNotifier>(context, listen: true).setDataHandler(dataHandler);
+          Provider.of<DataHandlerNotifier>(context, listen: true)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget showMain() {
     root = Container(
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
     return root;
@@ -114,8 +110,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -127,18 +122,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
         ];
       },
       body: Container(
-        color:Theme.of(context).backgroundColor,
+        color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
           builder: (context, provider, child) => ListView.builder(
-            itemCount: provider.dataHandler.notifications.length,
+            itemCount: provider.dataHandler.notifications!.length,
             padding: const EdgeInsets.only(top: 8),
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
               return NotificationView(
-                callback: () {
-                  
-                },
-                notification: provider.dataHandler.notifications[index],
+                callback: () {},
+                notification: provider.dataHandler.notifications![index],
               );
             },
           ),
@@ -162,13 +155,14 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                        sprintf("%d %s", 
-                          [provider.dataHandler.notifications.length, 
-                          tr("notifications_found")]),
+                        sprintf("%d %s", [
+                          provider.dataHandler.notifications!.length,
+                          tr("notifications_found")
+                        ]),
                         style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color,
+                          color: Theme.of(context).textTheme.caption!.color,
                         ),
                       ),
                     ),
@@ -200,9 +194,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Colors.transparent
-                              ),
+                            child: Icon(Icons.sort, color: Colors.transparent),
                           ),
                         ],
                       ),
@@ -282,8 +274,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                ],
+                children: <Widget>[],
               ),
             )
           ],
@@ -292,4 +283,3 @@ class _NotificationScreenState extends State<NotificationScreen> {
     );
   }
 }
-

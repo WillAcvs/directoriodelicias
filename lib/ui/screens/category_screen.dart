@@ -14,22 +14,19 @@ import 'package:directorio_delicias/ui/widgets/category_list_view.dart';
 import 'package:directorio_delicias/ui/widgets/load_widget.dart';
 import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 
-
 class CategoryPage extends StatefulWidget {
+  final Category? category;
 
-  final Category category;
-
-  const CategoryPage({Key key, this.category}) : super(key: key);
+  const CategoryPage({Key? key, this.category}) : super(key: key);
 
   @override
   _CategoryPageState createState() => _CategoryPageState();
 }
 
 class _CategoryPageState extends State<CategoryPage> {
-
   final ScrollController _scrollController = ScrollController();
   bool aToZ = false;
-  Widget root;
+  late Widget root;
   bool hasData = false;
 
   @override
@@ -46,40 +43,36 @@ class _CategoryPageState extends State<CategoryPage> {
   void dispose() {
     super.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          color: Colors.transparent,
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            color: Colors.transparent,
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(200),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget showMain() {
     root = Container(
       color: Colors.transparent,
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
     return root;
@@ -102,7 +95,7 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 
   Widget getDataFromServer() {
-    int pid = widget.category == null ? 0 : widget.category.categoryId;
+    int pid = widget.category == null ? 0 : widget.category!.categoryId;
     return FutureBuilder<DataHandler>(
       future: GetIt.instance.get<DataParser>().fetchCategories(pid),
       builder: (BuildContext context, AsyncSnapshot<DataHandler> snapshot) {
@@ -111,21 +104,21 @@ class _CategoryPageState extends State<CategoryPage> {
             size: 30.0,
             iconColor: Theme.of(context).accentColor,
           );
-        } 
-        else {
+        } else {
           hasData = true;
-          DataHandler dataHandler = snapshot.data;
-          Provider.of<DataHandlerNotifier>(context, listen: false).setDataHandler(dataHandler);
+          DataHandler? dataHandler = snapshot.data;
+          Provider.of<DataHandlerNotifier>(context, listen: false)
+              .setDataHandler(dataHandler);
           return showList();
         }
       },
-    );      
+    );
   }
 
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:(BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -139,38 +132,40 @@ class _CategoryPageState extends State<CategoryPage> {
       body: Container(
         color: Theme.of(context).backgroundColor,
         child: Consumer<DataHandlerNotifier>(
-          builder: (context, provider, child) =>  ListView.builder(
-            itemCount: provider.dataHandler.categories.length,
-            padding: const EdgeInsets.only(top: 8),
-            scrollDirection: Axis.vertical,
-            itemBuilder: (BuildContext context, int index) {
-              return CategoryListView(
-                callback: () {
-                  if(provider.dataHandler.categories[index].hasSub == 0) {
-                    Navigator.push<dynamic>(
-                      context,
-                      MaterialPageRoute<dynamic>(
-                        builder: (BuildContext context) => 
-                          StoresPage(category: provider.dataHandler.categories[index]),
-                      ),
+            builder: (context, provider, child) => ListView.builder(
+                  itemCount: provider.dataHandler.categories!.length,
+                  padding: const EdgeInsets.only(top: 8),
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (BuildContext context, int index) {
+                    return CategoryListView(
+                      callback: () {
+                        if (provider.dataHandler.categories![index].hasSub ==
+                            0) {
+                          Navigator.push<dynamic>(
+                            context,
+                            MaterialPageRoute<dynamic>(
+                              builder: (BuildContext context) => StoresPage(
+                                  category:
+                                      provider.dataHandler.categories![index]),
+                            ),
+                          );
+                        } else {
+                          Navigator.push<dynamic>(
+                            context,
+                            MaterialPageRoute<dynamic>(
+                              builder: (BuildContext context) => CategoryPage(
+                                  category:
+                                      provider.dataHandler.categories![index]),
+                            ),
+                          );
+                        }
+                      },
+                      category: provider.dataHandler.categories![index],
+                      padding: EdgeInsets.only(
+                          left: 24, right: 24, top: 8, bottom: 16),
                     );
-                  }
-                  else {
-                    Navigator.push<dynamic>(
-                      context,
-                      MaterialPageRoute<dynamic>(
-                        builder: (BuildContext context) => 
-                          CategoryPage(category: provider.dataHandler.categories[index]),
-                      ),
-                    );
-                  }
-                },
-                category: provider.dataHandler.categories[index],
-                padding: EdgeInsets.only(left: 24, right: 24, top: 8, bottom: 16),
-              );
-            },
-          )
-        ),
+                  },
+                )),
       ),
     );
   }
@@ -181,7 +176,8 @@ class _CategoryPageState extends State<CategoryPage> {
         Container(
           color: Theme.of(context).backgroundColor,
           child: Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
+            padding:
+                const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
             child: Row(
               children: <Widget>[
                 Expanded(
@@ -189,12 +185,14 @@ class _CategoryPageState extends State<CategoryPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Consumer<DataHandlerNotifier>(
                       builder: (context, provider, child) => Text(
-                          sprintf("%d %s", [provider.dataHandler.categories.length, tr("categories_found")]
-                        ),
+                        sprintf("%d %s", [
+                          provider.dataHandler.categories!.length,
+                          tr("categories_found")
+                        ]),
                         style: TextStyle(
                           fontWeight: FontWeight.w100,
                           fontSize: 16,
-                          color: Theme.of(context).textTheme.caption.color,
+                          color: Theme.of(context).textTheme.caption!.color,
                         ),
                       ),
                     ),
@@ -276,7 +274,7 @@ class _CategoryPageState extends State<CategoryPage> {
                     Radius.circular(32.0),
                   ),
                   onTap: () {
-                    if(widget.category == null)
+                    if (widget.category == null)
                       ZoomDrawer.of(context).toggle();
                     else
                       Navigator.of(context).pop();
@@ -284,7 +282,9 @@ class _CategoryPageState extends State<CategoryPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
-                      widget.category == null ? Icons.menu : Icons.arrow_back_ios,
+                      widget.category == null
+                          ? Icons.menu
+                          : Icons.arrow_back_ios,
                       color: Theme.of(context).appBarTheme.color,
                     ),
                   ),
@@ -294,7 +294,9 @@ class _CategoryPageState extends State<CategoryPage> {
             Expanded(
               child: Center(
                 child: Text(
-                  widget.category == null ? tr("categories") : widget.category.category,
+                  widget.category == null
+                      ? tr("categories")
+                      : widget.category!.category,
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 22,
@@ -318,15 +320,17 @@ class _CategoryPageState extends State<CategoryPage> {
                           Radius.circular(32.0),
                         ),
                         onTap: () {
-                          if(!hasData) return;
-                          
+                          if (!hasData) return;
+
                           aToZ = !aToZ;
                           provider.sortCategories(aToZ);
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Icon(
-                            aToZ ? FontAwesomeIcons.sortAlphaUp : FontAwesomeIcons.sortAlphaDown,
+                            aToZ
+                                ? FontAwesomeIcons.sortAlphaUp
+                                : FontAwesomeIcons.sortAlphaDown,
                             color: Theme.of(context).appBarTheme.color,
                           ),
                         ),

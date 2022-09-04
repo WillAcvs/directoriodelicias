@@ -16,21 +16,20 @@ import 'package:directorio_delicias/ui/widgets/news_widget.dart';
 import 'package:directorio_delicias/ui/widgets/tab_header.dart';
 
 class NewsPage extends StatefulWidget {
-  const NewsPage({Key key}) : super(key: key);
+  const NewsPage({Key? key}) : super(key: key);
 
   @override
   _NewsPageState createState() => _NewsPageState();
 }
 
 class _NewsPageState extends State<NewsPage> {
-
   final ScrollController _scrollController = ScrollController();
   bool isNearMe = false;
-  Widget root;
+  Widget? root;
   bool hasData = false;
   int min = 0;
   int max = Config.MAX_NEWS_COUNT_FETCH;
-  
+
   @override
   void initState() {
     super.initState();
@@ -49,25 +48,24 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DataHandlerNotifier>(
-      create: (context) => DataHandlerNotifier(),
-      builder: (ctx, widget) {
-        return Container(
-          child: Scaffold(
-            backgroundColor: Theme.of(context).backgroundColor,
-            body: FutureBuilder<bool>(
-              future: getData(200),
-              builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                if (!snapshot.hasData) {
-                  return const SizedBox();
-                } else {
-                  return showMain();
-                }
-              },
+        create: (context) => DataHandlerNotifier(),
+        builder: (ctx, widget) {
+          return Container(
+            child: Scaffold(
+              backgroundColor: Theme.of(context).backgroundColor,
+              body: FutureBuilder<bool>(
+                future: getData(200),
+                builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+                  if (!snapshot.hasData) {
+                    return const SizedBox();
+                  } else {
+                    return showMain();
+                  }
+                },
+              ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 
   Widget delayBeforeFetch() {
@@ -88,48 +86,45 @@ class _NewsPageState extends State<NewsPage> {
 
   Widget getDataFromServer() {
     return FutureBuilder<DataHandler>(
-      future: GetIt.instance.get<DataParser>().fetchNews(min: min, max:max),
+      future: GetIt.instance.get<DataParser>().fetchNews(min: min, max: max),
       builder: (BuildContext context, AsyncSnapshot<DataHandler> snapshot) {
         switch (snapshot.connectionState) {
-            case ConnectionState.waiting:
-              return LoadingWidget(
-                size: 30.0,
-                iconColor: Theme.of(context).accentColor,
-              );
+          case ConnectionState.waiting:
+            return LoadingWidget(
+              size: 30.0,
+              iconColor: Theme.of(context).accentColor,
+            );
 
-            case ConnectionState.done:
-              DataHandler dataHandler = snapshot.data;
-              hasData = true;
-              var provider = Provider.of<DataHandlerNotifier>(context, listen: false);
-              provider.setDataHandler(dataHandler);
-              provider.setCount(dataHandler.news.length);
-              provider.setHasMore(dataHandler.news.length == max); 
-              return showList();
+          case ConnectionState.done:
+            DataHandler dataHandler = snapshot.data!;
+            hasData = true;
+            var provider =
+                Provider.of<DataHandlerNotifier>(context, listen: false);
+            provider.setDataHandler(dataHandler);
+            provider.setCount(dataHandler.news?.length);
+            provider.setHasMore(dataHandler.news?.length == max);
+            return showList();
 
-            default:
-              return Center(child: Text(tr("")));
+          default:
+            return Center(child: Text(tr("")));
         }
       },
-    );      
+    );
   }
 
   Widget showMain() {
     root = Container(
       child: Column(
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded( child: delayBeforeFetch() )
-        ],
+        children: <Widget>[getAppBarUI(), Expanded(child: delayBeforeFetch())],
       ),
     );
-    return root;
+    return root!;
   }
 
   Widget showList() {
     return NestedScrollView(
       controller: _scrollController,
-      headerSliverBuilder:
-          (BuildContext context, bool innerBoxIsScrolled) {
+      headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           SliverPersistentHeader(
             pinned: true,
@@ -146,37 +141,42 @@ class _NewsPageState extends State<NewsPage> {
           builder: (context, provider, child) => IncrementallyLoadingListView(
             padding: EdgeInsets.all(0.0),
             hasMore: () => provider.hasMore,
-            itemCount: () => provider.dataHandler == null ? 0 : provider.dataHandler.news.length,
+            itemCount: () => provider.dataHandler == null
+                ? 0
+                : provider.dataHandler.news!.length,
             loadMore: () async {
               min += max;
-              DataHandler dataHandler = await GetIt.instance.get<DataParser>().fetchNews(min: min, max: max);
-              if(dataHandler.news.length > 0) {
-                for(News news in dataHandler.news) {
-                  provider.dataHandler.news.add(news);
+              DataHandler dataHandler = await GetIt.instance
+                  .get<DataParser>()
+                  .fetchNews(min: min, max: max);
+              if (dataHandler.news!.length > 0) {
+                for (News news in dataHandler.news!) {
+                  provider.dataHandler.news?.add(news);
                 }
               }
-              provider.setHasMore(dataHandler.news.length == max);  
+              provider.setHasMore(dataHandler.news?.length == max);
             },
-            onLoadMore: () {
-              
-            },
+            onLoadMore: () {},
             onLoadMoreFinished: () {
-              var provider = Provider.of<DataHandlerNotifier>(context, listen: false);
-              provider.setCountNotify(provider.dataHandler.news.length);
-              if(provider.hasMore)
-                provider.notifyListenersOnly();
+              var provider =
+                  Provider.of<DataHandlerNotifier>(context, listen: false);
+              provider.setCountNotify(provider.dataHandler.news?.length);
+              if (provider.hasMore) provider.notifyListenersOnly();
             },
             loadMoreOffsetFromBottom: 1,
             itemBuilder: (context, index) {
-              final news = provider.dataHandler.news[index];
-              if ((provider.hasMore) && index == provider.dataHandler.news.length - 1) {
+              final news = provider.dataHandler.news![index];
+              if ((provider.hasMore) &&
+                  index == provider.dataHandler.news!.length - 1) {
                 return Column(
                   children: <Widget>[
-                    NewsWidget(news: news,
-                      callback: () {
-                        GetIt.instance.get<Services>().launchURL(news.newsUrl);
-                      }
-                    ),
+                    NewsWidget(
+                        news: news,
+                        callback: () {
+                          GetIt.instance
+                              .get<Services>()
+                              .launchURL(news.newsUrl);
+                        }),
                     LoadingWidget(
                       size: 30.0,
                       iconColor: Theme.of(context).accentColor,
@@ -185,11 +185,10 @@ class _NewsPageState extends State<NewsPage> {
                 );
               }
               return NewsWidget(
-                news: news,
+                  news: news,
                   callback: () {
                     GetIt.instance.get<Services>().launchURL(news.newsUrl);
-                  }
-                );
+                  });
             },
           ),
         ),
@@ -200,7 +199,6 @@ class _NewsPageState extends State<NewsPage> {
   Widget getFilterBarUI() {
     return Stack(
       children: <Widget>[
-        
         Container(
           color: Theme.of(context).backgroundColor,
           child: Padding(
@@ -213,16 +211,14 @@ class _NewsPageState extends State<NewsPage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Selector<DataHandlerNotifier, int>(
                       selector: (ctxN, provider) => provider.count,
-                      builder: (ctxN, count, widgt) => 
-                        Text(
-                          sprintf("%d %s", [count, tr("news_found")]),
-                          style: TextStyle(
+                      builder: (ctxN, count, widgt) => Text(
+                        sprintf("%d %s", [count, tr("news_found")]),
+                        style: TextStyle(
                             fontWeight: FontWeight.w100,
                             fontSize: 16,
-                            color: Theme.of(context).textTheme.caption.color
-                          ),
-                        ),
+                            color: Theme.of(context).textTheme.caption!.color),
                       ),
+                    ),
                   ),
                 ),
                 Material(
@@ -251,9 +247,7 @@ class _NewsPageState extends State<NewsPage> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: Colors.transparent
-                              ),
+                            child: Icon(Icons.sort, color: Colors.transparent),
                           ),
                         ],
                       ),
@@ -338,4 +332,3 @@ class _NewsPageState extends State<NewsPage> {
     );
   }
 }
-
